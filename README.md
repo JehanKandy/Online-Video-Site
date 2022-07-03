@@ -69,4 +69,9 @@ My one of University Projects<br>
   - - lib/views
   - - - lib/views/login.php
   - - - lib/views/reg.php
+  - - lib/routes
+  - - - lib/routes/user.php
+  - - - lib/routes/admin.php
+  - - - lib/routes/index_loged.php
+
 
