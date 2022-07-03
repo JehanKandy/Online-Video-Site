@@ -40,9 +40,13 @@ My one of University Projects<br>
   - - - lib/layouts/header.php
   - - - lib/layouts/nav.php
   - - - lib/layouts/nav_login.php
+  - - - lib/layouts/nav_reg.php
+  - - lib/views
+  - - - lib/views/login.php
+  - - - lib/views/reg.php
   - - - lib/layouts/nav_reg.php  
   
-  
+
     <b>2.Updates</b>
   - index.php
   - css
