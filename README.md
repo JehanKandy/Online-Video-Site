@@ -32,6 +32,10 @@ My one of University Projects<br>
   - index.php    
   - css
   - - css/style.css
+  - lib
+  - - function
+  - - - lib/function/config.php
+  - - - lib/function/function.php
 
     <b>2.Updates</b>
   - index.php
