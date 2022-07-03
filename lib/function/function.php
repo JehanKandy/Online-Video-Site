@@ -7,8 +7,13 @@
     use FTP\Connection;
     session_start();
 
-    // ***************** 03 July 2022 ****************
-
+    
+    /*
+    Development history about fucntion file
+    
+    ---- 03 July 2022 - reg_user(), video_upoload(), uploded_videos()    
+    
+    */
 
     //function for register an user
     
