@@ -47,6 +47,7 @@ My one of University Projects<br>
   - - - lib/layouts/nav_reg.php  
   - - lib/routes
   - - - lib/routes/user.php
+  - - - lib/routes/admin.php
 
   
 
