@@ -51,7 +51,7 @@ My one of University Projects<br>
   - index.php
   - css
   - - style.css
-    - lib
+  - lib
   - - lib/function
   - - - lib/function/config.php
   - - - lib/function/function.php
