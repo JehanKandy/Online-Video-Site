@@ -210,7 +210,7 @@
                             
                                 <div class='col-auto'>
                                     <div class='card-body'>
-                                        <video src='upload/".$video_row['video_url']."' ></video>
+                                        <video src='upload/".$video_row['video_url']."' controls></video>
                                     </div>
                                 </div>
                             
