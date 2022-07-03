@@ -121,6 +121,60 @@ video {
     box-shadow: 0 2px 4px 0 rgba(41, 41, 41, 0.678), 0 3px 10px 0 rgba(71, 71, 71, 0.596);
 }
 
+.login {
+    padding-top: 60px;
+    padding-left: 500px;
+    padding-right: 500px;
+    padding-bottom: 60px;
+}
+
+.login-content {
+    width: 500px;
+    height: 100%;
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.login-content-title {
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 25px;
+}
+
+.login-content-body {
+    padding-top: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 70px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 20px;
+}
+
+.login-content-body .login-input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.login-content-body .login-btn {
+    width: 100%;
+    height: 50px;
+    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.5s;
+    margin-top: 15px;
+}
+
 
 /* for standard laptop screen size 
         width : 1366px
