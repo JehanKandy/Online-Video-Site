@@ -21,7 +21,7 @@
         2. standard iPad screen
         3. standard iPad Air screen
         4. standard iPad Mini screen
-        5. Galaxy Tab S4
+        5. Samsung Galaxy A51/71
 */
 
 .home {
@@ -197,6 +197,12 @@ video {
         padding-right: 400px;
         padding-bottom: 30px;
     }
+    .login {
+        padding-top: 50px;
+        padding-left: 400px;
+        padding-right: 400px;
+        padding-bottom: 30px;
+    }
 }
 
 
@@ -224,6 +230,12 @@ for standard iPad screen size
         height: 480px;
     }
     .reg {
+        padding-top: 100px;
+        padding-left: 140px;
+        padding-right: 140px;
+        padding-bottom: 30px;
+    }
+    .login {
         padding-top: 100px;
         padding-left: 140px;
         padding-right: 140px;
