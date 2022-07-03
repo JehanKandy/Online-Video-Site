@@ -11,10 +11,5 @@ My one of University Projects<br>
 
 
   - Start to Develop the Project
-  1. Develop
-    - index.php
-    
-
-  - Start to Develop the Project
-
-
+    <b>1. Develop</b>
+    - index.php    
