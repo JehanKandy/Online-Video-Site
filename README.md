@@ -44,6 +44,9 @@ My one of University Projects<br>
   - - lib/views
   - - - lib/views/login.php
   - - - lib/views/reg.php
+  - - - lib/layouts/nav_reg.php  
+  - - lib/routes
+  - - - lib/routes/user.php
 
   
 
