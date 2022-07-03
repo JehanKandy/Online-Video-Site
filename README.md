@@ -10,8 +10,7 @@ My one of University Projects<br>
 
 # Development History
 
-<br>
-<b>03 July 2022 :</b><br>
+
 
 <br>
 <b>03 July 2022 :</b><br>
