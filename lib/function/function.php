@@ -11,7 +11,7 @@
     /*
     Development history about fucntion.php file
     
-    ---- 03 July 2022 - reg_user(), video_upoload(), uploded_videos()    
+    ---- 03 July 2022 - reg_user(), user_login(), video_upoload(), uploded_videos()    
     
     */
 
