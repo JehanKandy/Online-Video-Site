@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Kdam+Thmor+Pro&family=Roboto+Flex:opsz@8..144&family=Rubik&family=Teko:wght@300&display=swap');
+
+/*
+
+    use font families
+
+        font-family: 'Bebas Neue', cursive;
+        font-family: 'Fjalla One', sans-serif;
+        font-family: 'Kdam Thmor Pro', sans-serif;
+        font-family: 'Roboto Flex', sans-serif;
+        font-family: 'Rubik', sans-serif;
+        font-family: 'Teko', sans-serif;
+
+*/
+
+.home {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(238, 238, 238, 0.281);
+}
+
+.home-content {
+    padding: 60px;
+}
+
+.login-btn-nav {
+    width: 100px;
+    height: 45px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea);
+    transition: 0.5s;
+}
+
+.login-btn-nav:hover {
+    background: -webkit-linear-gradient(right, #9f01ea, #56d8e4);
+    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.678), 0 3px 10px 0 rgba(255, 255, 255, 0.596);
+}
+
+video {
+    width: 320px;
+    height: 240px;
+}
+
+.col-md-3 {
+    padding: 5px;
+}
+
+
+/* for standard laptop screen size 
+        width : 1366px
+        height : 768px
+
+        in here I use media queries for laptop screen size
+*/
+
+@media only screen and (max-width: 1400px) {
+    .home-content {
+        padding: 50px;
+    }
+    video {
+        width: 350px;
+        height: 240px;
+    }
+}
+
+
+/*
+    iPad
+
+for standard iPad screen size 
+        width : 768px
+        height : 1024px
+       
+*/
+
+@media screen and (min-width: 712px) and (max-width: 1024px) {
+    .home {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(238, 238, 238, 0.281);
+    }
+    .home-content {
+        padding-left: 40px;
+        padding-right: 20px;
+    }
+    video {
+        width: 640px;
+        height: 480px;
+    }
+    .nav {
+        width: 110%;
+    }
+}
+
+
+/*Samsung Galaxy A51/71 
+
+
+ for standard Samsung Galaxy A51/71 screen size 
+        width : 412px
+        height : 914px */
+
+@media screen and (max-width: 768px) {
+    .home {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(238, 238, 238, 0.281);
+    }
+    .home-content {
+        padding-top: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
