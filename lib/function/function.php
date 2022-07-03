@@ -42,10 +42,27 @@
 
     function login_user($login_usern, $login_pwd){
         $con = Connection();
-
         //get values form database according to login username and password
 
-        
+        $check_login_user = "SELECT * FROM user_tbl WHERE username = '$login_usern' && pass1 = '$login_pwd'";
+        $check_login_user_result = mysqli_query($con, $check_login_user);
+        $check_login_user_nor = mysqli_num_rows($check_login_user_result);
+        $check_login_user_row = mysqli_fetch_assoc($check_login_user_result);
+
+        //check are there any recodes 
+        if($check_login_user_nor > 0){
+            //check the password is equal
+            if($login_pwd == $check_login_user_row['pass1']){
+                //check user rolls
+            }
+            else{
+                return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Password is Doesn't Match...!</div>&nbsp</center>"; 
+            }
+        }
+        else{
+            return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>No recodes found..!</div>&nbsp</center>"; 
+        }
+
     }
 
 
