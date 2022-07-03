@@ -28,6 +28,11 @@
             //check password and confram password is not equal
             if($password != $cpassword){
                 return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Passwords are not match..!</div>&nbsp</center>"; 
+            }else{
+                //if both passwords are match, then add values to database
+                $user_insert = "INSERT INTO user_tbl(username,email,pass1,roll,user_status,join_date)VALUES('$username','$email','$password','user',NOW())";
+                $user_insert_result = mysqli_query($con, $user_insert);
+                header("location:../views/login.php");
             }
         }
     }
