@@ -7,6 +7,7 @@ My one of University Projects<br>
  - css
  - - responsive for following screens
 
+
         1. standard laptop screen 
         2. standard iPad screen
         3. standard iPad Air screen
@@ -16,15 +17,11 @@ My one of University Projects<br>
 
 
 
-### DEVELPMENT HISTORY
-<hr>
-<br>
-<b>03 July 2022 :</b><br>
-
-
 
 
 # Development History
+
+
 
 <br>
 <b>03 July 2022 :</b><br>
@@ -33,3 +30,10 @@ My one of University Projects<br>
   - Start to Develop the Project<br>
     <b>1. Develop</b>
   - index.php    
+  - css
+  - - css/style.css
+
+    <b>2.Updates</b>
+  - index.php
+  - css
+  - - style.css
