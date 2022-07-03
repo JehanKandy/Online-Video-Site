@@ -1,11 +1,46 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
- 
-
 <?php 
     include("config.php");
 
     use FTP\Connection;
     session_start();
+
+    
+    /*
+    Development history about fucntion.php file
+    
+    ---- 03 July 2022 - reg_user(), user_login(), video_upoload(), uploded_videos()    
+    
+    */
+
+    //function for register an user
+    
+    function reg_user($username, $email, $password, $cpassword){
+        $con = Connection();
+        // check are there any user according to added username and email
+
+        $check_user = "SELECT * FROM user_tbk WHERE username = '$username' && email = '$email'";
+        $check_user_result = mysqli_query($con, $check_user);
+        $check_user_nor = mysqli_num_rows($check_user_result);
+
+
+        //now check are there any recodes 
+        if($check_user_nor > 0){
+            return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>User Already Exists..!</div>&nbsp</center>"; 
+        }else{
+            //check password and confram password is not equal
+            if($password != $cpassword){
+                return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Passwords are not match..!</div>&nbsp</center>"; 
+            }else{
+                //if both passwords are match, then add values to database
+                $user_insert = "INSERT INTO user_tbl(username,email,pass1,roll,user_status,join_date)VALUES('$username','$email','$password','user','1',NOW())";
+                $user_insert_result = mysqli_query($con, $user_insert);
+                header("location:../views/login.php");
+            }
+        }
+    }
+
+
+
 
     // function for upload videos
 

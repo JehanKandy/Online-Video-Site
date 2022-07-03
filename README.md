@@ -47,13 +47,14 @@ My one of University Projects<br>
   - - - lib/layouts/nav_reg.php  
   - - lib/routes
   - - - lib/routes/user.php
+
   
 
     <b>2.Updates</b>
   - index.php
   - css
   - - style.css
-    - lib
+  - lib
   - - lib/function
   - - - lib/function/config.php
   - - - lib/function/function.php
@@ -65,4 +66,4 @@ My one of University Projects<br>
   - - lib/views
   - - - lib/views/login.php
   - - - lib/views/reg.php
-  - - - lib/layouts/nav_reg.php  
+

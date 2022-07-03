@@ -55,10 +55,10 @@ video {
 }
 
 .reg {
-    padding-top: 40px;
+    padding-top: 60px;
     padding-left: 500px;
     padding-right: 500px;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
 }
 
 .reg-content {
@@ -88,6 +88,8 @@ video {
 }
 
 .reg-content-body .login-input {
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 100%;
     height: 50px;
     border: 1px solid rgb(182, 182, 182);
@@ -104,6 +106,7 @@ video {
     border-radius: 5px;
     color: white;
     transition: all 0.5s;
+    margin-top: 15px;
 }
 
 .reg-content-body .clr-btn {
@@ -116,6 +119,60 @@ video {
 
 .reg-content-body .clr-btn:hover {
     box-shadow: 0 2px 4px 0 rgba(41, 41, 41, 0.678), 0 3px 10px 0 rgba(71, 71, 71, 0.596);
+}
+
+.login {
+    padding-top: 60px;
+    padding-left: 500px;
+    padding-right: 500px;
+    padding-bottom: 60px;
+}
+
+.login-content {
+    width: 500px;
+    height: 100%;
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.login-content-title {
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 25px;
+}
+
+.login-content-body {
+    padding-top: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 70px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 20px;
+}
+
+.login-content-body .login-input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.login-content-body .login-btn {
+    width: 100%;
+    height: 50px;
+    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.5s;
+    margin-top: 15px;
 }
 
 
@@ -133,6 +190,12 @@ video {
     video {
         width: 350px;
         height: 240px;
+    }
+    .reg {
+        padding-top: 30px;
+        padding-left: 400px;
+        padding-right: 400px;
+        padding-bottom: 30px;
     }
 }
 
@@ -160,8 +223,11 @@ for standard iPad screen size
         width: 640px;
         height: 480px;
     }
-    .nav {
-        width: 110%;
+    .reg {
+        padding-top: 100px;
+        padding-left: 140px;
+        padding-right: 140px;
+        padding-bottom: 30px;
     }
 }
 
@@ -173,7 +239,7 @@ for standard iPad screen size
         width : 412px
         height : 914px */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 412px) {
     .home {
         height: 100%;
         width: 100%;
@@ -183,5 +249,37 @@ for standard iPad screen size
         padding-top: 15px;
         padding-left: 30px;
         padding-right: 30px;
+    }
+    .reg {
+        padding-top: 100px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 30px;
+    }
+    .reg-content {
+        width: 320px;
+        height: 100%;
+        border: 1px solid rgb(182, 182, 182);
+        border-radius: 5px;
+        font-size: 20px;
+    }
+    .reg-content-body {
+        padding-top: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 70px;
+        font-family: 'Roboto Flex', sans-serif;
+        font-size: 20px;
+    }
+    .reg-content-body .login-btn,
+    .clr-btn {
+        width: 47%;
+        height: 50px;
+        background: -webkit-linear-gradient(right, #56d8e4, #9f01ea);
+        border: none;
+        border-radius: 5px;
+        color: white;
+        transition: all 0.5s;
+        margin-top: 15px;
     }
 }
