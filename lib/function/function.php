@@ -7,6 +7,18 @@
     use FTP\Connection;
     session_start();
 
+    // ***************** 03 July 2022 ****************
+
+
+    //function for register an user
+    
+    function reg_user(){
+        
+    }
+
+
+
+
     // function for upload videos
 
     function video_upoload($username, $video){
