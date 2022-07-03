@@ -169,8 +169,11 @@ for standard iPad screen size
         width: 640px;
         height: 480px;
     }
-    .nav {
-        width: 110%;
+    .reg {
+        padding-top: 100px;
+        padding-left: 140px;
+        padding-right: 140px;
+        padding-bottom: 30px;
     }
 }
 
@@ -182,7 +185,7 @@ for standard iPad screen size
         width : 412px
         height : 914px */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 412px) {
     .home {
         height: 100%;
         width: 100%;
@@ -192,5 +195,37 @@ for standard iPad screen size
         padding-top: 15px;
         padding-left: 30px;
         padding-right: 30px;
+    }
+    .reg {
+        padding-top: 100px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 30px;
+    }
+    .reg-content {
+        width: 320px;
+        height: 100%;
+        border: 1px solid rgb(182, 182, 182);
+        border-radius: 5px;
+        font-size: 20px;
+    }
+    .reg-content-body {
+        padding-top: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 70px;
+        font-family: 'Roboto Flex', sans-serif;
+        font-size: 20px;
+    }
+    .reg-content-body .login-btn,
+    .clr-btn {
+        width: 47%;
+        height: 50px;
+        background: -webkit-linear-gradient(right, #56d8e4, #9f01ea);
+        border: none;
+        border-radius: 5px;
+        color: white;
+        transition: all 0.5s;
+        margin-top: 15px;
     }
 }
