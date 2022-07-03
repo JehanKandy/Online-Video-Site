@@ -51,3 +51,16 @@ My one of University Projects<br>
   - index.php
   - css
   - - style.css
+    - lib
+  - - lib/function
+  - - - lib/function/config.php
+  - - - lib/function/function.php
+  - - lib/layouts
+  - - - lib/layouts/header.php
+  - - - lib/layouts/nav.php
+  - - - lib/layouts/nav_login.php
+  - - - lib/layouts/nav_reg.php
+  - - lib/views
+  - - - lib/views/login.php
+  - - - lib/views/reg.php
+  - - - lib/layouts/nav_reg.php  
