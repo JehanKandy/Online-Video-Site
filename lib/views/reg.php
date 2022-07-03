@@ -1,5 +1,6 @@
 <?php include_once("../layouts/header.php"); ?>
 <?php include_once("../layouts/nav_reg.php"); ?>
+<?php include_once("../function/function.php"); ?>
 
 <div class="reg">
     <div class="reg-content">
@@ -7,7 +8,12 @@
             <i class="fas fa-user-plus"></i> &nbsp;&nbsp; Register
             <hr>        
         </div>
-        <?php ?>
+        <?php 
+            if(isset($_POST['Register'])){
+                $result = reg_user($_POST['username'], $_POST['email'], md5($_POST['password']), md5($_POST['cpassword']));
+                return $result;
+            }        
+        ?>
         <div class="reg-content-body">
             <form action="<?php echo($_SERVER['PHP_SELF']); ?>" method="POST">
                 <span class="label">Username : </span>
