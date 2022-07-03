@@ -1,3 +1,4 @@
+
 <?php 
     include("config.php");
 
@@ -18,28 +19,30 @@
         $con = Connection();
         // check are there any user according to added username and email
 
-        $check_user = "SELECT * FROM user_tbk WHERE username = '$username' && email = '$email'";
-        $check_user_result = mysqli_query($con, $check_user);
-        $check_user_nor = mysqli_num_rows($check_user_result);
+        $check_sql = "SELECT * FROM user_tbl WHERE username = '$username' ||  email = '$email'";
+        $check_reuslt = mysqli_query($con, $check_sql);
+        $check_nor = mysqli_num_rows($check_reuslt);
 
 
-        //now check are there any recodes 
-        if($check_user_nor > 0){
+        if($check_nor > 0){
             return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>User Already Exists..!</div>&nbsp</center>"; 
         }else{
-            //check password and confram password is not equal
             if($password != $cpassword){
-                return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Passwords are not match..!</div>&nbsp</center>"; 
-            }else{
-                //if both passwords are match, then add values to database
-                $user_insert = "INSERT INTO user_tbl(username,email,pass1,roll,user_status,join_date)VALUES('$username','$email','$password','user','1',NOW())";
-                $user_insert_result = mysqli_query($con, $user_insert);
-                header("location:../views/login.php");
+                return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Password Does not Match</div>&nbsp</center>"; 
             }
-        }
+            else{
+                $add_user = "INSERT INTO user_tbl(username,email,pass1,roll,user_status,join_date)VALUES('$username','$email','$password','user','1',NOW())";
+                $add_user_result = mysqli_query($con, $add_user);
+                header('location:../views/login.php');
+            }        
+        }  
     }
 
+    //function for register an user
 
+    function login_user($login_usern, $login_pwd){
+
+    }
 
 
     // function for upload videos
