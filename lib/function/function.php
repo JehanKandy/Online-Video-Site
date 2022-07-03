@@ -41,6 +41,9 @@
     //function for register an user
 
     function login_user($login_usern, $login_pwd){
+        $con = Connection();
+
+        //get values form database according to login username and password
 
     }
 
