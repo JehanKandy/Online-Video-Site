@@ -44,7 +44,7 @@ My one of University Projects<br>
   - - lib/views
   - - - lib/views/login.php
   - - - lib/views/reg.php
-  - - - lib/layouts/nav_reg.php  
+
   
 
     <b>2.Updates</b>
