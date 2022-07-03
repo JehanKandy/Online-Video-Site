@@ -192,12 +192,12 @@
     function uploded_videos_loged(){
         $con = Connection();
         
-        $all_videos = "SELECT * FROM videos LIMIT 30";
-        $all_videos_result = mysqli_query($con, $all_videos);
-        $all_video_nor = mysqli_num_rows($all_videos_result);
+        $all_videos_loged = "SELECT * FROM videos LIMIT 30";
+        $all_videos_loged_result = mysqli_query($con, $all_videos_loged);
+        $all_video_loged_nor = mysqli_num_rows($all_videos_loged_result);
         
-        if($all_video_nor > 0){
-            while($video_row = mysqli_fetch_assoc($all_videos_result)){
+        if($all_video_loged_nor > 0){
+            while($video_row_loged = mysqli_fetch_assoc($all_videos_loged_result)){
 
                     /*  ********* for find database table column of video 
                         and also we can use it for images, files for view to the
@@ -210,7 +210,7 @@
                             
                                 <div class='col-auto'>
                                     <div class='card-body'>
-                                        <video src='upload/".$video_row['video_url']."' controls></video>
+                                        <video src='../../upload/".$video_row_loged['video_url']."'controls></video>
                                     </div>
                                 </div>
                             
