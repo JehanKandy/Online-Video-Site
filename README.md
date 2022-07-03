@@ -4,6 +4,10 @@ Online Video Site
 
 My one of University Projects<br>
 
+
+ - css
+ - - responsive for following screens
+
 ### DEVELPMENT HISTORY
 <hr>
 <br>
