@@ -294,4 +294,25 @@ for standard iPad screen size
         transition: all 0.5s;
         margin-top: 15px;
     }
+    .login {
+        padding-top: 100px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 30px;
+    }
+    .login-content {
+        width: 320px;
+        height: 100%;
+        border: 1px solid rgb(182, 182, 182);
+        border-radius: 5px;
+        font-size: 20px;
+    }
+    .login-content-body {
+        padding-top: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 70px;
+        font-family: 'Roboto Flex', sans-serif;
+        font-size: 20px;
+    }
 }
