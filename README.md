@@ -4,22 +4,14 @@ Online Video Site
 
 My one of University Projects<br>
 # Information
-
-
-
-
  - css
  - - responsive for following screens
 
-### DEVELPMENT HISTORY
-<hr>
-<br>
-<b>03 July 2022 :</b><br>
-
-
-
 
 # Development History
+
+<br>
+<b>03 July 2022 :</b><br>
 
 <br>
 <b>03 July 2022 :</b><br>
