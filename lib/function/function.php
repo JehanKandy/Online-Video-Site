@@ -12,8 +12,24 @@
 
     //function for register an user
     
-    function reg_user(){
-        
+    function reg_user($username, $email, $password, $cpassword){
+        $con = Connection();
+        // check are there any user according to added username and email
+
+        $check_user = "SELECT * FROM user_tbk WHERE username = '$username' && email = '$email'";
+        $check_user_result = mysqli_query($con, $check_user);
+        $check_user_nor = mysqli_num_rows($check_user_result);
+
+
+        //now check are there any recodes 
+        if($check_user_nor > 0){
+            return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>User Already Exists..!</div>&nbsp</center>"; 
+        }else{
+            //check password and confram password is not equal
+            if($password != $cpassword){
+                return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Passwords are not match..!</div>&nbsp</center>"; 
+            }
+        }
     }
 
 
