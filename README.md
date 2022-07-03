@@ -9,8 +9,8 @@ My one of University Projects<br>
 
 
 
-# Development Histoty
-<hr>
+# Development History
+
 <br>
 <b>03 July 2022 :</b><br>
 
