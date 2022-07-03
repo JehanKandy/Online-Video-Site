@@ -55,10 +55,10 @@ video {
 }
 
 .reg {
-    padding-top: 40px;
+    padding-top: 60px;
     padding-left: 500px;
     padding-right: 500px;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
 }
 
 .reg-content {
@@ -88,6 +88,8 @@ video {
 }
 
 .reg-content-body .login-input {
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 100%;
     height: 50px;
     border: 1px solid rgb(182, 182, 182);
@@ -104,6 +106,7 @@ video {
     border-radius: 5px;
     color: white;
     transition: all 0.5s;
+    margin-top: 15px;
 }
 
 .reg-content-body .clr-btn {
@@ -133,6 +136,12 @@ video {
     video {
         width: 350px;
         height: 240px;
+    }
+    .reg {
+        padding-top: 30px;
+        padding-left: 400px;
+        padding-right: 400px;
+        padding-bottom: 30px;
     }
 }
 
