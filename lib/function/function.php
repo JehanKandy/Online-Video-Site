@@ -54,6 +54,23 @@
             //check the password is equal
             if($login_pwd == $check_login_user_row['pass1']){
                 //check user rolls
+
+                if($check_login_user_row['roll'] == 'user'){
+                    //set a cookie for login as user with 1 hour
+                    setcookie('login',$check_login_user_row['email'],time()+60*60,'/');
+
+                    //create a session for login as user 
+                    $_SESSION['loginSession'] = $check_login_user_row['email'];
+                    header("location:../routes/user.php");
+                }
+                elseif($check_login_user_row['roll'] == 'admin'){
+                    //set a cookie for login as user with 1 hour
+                    setcookie('login',$check_login_user_row['email'],time()+60*60,'/');
+
+                    //create a session for login as user 
+                    $_SESSION['loginSession'] = $check_login_user_row['email'];
+                    header("location:../routes/admin.php");
+                }
             }
             else{
                 return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Password is Doesn't Match...!</div>&nbsp</center>"; 
