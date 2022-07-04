@@ -330,6 +330,12 @@ for standard iPad screen size
         padding-right: 140px;
         padding-bottom: 30px;
     }
+    .video-upload {
+        padding-top: 60px;
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-bottom: 60px;
+    }
 }
 
 
