@@ -109,7 +109,7 @@
 
     // function for upload videos
 
-    function video_upoload($username, $video){
+    function video_upoload($username, $video_title, $video_des){
         $con = Connection();
 
         
