@@ -233,6 +233,12 @@ video {
     font-size: 20px;
 }
 
+.video-upload-content-body .video-text_area {
+    width: 700px;
+    height: 100px;
+    border: 1px solid #d4d4d4;
+}
+
 
 /* for standard laptop screen size 
         width : 1366px
