@@ -9,3 +9,15 @@
     include_once("../../layouts/nav_loged_video.php");
 
 ?>
+
+<div class="video-upload">
+    <div class="video-upload-content">
+        <div class="video-upload-content-title">
+            <i class="fas fa-upload"></i>&nbsp;&nbsp;Upload a Video
+            <hr>
+        </div>
+        <div class="video-upload-content-body">
+            
+        </div>
+    </div>
+</div>
