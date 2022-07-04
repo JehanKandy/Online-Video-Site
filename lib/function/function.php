@@ -84,9 +84,23 @@
     }
 
     //create function for get the loged user's username
-    
+
 
     // function for upload videos
+
+    function check_user_id(){
+        $con = Connection();
+        //get the loginSession email and convert it to string using strval()
+
+        $email = strval($_SESSION['loginSession']);
+        // get all data according to loginSession email from database
+
+        $get_user_data = "SELECT * FROM user_tbl WHERE email = '$email'";
+        $get_user_data_result = mysqli_query($con, $get_user_data);
+
+        
+
+    }
 
     function video_upoload($username, $video){
         $con = Connection();
