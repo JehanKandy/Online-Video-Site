@@ -109,7 +109,7 @@
 
     // function for upload videos
 
-    function video_upoload($video_title, $video_des){
+    function video_upoload($video_title, $video_des, $video){
         $con = Connection();
 
         //get email form loginSession
@@ -167,7 +167,7 @@
                 $new_video = uniqid("video-", true).'.'.$video_exe_lc;
 
                 //now make folder for uploaded videos
-                $video_file_path = 'upload/'.$new_video;
+                $video_file_path = '../../../upload/'.$new_video;
 
                 // now move the video to above folder
                 move_uploaded_file($tmp_name, $video_file_path);
@@ -178,7 +178,7 @@
                 $insert_video_result = mysqli_query($con, $insert_video);
 
                 //header to  view.php file for view uploaded videos
-                header("location:video_upload.php");
+                header("location:../index_loged.php");
             }
 
             else{
@@ -214,7 +214,7 @@
                             
                                 <div class='col-auto'>
                                     <div class='card-body'>
-                                        <video src='upload/".$video_row['video_url']."' ></video>
+                                        <video src='../../upload/".$video_row['video_url']."' ></video>
                                     </div>
                                 </div>
                             
@@ -245,7 +245,7 @@
                             
                                 <div class='col-auto'>
                                     <div class='card-body'>
-                                        <video src='../../upload/".$video_row_loged['video_url']."'controls></video>
+                                        <video src='upload/".$video_row_loged['video_url']."'controls></video>
                                     </div>
                                 </div>
                             
