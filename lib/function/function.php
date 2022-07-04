@@ -9,7 +9,8 @@
     /*
     Development history about fucntion.php file
     
-    ---- 03 July 2022 - reg_user(), user_login(), video_upoload(), uploded_videos(),uploded_videos_loged()    
+    ---- 03 July 2022 - reg_user(), user_login(), video_upoload(), uploded_videos(),uploded_videos_loged()        
+    ---- 04 July 2022 - check_user_id(),
     
     */
 
@@ -61,7 +62,7 @@
 
                     //create a session for login as user 
                     $_SESSION['loginSession'] = $check_login_user_row['email'];
-                    header("location:../routes/user.php");
+                    header("location:../routes/index_loged.php");
                 }
                 elseif($check_login_user_row['roll'] == 'admin'){
                     //set a cookie for login as user with 1 hour
