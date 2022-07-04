@@ -10,8 +10,7 @@
     Development history about fucntion.php file
     
     ---- 03 July 2022 - reg_user(), user_login(), video_upoload(), uploded_videos(),uploded_videos_loged()        
-    ---- 04 July 2022 - check_user_id(), video_subtitle()
-    
+    ---- 04 July 2022 - check_user_id() and update --> reg_user(), user_login(), video_upoload(), uploded_videos(),uploded_videos_loged()
     */
 
     //function for register an user
@@ -190,15 +189,8 @@
         }
 
     }
-    //create fucntion for video subtitle
 
-    function video_subtitle(){
-        $con = Connection();
 
-        $video_title = "SELECT * FROM video";
-        $video_title_result = mysqli_query($con, $video_title);
-        $video_title_row = mysqli_fetch_assoc($video_title_result);
-    }
 
     // create a function for view uploaded video
     function uploded_videos(){
@@ -223,6 +215,7 @@
                                 <div class='col-auto'>
                                     <div class='card-body'>
                                         <video src='upload/".$video_row['video_url']."' ></video>
+
                                     </div>
                                 </div>
                             
@@ -254,6 +247,7 @@
                                 <div class='col-auto'>
                                     <div class='card-body'>
                                         <video src='../../upload/".$video_row_loged['video_url']."'controls></video>
+
                                     </div>
                                 </div>
                             
