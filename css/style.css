@@ -258,6 +258,27 @@ video {
     border-radius: 5px;
 }
 
+.title-video {
+    background-color: rgb(228, 228, 228);
+    height: 45px;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+.title-video .uploder {
+    color: red;
+}
+
+.title-video .title {
+    padding-left: 15px;
+    color: green;
+}
+
+.title-video .desc {
+    padding-left: 15px;
+    color: green;
+}
+
 
 /* for standard laptop screen size 
         width : 1366px
