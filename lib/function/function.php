@@ -86,7 +86,7 @@
     //create function for get the loged user's username
 
 
-    // function for upload videos
+    
 
     function check_user_id(){
         $con = Connection();
@@ -98,9 +98,16 @@
         $get_user_data = "SELECT * FROM user_tbl WHERE email = '$email'";
         $get_user_data_result = mysqli_query($con, $get_user_data);
 
-        
+        //now get the username from database
+
+        $get_user_data_row = mysqli_fetch_assoc($get_user_data_result);
+
+        echo($get_user_data_row['username']);
 
     }
+    
+
+    // function for upload videos
 
     function video_upoload($username, $video){
         $con = Connection();
