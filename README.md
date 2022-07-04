@@ -86,6 +86,7 @@ My one of University Projects<br>
    - lib/layouts/nav_loged.php
    - lib/layouts/footer.php
    - lib/layouts/nav_loged_video.php
+   - lib/routes/video_upload.php
    
   02. develop
    - lib
