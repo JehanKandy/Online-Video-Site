@@ -90,7 +90,9 @@ My one of University Projects<br>
    - - lib/layouts
    - - - lib/layouts/nav_loged.php
    - - - lib/layouts/nav_loged_video.php
+   - - - lib/layouts/footer.php
    - - lib/routes
    - - - lib/routes/user
    - - - - lib/routes/video_upload.php
+   
    
