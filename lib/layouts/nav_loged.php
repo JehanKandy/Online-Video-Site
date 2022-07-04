@@ -11,7 +11,7 @@
 <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="#">&nbsp;&nbsp;ABC Videos</a>
     <span class="navbar-text">
-        <a href="#"><?php check_user_id(); ?></a> &nbsp;&nbsp;&nbsp;   
+        <a href="#"><i class="fas fa-user-alt">&nbsp;&nbsp;</i><?php check_user_id(); ?></a> &nbsp;&nbsp;&nbsp;   
         <a href="../views/logout.php"><button class="logout-btn-nav">Logout</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </span>
 </nav>
