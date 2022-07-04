@@ -223,6 +223,16 @@ video {
     font-size: 20px;
 }
 
+.video-upload-content-body .video_input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #9f01ea;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
 
 /* for standard laptop screen size 
         width : 1366px
