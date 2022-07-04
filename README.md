@@ -82,6 +82,8 @@ My one of University Projects<br>
    - lib/function/function.php
    - css/style.css
    - lib/routes/index_loged.php
+   - lib/layouts/nav_loged.php
+
    
   02. develop
    - lib
