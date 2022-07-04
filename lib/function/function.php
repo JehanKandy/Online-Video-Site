@@ -248,7 +248,9 @@
                                     <div class='card-body'>
                                         <video src='../../upload/".$video_row_loged['video_url']."'controls></video>
                                         <div class='title-video'>
-                                            video
+                                            <span class='uploder'>By : ".$video_row_loged['username']."</span>
+                                            
+
                                         </div>
                                     </div>
                                 </div>
