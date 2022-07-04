@@ -1,3 +1,4 @@
+
 <?php 
     include("config.php");
 
@@ -189,7 +190,15 @@
         }
 
     }
+    //create fucntion for video subtitle
 
+    function video_subtitle(){
+        $con = Connection();
+
+        $video_title = "SELECT * FROM video";
+        $video_title_result = mysqli_query($con, $video_title);
+        $video_title_row = mysqli_fetch_assoc($video_title_result);
+    }
 
     // create a function for view uploaded video
     function uploded_videos(){
@@ -253,5 +262,6 @@
             }
         }
     }
+
 
 ?>
