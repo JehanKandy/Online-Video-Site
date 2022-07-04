@@ -192,9 +192,35 @@ video {
 
 .video-upload {
     padding-top: 60px;
-    padding-left: 500px;
-    padding-right: 500px;
+    padding-left: 400px;
+    padding-right: 400px;
     padding-bottom: 60px;
+}
+
+.video-upload-content {
+    width: 800px;
+    height: 100%;
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.video-upload-content-title {
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 25px;
+}
+
+.video-upload-content-body {
+    padding-top: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 70px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 20px;
 }
 
 
