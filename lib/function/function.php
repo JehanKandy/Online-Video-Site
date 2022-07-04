@@ -10,7 +10,7 @@
     Development history about fucntion.php file
     
     ---- 03 July 2022 - reg_user(), user_login(), video_upoload(), uploded_videos(),uploded_videos_loged()        
-    ---- 04 July 2022 - check_user_id(),
+    ---- 04 July 2022 - check_user_id(), video_subtitle()
     
     */
 
@@ -214,7 +214,7 @@
                             
                                 <div class='col-auto'>
                                     <div class='card-body'>
-                                        <video src='../../upload/".$video_row['video_url']."' ></video>
+                                        <video src='upload/".$video_row['video_url']."' ></video>
                                     </div>
                                 </div>
                             
@@ -245,7 +245,7 @@
                             
                                 <div class='col-auto'>
                                     <div class='card-body'>
-                                        <video src='upload/".$video_row_loged['video_url']."'controls></video>
+                                        <video src='../../upload/".$video_row_loged['video_url']."'controls></video>
                                     </div>
                                 </div>
                             
