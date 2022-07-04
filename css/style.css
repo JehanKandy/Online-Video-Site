@@ -336,12 +336,26 @@ for standard iPad screen size
         padding-right: 80px;
         padding-bottom: 60px;
     }
+    .video-upload-content {
+        width: 600px;
+        height: 100%;
+        border: 1px solid rgb(182, 182, 182);
+        border-radius: 5px;
+        font-size: 20px;
+    }
+    .video-upload-content-body .video-text_area {
+        width: 500px;
+        height: 100px;
+        border: 1px solid #d4d4d4;
+        resize: none;
+        border-radius: 5px;
+    }
 }
 
 
 /*Samsung Galaxy A51/71 
 
-
+/ under development
  for standard Samsung Galaxy A51/71 screen size 
         width : 412px
         height : 914px */
