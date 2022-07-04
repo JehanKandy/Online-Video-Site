@@ -34,6 +34,21 @@
     padding: 60px;
 }
 
+.logout-btn-nav {
+    width: 100px;
+    height: 45px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(right, #ce4444, #ff8e8e);
+    transition: 0.5s;
+}
+
+.logout-btn-nav:hover {
+    background: -webkit-linear-gradient(right, #ff8e8e, #ce4444);
+    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.678), 0 3px 10px 0 rgba(255, 255, 255, 0.596);
+}
+
 .login-btn-nav {
     width: 100px;
     height: 45px;
