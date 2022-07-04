@@ -190,6 +190,13 @@ video {
     margin-top: 15px;
 }
 
+.video-upload {
+    padding-top: 60px;
+    padding-left: 500px;
+    padding-right: 500px;
+    padding-bottom: 60px;
+}
+
 
 /* for standard laptop screen size 
         width : 1366px
