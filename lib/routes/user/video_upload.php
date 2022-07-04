@@ -17,7 +17,10 @@
             <hr>
         </div>
         <div class="video-upload-content-body">
-            
+            <form action="<?php echo($_SERVER['PHP_SELF']); ?>" method="POST">
+                <span class="label">Video Title : </span>
+                <input type="text" name="video_title" id="video_title" placeholder="Video Title" class="video_input">
+            </form>
         </div>
     </div>
 </div>
