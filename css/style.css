@@ -260,7 +260,7 @@ video {
 
 .title-video {
     background-color: rgb(228, 228, 228);
-    height: 45px;
+    height: 100px;
     padding-top: 10px;
     padding-left: 15px;
 }
@@ -270,12 +270,10 @@ video {
 }
 
 .title-video .title {
-    padding-left: 15px;
     color: green;
 }
 
 .title-video .desc {
-    padding-left: 15px;
     color: green;
 }
 
