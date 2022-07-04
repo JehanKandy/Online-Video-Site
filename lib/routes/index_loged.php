@@ -8,13 +8,12 @@
 
 <link rel="stylesheet" href="../../css/style.css">
 <?php include_once("../layouts/header.php"); ?>
+<?php include_once("../layouts/nav_loged.php"); ?>
 
-
-<?php include_once("../function/function.php"); ?>
 <div class="home">
     <div class="home-content">
         <div class="row">
-            <?php uploded_videos(); ?>
+            <?php uploded_videos_loged(); ?>
         </div>
     </div>
 </div>
