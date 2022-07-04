@@ -109,9 +109,20 @@
 
     // function for upload videos
 
-    function video_upoload($username, $video_title, $video_des){
+    function video_upoload($video_title, $video_des){
         $con = Connection();
 
+        //get email form loginSession
+
+        $email = strval($_SESSION['loginSession']);
+
+        //get all data from database using above email
+
+        $get_data = "SELECT * FROM user_tbl WHERE email = '$email'";
+        $get_data_result = mysqli_query($con, $get_data);
+        $get_data_row = mysqli_fetch_assoc($get_data_result);
+
+        $username = $get_data_row['username'];
         
        /*
             ********* for find name, type, tmp_name, errors, size of video 
@@ -163,7 +174,7 @@
 
 
                 //now upload files to the database
-                $insert_video = "INSERT INTO videos(video_url,username,add_date)VALUES('$new_video','$username',NOW())";
+                $insert_video = "INSERT INTO videos()";
                 $insert_video_result = mysqli_query($con, $insert_video);
 
                 //header to  view.php file for view uploaded videos
