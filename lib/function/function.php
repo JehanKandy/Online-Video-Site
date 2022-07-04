@@ -259,7 +259,10 @@ video {
 }
 
 .title-video {
-    background-color: rgb(194, 194, 194);
+    background-color: rgb(228, 228, 228);
+    height: 45px;
+    padding-top: 10px;
+    padding-left: 15px;
 }
 
 
