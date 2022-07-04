@@ -286,6 +286,12 @@ video {
         padding-right: 400px;
         padding-bottom: 30px;
     }
+    .video-upload {
+        padding-top: 60px;
+        padding-left: 250px;
+        padding-right: 250px;
+        padding-bottom: 60px;
+    }
 }
 
 
