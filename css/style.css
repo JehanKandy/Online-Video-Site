@@ -263,6 +263,8 @@ video {
     height: 100px;
     padding-top: 10px;
     padding-left: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 .title-video .uploder {
