@@ -250,8 +250,8 @@
                                         <div class='title-video'>
                                             <span class='uploder'>By : ".$video_row_loged['username']."</span>
                                             <span class='title'>By : ".$video_row_loged['video_title']."</span>
-
-                                        </div>
+                                            <span class='desc'>By : ".$video_row_loged['video_description']."</span>                          
+                                         </div>
                                     </div>
                                 </div>
                             
