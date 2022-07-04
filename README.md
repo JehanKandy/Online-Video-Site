@@ -83,7 +83,7 @@ My one of University Projects<br>
    - css/style.css
    - lib/routes/index_loged.php
    - lib/layouts/nav_loged.php
-
+   - lib/layouts/footer.php
    
   02. develop
    - lib
