@@ -1,3 +1,4 @@
+
 <?php 
     include("config.php");
 
@@ -173,11 +174,11 @@
 
 
                 //now upload files to the database
-                $insert_video = "INSERT INTO videos()";
+                $insert_video = "INSERT INTO videos(video_title,video_description,video_url,username,add_date)VALUES('$video_title','$video_des','$new_video','$username',NOW())";
                 $insert_video_result = mysqli_query($con, $insert_video);
 
                 //header to  view.php file for view uploaded videos
-                header("location:view.php");
+                header("location:video_upload.php");
             }
 
             else{
