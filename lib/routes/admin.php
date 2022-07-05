@@ -51,7 +51,7 @@
                   <h4><i class='fas fa-user-tie' style='font-size:40px'></i>&nbsp;Pro - Users&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
                   <hr style="background-color:white">
                   <h5>
-                    <b><?php  ?></b>
+                    <b><?php count_pro_users(); ?></b>
                   </h5>
                 </div>
               </div>
