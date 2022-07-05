@@ -339,5 +339,12 @@
     function similer_videos(){
         $con = Connection();
 
+        //get similer videos from database
+
+        $video_similer = "SELECT * FROM videos LIMIT 12";
+        $video_similer_result = mysqli_query($con, $video_similer);
+
+        // get 12 similer videos from database
+        
     }
 ?>
