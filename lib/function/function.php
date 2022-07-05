@@ -413,6 +413,20 @@ for standard iPad screen size
         resize: none;
         border-radius: 5px;
     }
+    .video-full-view {
+        padding-top: 15px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 15px;
+    }
+    .video-full-view .content video {
+        height: 480px;
+        width: 670px;
+    }
+    .video-full-view .content .similer_videos video {
+        width: 250px;
+        height: 150px;
+    }
 }
 
 
