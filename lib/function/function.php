@@ -276,9 +276,9 @@
         $_SESSION['Video_id'] = $video_id;
     }
 
-    //function for watch videos full scree
+    //function for Video title and description
 
-    function video_full_screen(){
+    function video_title_desc(){
         $con = Connection();
 
         //get video id from get_video_id funtion
@@ -296,10 +296,18 @@
 
         $get_video_data_row = mysqli_fetch_assoc($get_video_data_result);
 
-        $video_desc = $get_video_data_row['	video_description'];
+        $video_desc = $get_video_data_row['video_description'];
 
         // echo video description
-        echo $video_desc;
+        echo "
+        <div class='video-title'>
+            ".$get_video_data_row['video_title']."
+        </div>
+        <div class='video-desc'>
+            ".$get_video_data_row['video_description']."
+        </div>
+
+        ";
     }
 
 ?>
