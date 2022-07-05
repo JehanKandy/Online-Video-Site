@@ -251,13 +251,14 @@
                 echo "
                             
                                 <div class='col-auto'>
-                                    <div class='card-body'>
-                                        <video src='../../upload/".$video_row_loged['video_url']."'controls></video>
-                                        <div class='title-video'>
-
-                                            <span class='title'>Video Title : ".$video_row_loged['video_title']."</span>
+                                    <a href='#'>
+                                        <div class='card-body'>
+                                            <video src='../../upload/".$video_row_loged['video_url']."'controls></video>
+                                            <div class='title-video'>
+                                                <span class='title'>".$video_row_loged['video_title']."</span>
+                                            </div>                                    
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                             
                         ";
