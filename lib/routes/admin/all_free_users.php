@@ -93,7 +93,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr><td>1</td><td>Jehan</td><td>jehan@123</td><td>user</td><td>free</td><td>date</td><td>Active</td><td>action</td></tr>
+           <?php all_free_users(); ?>
 
             </tbody>
             </table>
