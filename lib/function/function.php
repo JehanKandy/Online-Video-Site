@@ -380,7 +380,7 @@
         $con = Connection();
 
         //get all data from database according to free users
-        $free_user = "SELECT * FROM user_tbl WHERE roll = 'user'";
+        $free_user = "SELECT * FROM user_tbl WHERE roll = 'free'";
         $free_user_result = mysqli_query($con, $free_user);
 
         //cont free users in database
@@ -392,6 +392,16 @@
     //function for count_pro_users
     function count_pro_users(){
         $con = Connection();
+
+        //get data according to pro users in table
+        $pro_users = "SELECT * FROM user_tbl WHERE roll = 'pro'";
+        $pro_users_result = mysqli_query($con, $pro_users);
+
+        //count pro_users
+        $pro_users_nor = mysqli_num_rows($pro_users_result);
+
+        //print number of free users
+        echo $pro_users_nor;
     }
 
 
