@@ -104,14 +104,7 @@ My one of University Projects<br>
 <br><br>
 <b>05 July 2022 :</b><br>
   01. update<br>
-   - index.php
-   - lib/function/function.php
-   - css/style.css
-   - lib/routes/index_loged.php
-   - lib/layouts/nav_loged.php
-   - lib/layouts/footer.php
-   - lib/layouts/nav_loged_video.php
-   - lib/routes/video_upload.php
+  - lib/function/function.php
    
   02. develop
 
