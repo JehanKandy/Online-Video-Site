@@ -490,7 +490,7 @@
 
         //gat all data from database accorfing to free users
 
-        $all_free_users = "SELECT * FROM user_tbl WHERE roll = free";
+        $all_free_users = "SELECT * FROM user_tbl WHERE roll = 'free'";
         $all_free_users_result = mysqli_query($con, $all_free_users);
         
         //now print all data in table
@@ -506,10 +506,10 @@
                 <td>".$all_free_users_row['join_date']."</td> ";
 
                 if($all_free_users_row['user_status'] == 1){
-                    $free_user .= "<h2 class='badge badge-pill badge-success'>Active</h2>";
+                    $free_user .= "<td><h2 class='badge badge-pill badge-success'>Active</h2></td>";
                 }
                 elseif($all_free_users_row['user_status'] == 0){
-                    $free_user .= "<h2 class='badge badge-pill badge-danger'>Deactive</h2>";
+                    $free_user .= "<td><h2 class='badge badge-pill badge-danger'>Deactive</h2></td>";
                 }
 
             $free_user .="    
@@ -517,6 +517,8 @@
             </tr>
             
                 ";
+
+            echo $free_user;
 
        }
     }
