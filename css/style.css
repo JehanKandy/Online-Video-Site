@@ -279,6 +279,10 @@ video {
     text-decoration: none;
 }
 
+.video-full-view {
+    padding-top: 50px;
+}
+
 
 /* for standard laptop screen size 
         width : 1366px
