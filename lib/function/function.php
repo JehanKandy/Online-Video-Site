@@ -295,7 +295,11 @@
         //get video description from database
 
         $get_video_data_row = mysqli_fetch_assoc($get_video_data_result);
-        
+
+        $video_desc = $get_video_data_row['	video_description'];
+
+        // echo video description
+        echo $video_desc;
     }
 
 ?>
