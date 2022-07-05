@@ -414,6 +414,7 @@
         $channels_result = mysqli_query($con, $channels);
 
         //count all channels
-        
+
+        $channels_nor = mysqli_num_rows($channels_result);
     }
 ?>
