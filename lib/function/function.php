@@ -428,6 +428,9 @@
 
         //get all data from database according to free videos
         $free_videos = "SELECT * FROM videos WHERE video_type = 'free'";
+        $free_videos_result = mysqli_query($con, $free_videos);
+
+        //count free videos
         
     }
 ?>
