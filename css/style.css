@@ -275,6 +275,10 @@ video {
     background-color: dark;
 }
 
+.home-content .row a {
+    text-decoration: none;
+}
+
 
 /* for standard laptop screen size 
         width : 1366px
