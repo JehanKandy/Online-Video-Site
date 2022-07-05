@@ -329,12 +329,7 @@
 
         //now echo the video
         echo "
-                            
-        <div class='col-auto'>
-            <div class='card-body'>
-                <video src='../../upload/".$get_videos_data_row['video_url']."'controls></video>
-            </div>
-        </div>    
+            <video src='../../upload/".$get_videos_data_row['video_url']."'controls></video>
         ";
 
     }
