@@ -495,6 +495,13 @@
         
         //now print all data in table
 
+        while($all_free_users_row = mysqli_fetch_assoc($all_free_users_result)){
+            echo "
+            
+            
+                ";
+
+       }
     }
 
 ?>
