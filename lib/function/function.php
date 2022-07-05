@@ -11,7 +11,7 @@
     
     ---- 03 July 2022 - reg_user(), user_login(), video_upoload(), uploded_videos(),uploded_videos_loged()        
     ---- 04 July 2022 - check_user_id() and update --> reg_user(), user_login(), video_upoload(), uploded_videos(),uploded_videos_loged()
-    ---- 05 July 2022 - get_video_id(), video_full_screen(),
+    ---- 05 July 2022 - get_video_id(), video_title_desc(), video_full_screen(),
     */
 
     //function for register an user
@@ -306,8 +306,9 @@
         <div class='video-desc'>
             ".$get_video_data_row['video_description']."
         </div>
-
         ";
     }
 
+
+    //
 ?>
