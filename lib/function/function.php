@@ -1,362 +1,490 @@
-<?php 
-    include("config.php");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Kdam+Thmor+Pro&family=Roboto+Flex:opsz@8..144&family=Rubik&family=Teko:wght@300&display=swap');
 
-    use FTP\Connection;
-    session_start();
+/*
 
-    
-    /*
-    Development history about fucntion.php file
-    
-    ---- 03 July 2022 - reg_user(), user_login(), video_upoload(), uploded_videos(),uploded_videos_loged()        
-    ---- 04 July 2022 - check_user_id() and update --> reg_user(), user_login(), video_upoload(), uploded_videos(),uploded_videos_loged()
-    ---- 05 July 2022 - get_video_id(), video_title_desc(), video_full_screen(), similer_videos()
-    */
+    use font families
 
-    //function for register an user
-    
-    function reg_user($username, $email, $password, $cpassword){
-        $con = Connection();
-        // check are there any user according to added username and email
-
-        $check_sql = "SELECT * FROM user_tbl WHERE username = '$username' ||  email = '$email'";
-        $check_reuslt = mysqli_query($con, $check_sql);
-        $check_nor = mysqli_num_rows($check_reuslt);
+        font-family: 'Bebas Neue', cursive;
+        font-family: 'Fjalla One', sans-serif;
+        font-family: 'Kdam Thmor Pro', sans-serif;
+        font-family: 'Roboto Flex', sans-serif;
+        font-family: 'Rubik', sans-serif;
+        font-family: 'Teko', sans-serif;
 
 
-        if($check_nor > 0){
-            return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>User Already Exists..!</div>&nbsp</center>"; 
-        }else{
-            if($password != $cpassword){
-                return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Password Does not Match</div>&nbsp</center>"; 
-            }
-            else{
-                $add_user = "INSERT INTO user_tbl(username,email,pass1,roll,user_status,join_date)VALUES('$username','$email','$password','user','1',NOW())";
-                $add_user_result = mysqli_query($con, $add_user);
-                header('location:../views/login.php');
-            }        
-        }  
+
+
+
+        This style sheet is responsive for following Devices
+
+        1. standard laptop screen 
+        2. standard iPad screen
+        3. standard iPad Air screen
+        4. standard iPad Mini screen
+
+*/
+
+.home {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(238, 238, 238, 0.281);
+}
+
+.home-content {
+    padding: 60px;
+}
+
+.logout-btn-nav {
+    width: 100px;
+    height: 45px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(right, #ce4444, #ff8e8e);
+    transition: 0.5s;
+}
+
+.logout-btn-nav:hover {
+    background: -webkit-linear-gradient(right, #ff8e8e, #ce4444);
+    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.678), 0 3px 10px 0 rgba(255, 255, 255, 0.596);
+}
+
+.login-btn-nav {
+    width: 100px;
+    height: 45px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea);
+    transition: 0.5s;
+}
+
+.login-btn-nav:hover {
+    background: -webkit-linear-gradient(right, #9f01ea, #56d8e4);
+    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.678), 0 3px 10px 0 rgba(255, 255, 255, 0.596);
+}
+
+video {
+    width: 320px;
+    height: 240px;
+}
+
+.reg {
+    padding-top: 60px;
+    padding-left: 500px;
+    padding-right: 500px;
+    padding-bottom: 60px;
+}
+
+.reg-content {
+    width: 500px;
+    height: 100%;
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.reg-content-title {
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 25px;
+}
+
+.reg-content-body {
+    padding-top: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 70px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 20px;
+}
+
+.reg-content-body .login-input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.reg-content-body .login-btn,
+.clr-btn {
+    width: 48%;
+    height: 50px;
+    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.5s;
+    margin-top: 15px;
+}
+
+.reg-content-body .clr-btn {
+    background: -webkit-linear-gradient(right, #cacaca, #888888);
+}
+
+.reg-content-body .login-btn:hover {
+    box-shadow: 0 2px 4px 0 rgba(41, 41, 41, 0.678), 0 3px 10px 0 rgba(71, 71, 71, 0.596);
+}
+
+.reg-content-body .clr-btn:hover {
+    box-shadow: 0 2px 4px 0 rgba(41, 41, 41, 0.678), 0 3px 10px 0 rgba(71, 71, 71, 0.596);
+}
+
+.login {
+    padding-top: 60px;
+    padding-left: 500px;
+    padding-right: 500px;
+    padding-bottom: 60px;
+}
+
+.login-content {
+    width: 500px;
+    height: 100%;
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.login-content-title {
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 25px;
+}
+
+.login-content-body {
+    padding-top: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 70px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 20px;
+}
+
+.login-content-body .login-input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.login-content-body .login-btn {
+    width: 100%;
+    height: 50px;
+    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.5s;
+    margin-top: 15px;
+}
+
+.video-upload {
+    padding-top: 60px;
+    padding-left: 400px;
+    padding-right: 400px;
+    padding-bottom: 60px;
+}
+
+.video-upload-content {
+    width: 800px;
+    height: 100%;
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.video-upload-content-title {
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 25px;
+}
+
+.video-upload-content-body .video-btn {
+    width: 100%;
+    height: 50px;
+    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.5s;
+    margin-top: 15px;
+    margin-top: 20px;
+}
+
+.video-upload-content-body .video-btn:hover {
+    background: -webkit-linear-gradient(right, #9f01ea, #56d8e4);
+    box-shadow: 0 2px 4px 0 rgba(148, 148, 148, 0.678), 0 3px 10px 0 rgba(71, 71, 71, 0.596);
+}
+
+.video-upload-content-body {
+    padding-top: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 70px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 20px;
+}
+
+.video-upload-content-body .video_input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.video-upload-content-body .video-text_area {
+    width: 700px;
+    height: 100px;
+    border: 1px solid #d4d4d4;
+    resize: none;
+    border-radius: 5px;
+}
+
+.title-video {
+    background-color: rgb(228, 228, 228);
+    height: 60px;
+    padding-top: 10px;
+    padding-left: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.title-video .title {
+    color: green;
+}
+
+.footer {
+    background-color: dark;
+}
+
+.home-content .row a {
+    text-decoration: none;
+}
+
+.video-full-view {
+    padding-top: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 50px;
+}
+
+.video-full-view .content .video-title {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 50px;
+}
+
+.video-full-view .content .video-desc {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 25px;
+    padding-bottom: 50px;
+}
+
+.video-full-view .content video {
+    height: 720px;
+    width: 1280px;
+}
+
+.video-full-view .content .similer_videos video {
+    width: 350px;
+    height: 240px;
+}
+
+
+/* for standard laptop screen size 
+        width : 1366px
+        height : 768px
+
+        in here I use media queries for laptop screen size
+*/
+
+@media only screen and (max-width: 1400px) {
+    .home-content {
+        padding: 50px;
     }
-
-    //function for register an user
-
-    function login_user($login_usern, $login_pwd){
-        $con = Connection();
-        //get values form database according to login username and password
-
-        $check_login_user = "SELECT * FROM user_tbl WHERE username = '$login_usern' && pass1 = '$login_pwd'";
-        $check_login_user_result = mysqli_query($con, $check_login_user);
-        $check_login_user_nor = mysqli_num_rows($check_login_user_result);
-        $check_login_user_row = mysqli_fetch_assoc($check_login_user_result);
-
-        //check are there any recodes 
-        if($check_login_user_nor > 0){
-            //check the password is equal
-            if($login_pwd == $check_login_user_row['pass1']){
-                //check user rolls
-
-                if($check_login_user_row['roll'] == 'user'){
-                    //set a cookie for login as user with 1 hour
-                    setcookie('login',$check_login_user_row['email'],time()+60*60,'/');
-
-                    //create a session for login as user 
-                    $_SESSION['loginSession'] = $check_login_user_row['email'];
-                    header("location:../routes/index_loged.php");
-                }
-                elseif($check_login_user_row['roll'] == 'admin'){
-                    //set a cookie for login as user with 1 hour
-                    setcookie('login',$check_login_user_row['email'],time()+60*60,'/');
-
-                    //create a session for login as user 
-                    $_SESSION['loginSession'] = $check_login_user_row['email'];
-                    header("location:../routes/admin.php");
-                }
-            }
-            else{
-                return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Password is Doesn't Match...!</div>&nbsp</center>"; 
-            }
-        }
-        else{
-            return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>No recodes found..!</div>&nbsp</center>"; 
-        }
-
+    video {
+        width: 350px;
+        height: 240px;
     }
-
-    //create function for get the loged user's username
-
-
-    
-
-    function check_user_id(){
-        $con = Connection();
-        //get the loginSession email and convert it to string using strval()
-
-        $email = strval($_SESSION['loginSession']);
-        // get all data according to loginSession email from database
-
-        $get_user_data = "SELECT * FROM user_tbl WHERE email = '$email'";
-        $get_user_data_result = mysqli_query($con, $get_user_data);
-
-        //now get the username from database
-
-        $get_user_data_row = mysqli_fetch_assoc($get_user_data_result);
-
-        echo($get_user_data_row['username']);
-
+    .reg {
+        padding-top: 30px;
+        padding-left: 400px;
+        padding-right: 400px;
+        padding-bottom: 30px;
     }
-    
-
-    // function for upload videos
-
-    function video_upoload($video_title, $video_des, $video){
-        $con = Connection();
-
-        //get email form loginSession
-
-        $email = strval($_SESSION['loginSession']);
-
-        //get all data from database using above email
-
-        $get_data = "SELECT * FROM user_tbl WHERE email = '$email'";
-        $get_data_result = mysqli_query($con, $get_data);
-        $get_data_row = mysqli_fetch_assoc($get_data_result);
-
-        $username = $get_data_row['username'];
-        
-       /*
-            ********* for find name, type, tmp_name, errors, size of video 
-            and also we can use it for images, files for upload to the
-            database ***********
-
-           echo "<pre>";
-           echo($username);
-           print_r($video);
-
-        */
-
-        //create veriable for video name
-        $video_name = $_FILES['video']['name'];
-        //create veriable for video temp_name
-        $tmp_name = $_FILES['video']['tmp_name'];
-        //error
-        $error = $_FILES['video']['error'];
-    
-        //now check are there any errors in this array
-
-        if($error === 0){
-            //now get the pathinfo of video 
-            $video_mp4 = pathinfo($video_name, PATHINFO_EXTENSION);
-
-            /*  now print it
-                echo $video_mp4;  */
-            //now convert video pathifo to lowercase
-             
-            $video_exe_lc = strtolower($video_mp4);
-
-            //now give the user controlls for video upload
-            // file type controllers(some of video file types are in array)
-
-            $allowed_file_types = array("mp4","webm","avi","flv");
-
-            //now do some error handlings
-
-            if(in_array($video_exe_lc, $allowed_file_types)){
-
-                //now make new name for video with lowercase extention
-                $new_video = uniqid("video-", true).'.'.$video_exe_lc;
-
-                //now make folder for uploaded videos
-                $video_file_path = '../../../upload/'.$new_video;
-
-                // now move the video to above folder
-                move_uploaded_file($tmp_name, $video_file_path);
-
-
-                //now upload files to the database
-                $insert_video = "INSERT INTO videos(video_title,video_description,video_url,username,add_date)VALUES('$video_title','$video_des','$new_video','$username',NOW())";
-                $insert_video_result = mysqli_query($con, $insert_video);
-
-                //header to  view.php file for view uploaded videos
-                header("location:../index_loged.php");
-            }
-
-            else{
-                //print error
-                $error_msg = "Wrong File Type";
-                header("location:test_video_upload.php?error=$error_msg");
-            }
-
-        }
-
+    .login {
+        padding-top: 50px;
+        padding-left: 400px;
+        padding-right: 400px;
+        padding-bottom: 30px;
     }
-
-
-
-    // create a function for view uploaded video
-    function uploded_videos(){
-        $con = Connection();
-        
-        $all_videos = "SELECT * FROM videos LIMIT 30";
-        $all_videos_result = mysqli_query($con, $all_videos);
-        $all_video_nor = mysqli_num_rows($all_videos_result);
-        
-        if($all_video_nor > 0){
-            while($video_row = mysqli_fetch_assoc($all_videos_result)){
-
-                    /*  ********* for find database table column of video 
-                        and also we can use it for images, files for view to the
-                        database ***********    
-
-                    echo "<pre>";
-                    print_r($video_row);  */
-                        
-                echo "
-                            
-                                <div class='col-auto'>
-                                    <div class='card-body'>
-                                        <video src='upload/".$video_row['video_url']."' ></video>
-                                        <div class='title-video'>
-
-                                            <span class='title'>Video Title : ".$video_row['video_title']."</span>
-                    
-                                        </div>
-
-                                    </div>
-                                </div>
-                            
-                        ";
-
-            }
-        }
+    .video-upload {
+        padding-top: 60px;
+        padding-left: 250px;
+        padding-right: 250px;
+        padding-bottom: 60px;
     }
-
-    function uploded_videos_loged(){
-        $con = Connection();
-        
-        $all_videos_loged = "SELECT * FROM videos LIMIT 30";
-        $all_videos_loged_result = mysqli_query($con, $all_videos_loged);
-        $all_video_loged_nor = mysqli_num_rows($all_videos_loged_result);
-        
-        if($all_video_loged_nor > 0){
-            while($video_row_loged = mysqli_fetch_assoc($all_videos_loged_result)){
-
-                    /*  ********* for find database table column of video 
-                        and also we can use it for images, files for view to the
-                        database ***********    
-
-                    echo "<pre>";
-                    print_r($video_row);  */
-                        
-                echo "
-                            
-                                <div class='col-auto'>
-                                    <a href='../routes/video_full_screen.php?id=".$video_row_loged['id']."'>
-                                        <div class='card-body'>
-                                            <video src='../../upload/".$video_row_loged['video_url']."'controls></video>
-                                            <div class='title-video'>
-                                                <span class='title'>".$video_row_loged['video_title']."</span>
-                                            </div>                                    
-                                        </div>
-                                    </a>
-                                </div>
-                            
-                        ";
-
-            }
-        }
+    .video-full-view {
+        padding-top: 20px;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-bottom: 20px;
     }
-
-    //function for watch video id 
-
-    function get_video_id($video_id){
-        $con = Connection();
-        //echo $video_id;     
-        
-        $_SESSION['Video_id'] = $video_id;
+    .video-full-view .content video {
+        height: 720px;
+        width: 1150px;
     }
-
-    //function for Video title and description
-
-    function video_title_desc(){
-        $con = Connection();
-
-        //get video id from get_video_id funtion
-
-        $vid_id = strval($_SESSION['Video_id']);
-
-        //echo $vid_id;
-
-        //now get all data from database according to video id
-
-        $get_video_data = "SELECT * FROM videos WHERE id = '$vid_id'";
-        $get_video_data_result = mysqli_query($con, $get_video_data);
-
-        //get video description from database
-
-        $get_video_data_row = mysqli_fetch_assoc($get_video_data_result);
-
-        $video_desc = $get_video_data_row['video_description'];
-
-        // echo video description
-        echo "
-        <div class='video-title'>
-            ".$get_video_data_row['video_title']."
-        </div>
-        <div class='video-desc'>
-            ".$get_video_data_row['video_description']."
-        </div>
-        ";
+    .video-full-view .content .similer_videos video {
+        width: 315px;
+        height: 210px;
     }
+}
 
 
-    //function for Video full screen
+/*
+    iPad
 
-    function video_full_screen(){
-        $con = Connection();
+for standard iPad screen size 
+        width : 768px
+        height : 1024px
+       
+*/
 
-        //get video id from get_video_id funtion
-        $videos_id = strval($_SESSION['Video_id']);
-
-        //now get all data from database according to video id
-
-        $get_videos_data = "SELECT * FROM videos WHERE id = '$videos_id'";
-        $get_videos_data_result = mysqli_query($con, $get_videos_data);
-
-        //get video description from database
-
-        $get_videos_data_row = mysqli_fetch_assoc($get_videos_data_result);
-
-        //now echo the video
-        echo "
-                <video src='../../upload/".$get_videos_data_row['video_url']."'controls></video>
-
-            ";
-
+@media screen and (min-width: 712px) and (max-width: 1024px) {
+    .home {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(238, 238, 238, 0.281);
     }
-
-    //function of similer videos
-
-    function similer_videos(){
-        $con = Connection();
-
-        //get similer videos from database
-
-        $video_similer = "SELECT * FROM videos LIMIT 12";
-        $video_similer_result = mysqli_query($con, $video_similer);
-
-        // get 12 similer videos from database
-        
-        while($video_similer_row = mysqli_fetch_assoc($video_similer_result)){
-            echo "
-                            
-                <div class='col-auto'>
-                    <div class='card-body'>
-                        <video src='../../upload/".$video_similer_row['video_url']."'controls></video>
-                    </div>
-                </div>
-        
-            ";
-        }
-        
+    .home-content {
+        padding-left: 40px;
+        padding-right: 20px;
     }
-?>
+    video {
+        width: 640px;
+        height: 480px;
+    }
+    .reg {
+        padding-top: 100px;
+        padding-left: 140px;
+        padding-right: 140px;
+        padding-bottom: 30px;
+    }
+    .login {
+        padding-top: 100px;
+        padding-left: 140px;
+        padding-right: 140px;
+        padding-bottom: 30px;
+    }
+    .video-upload {
+        padding-top: 60px;
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-bottom: 60px;
+    }
+    .video-upload-content {
+        width: 600px;
+        height: 100%;
+        border: 1px solid rgb(182, 182, 182);
+        border-radius: 5px;
+        font-size: 20px;
+    }
+    .video-upload-content-body .video-text_area {
+        width: 500px;
+        height: 100px;
+        border: 1px solid #d4d4d4;
+        resize: none;
+        border-radius: 5px;
+    }
+}
+
+
+/*Samsung Galaxy A51/71 
+
+/ under development
+ for standard Samsung Galaxy A51/71 screen size 
+        width : 412px
+        height : 914px */
+
+@media screen and (max-width: 412px) {
+    .home {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(238, 238, 238, 0.281);
+    }
+    .home-content {
+        padding-top: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .reg {
+        padding-top: 100px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 30px;
+    }
+    .reg-content {
+        width: 320px;
+        height: 100%;
+        border: 1px solid rgb(182, 182, 182);
+        border-radius: 5px;
+        font-size: 20px;
+    }
+    .reg-content-body {
+        padding-top: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 70px;
+        font-family: 'Roboto Flex', sans-serif;
+        font-size: 20px;
+    }
+    .reg-content-body .login-btn,
+    .clr-btn {
+        width: 47%;
+        height: 50px;
+        background: -webkit-linear-gradient(right, #56d8e4, #9f01ea);
+        border: none;
+        border-radius: 5px;
+        color: white;
+        transition: all 0.5s;
+        margin-top: 15px;
+    }
+    .login {
+        padding-top: 100px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 30px;
+    }
+    .login-content {
+        width: 320px;
+        height: 100%;
+        border: 1px solid rgb(182, 182, 182);
+        border-radius: 5px;
+        font-size: 20px;
+    }
+    .login-content-body {
+        padding-top: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 70px;
+        font-family: 'Roboto Flex', sans-serif;
+        font-size: 20px;
+    }
+}
