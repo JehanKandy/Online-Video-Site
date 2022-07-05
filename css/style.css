@@ -294,11 +294,17 @@ video {
 .video-full-view .content .video-desc {
     font-family: 'Roboto Flex', sans-serif;
     font-size: 25px;
+    padding-bottom: 50px;
 }
 
 .video-full-view .content video {
-    height: 576px;
-    width: 768px;
+    height: 720px;
+    width: 1280px;
+}
+
+.video-full-view .content .similer_videos video {
+    width: 350px;
+    height: 240px;
 }
 
 
