@@ -28,11 +28,12 @@
 
             video_title_desc(); ?>
 
-        <?php 
-            //now echo video
+            <?php 
+                //now echo video
 
-            video_full_screen();
-        
-        ?>
+                video_full_screen();
+            
+            ?>
+
     </div>
 </div>
