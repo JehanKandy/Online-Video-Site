@@ -31,7 +31,7 @@
     </section>
     <section class="admin-panel">
         <div class="container-fluid">
-          <h1 class="display-4">Welcome to Dashboard</h1>
+          <h1 class="display-4">All Free Users</h1>
           <hr>
 
           <div class="row">
@@ -59,9 +59,9 @@
             </div> 
         </div>
         
-        
-
-
+        <br>
+        <hr>
+        <br>
             <h2>Data in Table with pagination</h2>
             <table class="table table-fluid" id="myTable">
             <thead>
