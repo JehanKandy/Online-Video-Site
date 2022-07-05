@@ -11,7 +11,7 @@
     
     ---- 03 July 2022 - reg_user(), user_login(), video_upoload(), uploded_videos(),uploded_videos_loged()        
     ---- 04 July 2022 - check_user_id() and update --> reg_user(), user_login(), video_upoload(), uploded_videos(),uploded_videos_loged()
-    ---- 05 July 2022 - video_full_screem()
+    ---- 05 July 2022 - video_full_screen()
     */
 
     //function for register an user
@@ -269,10 +269,14 @@
 
     //function for watch videos full scree
 
-    function video_full_screem(){
+    function get_video_id($video_id){
         $con = Connection();
 
+        echo $video_id;      
+    }
 
+    function video_full_screen(){
+        $con = Connection();
     }
 
 
