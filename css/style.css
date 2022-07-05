@@ -296,6 +296,11 @@ video {
     font-size: 25px;
 }
 
+.video-full-view .content video {
+    height: 576px;
+    width: 768px;
+}
+
 
 /* for standard laptop screen size 
         width : 1366px
