@@ -365,7 +365,20 @@
                 </div>
         
             ";
-        }
-        
+        }        
     }
+
+    //function for count users
+
+    function count_users(){
+        $con = Connection();
+
+        //get all data from database according to free users
+        $free_user = "SELECT * FROM user_tbl WHERE roll = 'user'";
+        $free_user_result = mysqli_query($con, $free_user);
+
+        $free_user_nor = mysqli_num_rows($free_user_result);
+        echo ($free_user_nor);
+    }
+
 ?>
