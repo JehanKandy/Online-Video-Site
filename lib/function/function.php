@@ -496,8 +496,16 @@
         //now print all data in table
 
         while($all_free_users_row = mysqli_fetch_assoc($all_free_users_result)){
-            echo "
-            
+            $free_user =  "
+            <tr>
+                <td>".$all_free_users_row['id']."</td>
+                <td>".$all_free_users_row['username']."</td>
+                <td>".$all_free_users_row['email']."</td>
+                <td>user</td>
+                <td>".$all_free_users_row['roll']."</td>
+                <td>".$all_free_users_row['join_date']."</td>
+                <td>action</td>
+            </tr>
             
                 ";
 
