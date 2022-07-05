@@ -15,7 +15,7 @@
     //pass video id to the fucntion file
 
     if(isset($_GET['id'])){
-        $reult = video_full_screem($_GET['id']);
+        $reult = get_video_id($_GET['id']);
         echo $reult;
     }
 
@@ -27,7 +27,7 @@
             Make Cake
         </div>
         <div class="video-desc">
-            <?php video_full_screem(); ?>
+            <?php  video_full_screen(); ?>
         </div>
     </div>
 </div>
