@@ -431,6 +431,8 @@
         $free_videos_result = mysqli_query($con, $free_videos);
 
         //count free videos
-        
+        $free_videos_nor = mysqli_num_rows($free_videos_result);
+
+        echo($free_videos_nor);
     }
 ?>
