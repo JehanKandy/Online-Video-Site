@@ -32,8 +32,15 @@
                 //now echo video
 
                 video_full_screen();
-            
+
+        
             ?>
+
+            <div class="similer_videos">
+                <div class="row">
+                    <?php similer_videos(); ?>
+                </div>
+            </div>
 
     </div>
 </div>
