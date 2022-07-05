@@ -293,7 +293,9 @@
         $get_video_data_result = mysqli_query($con, $get_video_data);
 
         //get video description from database
-    }
 
+        $get_video_data_row = mysqli_fetch_assoc($get_video_data_result);
+        
+    }
 
 ?>
