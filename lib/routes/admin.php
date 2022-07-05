@@ -39,7 +39,7 @@
                   <h4><i class='fas fa-users' style='font-size:40px'></i>&nbsp;Users&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
                   <hr style="background-color:white">
                   <h5>
-                    <b><?php //count_users(); ?></b>
+                    <b><?php count_users(); ?></b>
                   </h5>
                 </div>
               </div>
