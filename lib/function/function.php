@@ -314,5 +314,20 @@
 
     function video_full_screen(){
         $con = Connection();
+
+        //get video id from get_video_id funtion
+        $videos_id = strval($_SESSION['Video_id']);
+
+        //now get all data from database according to video id
+
+        $get_videos_data = "SELECT * FROM videos WHERE id = '$videos_id'";
+        $get_videos_data_result = mysqli_query($con, $get_videos_data);
+
+        //get video description from database
+
+        $get_videos_data_row = mysqli_fetch_assoc($get_videos_data_result);
+
+        
+
     }
 ?>
