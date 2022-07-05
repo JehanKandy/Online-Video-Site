@@ -11,7 +11,7 @@
     ---- 03 July 2022 - reg_user(), user_login(), video_upoload(), uploded_videos(),uploded_videos_loged()        
     ---- 04 July 2022 - check_user_id() and update --> reg_user(), user_login(), video_upoload(), uploded_videos(),uploded_videos_loged()
     ---- 05 July 2022 - get_video_id(), video_title_desc(), video_full_screen(), similer_videos(), count_users(), count_admis()
-    ---- 06 July 2022 - count_channels(), count_videos(), count_pro_videos(), count_pro_users(), count_catagery(), and update --> reg_uer(),
+    ---- 06 July 2022 - count_channels(), count_videos(), count_pro_videos(), count_pro_users(),   count_catagery(), all_free_users(), and update --> reg_uer(),
     */
 
     //function for register an user
