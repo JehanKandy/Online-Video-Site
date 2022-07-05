@@ -442,6 +442,8 @@
 
         //get all data from database according to Pro videos
         $pro_videos = "SELECT * FROM videos WHERE video_type = 'pro'";
+        $pro_videos_result = mysqli_query($con, $pro_videos);
+        
     
     }
 ?>
