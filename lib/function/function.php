@@ -487,6 +487,14 @@
     //fucntion for all free users
     function all_free_users(){
         $con = Connection();
+
+        //gat all data from database accorfing to free users
+
+        $all_free_users = "SELECT * FROM user_tbl WHERE roll = free";
+        $all_free_users_result = mysqli_query($con, $all_free_users);
+        
+        //now print all data in table
+
     }
 
 ?>
