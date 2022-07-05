@@ -23,6 +23,16 @@
 
 <div class="video-full-view">
     <div class="content">
-        <?php video_title_desc(); ?>
+        <?php 
+            //now echo video title and desctiption
+
+            video_title_desc(); ?>
+
+        <?php 
+            //now echo video
+
+            video_full_screen();
+        
+        ?>
     </div>
 </div>
