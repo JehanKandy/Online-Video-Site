@@ -403,4 +403,11 @@
         $admin_data_nor = mysqli_num_rows($admin_data_result);
         echo ($admin_data_nor);
     }
+
+    //function for count_channels
+
+    function count_channels(){
+        $con = Connection();
+        
+    }
 ?>
