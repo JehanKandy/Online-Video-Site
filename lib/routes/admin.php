@@ -51,7 +51,7 @@
                   <h4><i class='fas fa-user-tie' style='font-size:40px'></i>&nbsp;Pro - Users&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
                   <hr style="background-color:white">
                   <h5>
-                    <b><?php count_admins(); ?></b>
+                    <b><?php  ?></b>
                   </h5>
                 </div>
               </div>
@@ -95,7 +95,7 @@
                   <h4><i class='fas fa-user-alt' style='font-size:40px'></i>&nbsp;Admins&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
                   <hr style="background-color:white">
                   <h5>
-                    <b><?php //count_users(); ?></b>
+                    <b><?php count_admins(); ?></b>
                   </h5>
                 </div>
               </div>
