@@ -427,5 +427,7 @@
         $con = Connection();
 
         //get all data from database according to free videos
+        $free_videos = "SELECT * FROM videos WHERE video_type = 'free'";
+        
     }
 ?>
