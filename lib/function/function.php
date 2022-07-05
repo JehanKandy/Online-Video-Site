@@ -267,5 +267,11 @@
         }
     }
 
+    //function for watch videos full scree
+
+    function video_full_screem(){
+        $con = Connection();
+    }
+
 
 ?>
