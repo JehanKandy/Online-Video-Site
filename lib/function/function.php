@@ -424,6 +424,8 @@
     //function for count videos
 
     function count_videos(){
-        
+        $con = Connection();
+
+        //get all data from database according to free videos
     }
 ?>
