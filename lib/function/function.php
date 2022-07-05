@@ -310,5 +310,9 @@
     }
 
 
-    //
+    //function for Video full screen
+
+    function video_full_screen(){
+        $con = Connection();
+    }
 ?>
