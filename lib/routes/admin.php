@@ -62,7 +62,7 @@
                   <h4><i class='fas fa-tv' style='font-size:40px'></i>&nbsp;Channels &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
                   <hr style="background-color:white">
                   <h5>
-                    <b><?php //count_users(); ?></b>
+                    <b><?php count_channels(); ?></b>
                   </h5>
                 </div>
               </div>
