@@ -12,7 +12,7 @@ My one of University Projects<br>
         2. standard iPad screen
         3. standard iPad Air screen
         4. standard iPad Mini screen
-        5. Samsung Galaxy A51/71
+
 
 
 
@@ -108,7 +108,7 @@ My one of University Projects<br>
   - css/style.css
   - lib/routes/video_full_screen.php
   - lib/routes/admin.php
-   
+
   02. develop
   - lib
   - - lib/routes

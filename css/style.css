@@ -21,7 +21,7 @@
         2. standard iPad screen
         3. standard iPad Air screen
         4. standard iPad Mini screen
-        5. Galaxy Tab S4
+
 */
 
 .home {
@@ -32,6 +32,21 @@
 
 .home-content {
     padding: 60px;
+}
+
+.logout-btn-nav {
+    width: 100px;
+    height: 45px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(right, #ce4444, #ff8e8e);
+    transition: 0.5s;
+}
+
+.logout-btn-nav:hover {
+    background: -webkit-linear-gradient(right, #ff8e8e, #ce4444);
+    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.678), 0 3px 10px 0 rgba(255, 255, 255, 0.596);
 }
 
 .login-btn-nav {
@@ -175,6 +190,123 @@ video {
     margin-top: 15px;
 }
 
+.video-upload {
+    padding-top: 60px;
+    padding-left: 400px;
+    padding-right: 400px;
+    padding-bottom: 60px;
+}
+
+.video-upload-content {
+    width: 800px;
+    height: 100%;
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.video-upload-content-title {
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 25px;
+}
+
+.video-upload-content-body .video-btn {
+    width: 100%;
+    height: 50px;
+    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.5s;
+    margin-top: 15px;
+    margin-top: 20px;
+}
+
+.video-upload-content-body .video-btn:hover {
+    background: -webkit-linear-gradient(right, #9f01ea, #56d8e4);
+    box-shadow: 0 2px 4px 0 rgba(148, 148, 148, 0.678), 0 3px 10px 0 rgba(71, 71, 71, 0.596);
+}
+
+.video-upload-content-body {
+    padding-top: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 70px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 20px;
+}
+
+.video-upload-content-body .video_input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.video-upload-content-body .video-text_area {
+    width: 700px;
+    height: 100px;
+    border: 1px solid #d4d4d4;
+    resize: none;
+    border-radius: 5px;
+}
+
+.title-video {
+    background-color: rgb(228, 228, 228);
+    height: 60px;
+    padding-top: 10px;
+    padding-left: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.title-video .title {
+    color: green;
+}
+
+.footer {
+    background-color: dark;
+}
+
+.home-content .row a {
+    text-decoration: none;
+}
+
+.video-full-view {
+    padding-top: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 50px;
+}
+
+.video-full-view .content .video-title {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 50px;
+}
+
+.video-full-view .content .video-desc {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 25px;
+    padding-bottom: 50px;
+}
+
+.video-full-view .content video {
+    height: 720px;
+    width: 1280px;
+}
+
+.video-full-view .content .similer_videos video {
+    width: 350px;
+    height: 240px;
+}
+
 
 /* for standard laptop screen size 
         width : 1366px
@@ -196,6 +328,18 @@ video {
         padding-left: 400px;
         padding-right: 400px;
         padding-bottom: 30px;
+    }
+    .login {
+        padding-top: 50px;
+        padding-left: 400px;
+        padding-right: 400px;
+        padding-bottom: 30px;
+    }
+    .video-upload {
+        padding-top: 60px;
+        padding-left: 250px;
+        padding-right: 250px;
+        padding-bottom: 60px;
     }
 }
 
@@ -229,12 +373,38 @@ for standard iPad screen size
         padding-right: 140px;
         padding-bottom: 30px;
     }
+    .login {
+        padding-top: 100px;
+        padding-left: 140px;
+        padding-right: 140px;
+        padding-bottom: 30px;
+    }
+    .video-upload {
+        padding-top: 60px;
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-bottom: 60px;
+    }
+    .video-upload-content {
+        width: 600px;
+        height: 100%;
+        border: 1px solid rgb(182, 182, 182);
+        border-radius: 5px;
+        font-size: 20px;
+    }
+    .video-upload-content-body .video-text_area {
+        width: 500px;
+        height: 100px;
+        border: 1px solid #d4d4d4;
+        resize: none;
+        border-radius: 5px;
+    }
 }
 
 
 /*Samsung Galaxy A51/71 
 
-
+/ under development
  for standard Samsung Galaxy A51/71 screen size 
         width : 412px
         height : 914px */
@@ -281,5 +451,26 @@ for standard iPad screen size
         color: white;
         transition: all 0.5s;
         margin-top: 15px;
+    }
+    .login {
+        padding-top: 100px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 30px;
+    }
+    .login-content {
+        width: 320px;
+        height: 100%;
+        border: 1px solid rgb(182, 182, 182);
+        border-radius: 5px;
+        font-size: 20px;
+    }
+    .login-content-body {
+        padding-top: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 70px;
+        font-family: 'Roboto Flex', sans-serif;
+        font-size: 20px;
     }
 }

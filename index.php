@@ -11,3 +11,4 @@
     </div>
 </div>
 
+<?php include_once("lib/layouts/footer.php"); ?>

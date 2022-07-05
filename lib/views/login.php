@@ -7,6 +7,13 @@
             <i class="fas fa-user-alt"></i> &nbsp; Login
             <hr>
         </div>
+        <?php 
+            include_once("../function/function.php");
+            if(isset($_POST['login'])){
+                $result = login_user($_POST['username'], md5($_POST['password']));
+                echo($result);
+            }        
+        ?>
         <div class="login-content-body">
             <form action="<?php echo($_SERVER['PHP_SELF']); ?>" method="POST">
                 <span class="label">Username : </span>
