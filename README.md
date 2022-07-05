@@ -115,3 +115,23 @@ My one of University Projects<br>
   - - - lib/routes/video_full_screen.php
   - - - lib/admin
    
+   
+      
+   
+   <hr>
+
+<br><br>
+<b>06 July 2022 :</b><br>
+  01. update<br>
+  - lib/function/function.php
+  - css/style.css
+  - lib/routes/video_full_screen.php
+  - lib/routes/admin.php
+
+  02. develop
+  - lib
+  - - lib/routes
+  - - - lib/routes/video_full_screen.php
+  - - - lib/admin
+   
+
