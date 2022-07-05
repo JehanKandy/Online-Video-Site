@@ -472,5 +472,9 @@
     //function for count catagery
     function count_catagery(){
         $con = Connection();
+
+        //gat all data according to catagery
+        $catagery = "SELECT * FROM categories";
+        $catagery_result = mysqli_query($con,$catagery);
     }
 ?>
