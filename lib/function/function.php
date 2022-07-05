@@ -36,7 +36,8 @@
                 $add_user = "INSERT INTO user_tbl(username,email,pass1,roll,user_status,join_date)VALUES('$username','$email','$password','user','1',NOW())";
                 $add_user_result = mysqli_query($con, $add_user);
 
-
+                // add data to the channels table
+                $add_channel = "INSERT INTO";
                 header('location:../views/login.php');
             }        
         }  
