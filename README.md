@@ -107,6 +107,7 @@ My one of University Projects<br>
   - lib/function/function.php
   - css/style.css
   - lib/routes/video_full_screen.php
+  - lib/routes/admin.php
    
   02. develop
   - lib
