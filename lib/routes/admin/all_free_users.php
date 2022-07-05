@@ -90,26 +90,8 @@
             </tr>
             </thead>
             <tbody>
-            <tr><td>Jehan</td><td>10</td><td>Kandy</td><td>+91 711758851</td></tr>
-            <tr><td>Jehan</td><td>10</td><td>Kandy</td><td>+91 711758851</td></tr>
-            <tr><td>Jehan</td><td>10</td><td>Kandy</td><td>+91 711758851</td></tr>
-            <tr><td>Jehan</td><td>10</td><td>Kandy</td><td>+91 711758851</td></tr>
-            <tr><td>Jehan</td><td>10</td><td>Kandy</td><td>+91 711758851</td></tr>
-            <tr><td>Jehan</td><td>10</td><td>Kandy</td><td>+91 711758851</td></tr>
-            <tr><td>Jehan</td><td>10</td><td>Kandy</td><td>+91 711758851</td></tr>
-            <tr><td>Jehan</td><td>10</td><td>Kandy</td><td>+91 711758851</td></tr>
-            <tr><td>Jehan</td><td>10</td><td>Kandy</td><td>+91 711758851</td></tr>
-            <tr><td>Jehan</td><td>10</td><td>Kandy</td><td>+91 711758851</td></tr>
-            <tr><td>Jehan</td><td>10</td><td>Kandy</td><td>+91 711758851</td></tr>
-            <tr><td>Jehan</td><td>10</td><td>Kandy</td><td>+91 711758851</td></tr>
-            <tr><td>Jehan</td><td>10</td><td>Kandy</td><td>+91 711758851</td></tr>
-            <tr><td>Jehan</td><td>10</td><td>Kandy</td><td>+91 711758851</td></tr>
-            <tr><td>Jehan</td><td>10</td><td>Kandy</td><td>+91 711758851</td></tr>
-            <tr><td>Jehan</td><td>10</td><td>Kandy</td><td>+91 711758851</td></tr>
-            <tr><td>Kamal</td><td>10</td><td>Kandy</td><td>+91 711758851</td></tr>
-            <tr><td>Jehan</td><td>10</td><td>Kandy</td><td>+91 711758851</td></tr>
-            <tr><td>Jehan</td><td>10</td><td>Kandy</td><td>+91 711758851</td></tr>
-            <tr><td>Jehan</td><td>10</td><td>Kandy</td><td>+91 711758851</td></tr>
+            <tr><td>1</td><td>Jehan</td><td>jehan@123</td><td>user</td><td>free</td><td>date</td><td>action</td></tr>
+
             </tbody>
             </table>
 
