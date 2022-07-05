@@ -389,6 +389,10 @@
         // get all data from database according admins
         $admin_data = "SELECT * FROM user_tbl WHERE roll = 'admin'";
         $admin_data_result = mysqli_query($con, $admin_data); 
+        
+        //count admins in database
 
+        $admin_data_nor = mysqli_num_rows($admin_data_result);
+        echo ($admin_data_nor);
     }
 ?>
