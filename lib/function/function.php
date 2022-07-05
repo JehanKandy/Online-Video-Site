@@ -439,5 +439,7 @@
     //function for count pro videos
     function count_pro_videos(){
         $con = Connection();
+
+                //get all data from database according to Pro videos
     }
 ?>
