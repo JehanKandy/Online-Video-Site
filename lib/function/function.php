@@ -31,8 +31,11 @@
                 return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Password Does not Match</div>&nbsp</center>"; 
             }
             else{
+                //add data to the user_tbl
                 $add_user = "INSERT INTO user_tbl(username,email,pass1,roll,user_status,join_date)VALUES('$username','$email','$password','user','1',NOW())";
                 $add_user_result = mysqli_query($con, $add_user);
+
+
                 header('location:../views/login.php');
             }        
         }  
