@@ -251,7 +251,7 @@
                 echo "
                             
                                 <div class='col-auto'>
-                                    <a href='#'>
+                                    <a href='../routes/video_full_screen.php?id=".$video_row_loged['id']."'>
                                         <div class='card-body'>
                                             <video src='../../upload/".$video_row_loged['video_url']."'controls></video>
                                             <div class='title-video'>
@@ -271,6 +271,8 @@
 
     function video_full_screem(){
         $con = Connection();
+
+
     }
 
 
