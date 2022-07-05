@@ -9,3 +9,25 @@
 <link rel="stylesheet" href="../../css/style.css">
 <?php include_once("../layouts/header.php"); ?>
 <?php include_once("../layouts/nav_loged.php"); ?>
+
+
+<?php 
+    //pass video id to the fucntion file
+
+    if(isset($_GET['id'])){
+        $reult = video_full_screem($_GET['id']);
+        echo $reult;
+    }
+
+?>
+
+<div class="video-full-view">
+    <div class="content">
+        <div class="video-title">
+            Make Cake
+        </div>
+        <div class="video-desc">
+            <?php video_full_screem(); ?>
+        </div>
+    </div>
+</div>
