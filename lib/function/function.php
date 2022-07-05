@@ -483,4 +483,10 @@
         //print number of catagery
         echo $catagery_nor;
     }
+
+    //fucntion for all free users
+    function all_free_users(){
+        $con = Connection();
+    }
+
 ?>
