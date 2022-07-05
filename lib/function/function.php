@@ -1,3 +1,4 @@
+
 <?php 
     include("config.php");
 
@@ -270,12 +271,19 @@
 
     function get_video_id($video_id){
         $con = Connection();
-
-        echo $video_id;      
+        echo $video_id;     
+        
+        $_SESSION['Video_id'] = $video_id;
     }
 
     function video_full_screen(){
         $con = Connection();
+
+        //get video id from get_video_id funtion
+
+        $vid_id = strval($_SESSION['Video_id']);
+
+        echo $vid_id;
     }
 
 
