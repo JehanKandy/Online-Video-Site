@@ -390,6 +390,11 @@
     }
 
     //function for count_pro_users
+    function count_pro_users(){
+        $con = Connection();
+    }
+
+
     //function for count_admis 
 
     function count_admins(){
