@@ -59,7 +59,7 @@
             <div class="col-auto">
               <div class="card bg-warning text-white">
                 <div class="card-body">
-                  <h4><i class='fas fa-users' style='font-size:40px'></i>&nbsp;Channels &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+                  <h4><i class='fas fa-tv' style='font-size:40px'></i>&nbsp;Channels &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
                   <hr style="background-color:white">
                   <h5>
                     <b><?php //count_users(); ?></b>
