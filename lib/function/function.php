@@ -346,5 +346,17 @@
 
         // get 12 similer videos from database
         
+        while($video_similer_row = mysqli_fetch_assoc($video_similer_result)){
+            echo "
+                            
+                <div class='col-auto'>
+                    <div class='card-body'>
+                        <video src='../../upload/".$video_similer_row['video_url']."'controls></video>
+                    </div>
+                </div>
+        
+            ";
+        }
+        
     }
 ?>
