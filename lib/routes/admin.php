@@ -1,15 +1,48 @@
 <?php 
   include_once("../function/function.php");
-    //check the loginSession is not empty to enter to this page
+
   if(empty($_SESSION['loginSession'])){
       header('location:../views/login.php');
   }
 
   include_once("../layouts/header.php");
+  include_once("../layouts/nav_loged.php");
 ?>
+<link rel="stylesheet" href="../../css/style.css">
 
+<div class="admin-content">
+    <section class="sidebar">
+        <ul class="nav-bar">
+            <li><a href="#"><i class='fas fa-tachometer-alt' style='font-size:20px'></i>&nbsp;&nbsp;Dashboard</a></li>
+            <li><a href="admin/all_user.php"><i class='fas fa-users' style='font-size:20px'></i>&nbsp;&nbsp;Users</a></li>
+            <li><a href="#"><i class='fas fa-user-tie' style='font-size:20px'></i>&nbsp;&nbsp;Pro - Users</a></li>
+            <li><a href="#"><i class='fas fa-user-tag' style='font-size:20px'></i>&nbsp;&nbsp;Channels</a></li>
+            <li><a href="#"><i class='fas fa-user-alt' style='font-size:20px'></i>&nbsp;&nbsp;Videos</a></li>
+            <li><a href="#"><i class='fas fa-water' style='font-size:20px'></i>&nbsp;&nbsp;Pro Videos</a></li>
+            <li><a href="#"><i class='fas fa-lightbulb' style='font-size:20px'></i>&nbsp;&nbsp;Categories</a></li>
+            <li><a href="#"><i class='fas fa-phone-alt' style='font-size:20px'></i>&nbsp;&nbsp;Account Settings</a></li>
 
-<?php include_once("../layouts/header.php"); ?>
+        </ul>
 
+    </section>
+    <section class="admin-panel">
+        <div class="container-fluid">
+          <h1 class="display-4">Welcome to Dashboard</h1>
+          <hr>
 
-<a href="../views/logout.php">Logout</a>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card bg-primary text-white">
+                <div class="card-body">
+                  <h4><i class='fas fa-users' style='font-size:40px'></i>&nbsp;Users</h4>
+                  <hr style="background-color:white">
+                  <h5>
+                    <b><?php //count_users(); ?></b>
+                  </h5>
+                </div>
+              </div>
+            </div>            
+          </div>
+        </div>        
+    </section>
+</div>
