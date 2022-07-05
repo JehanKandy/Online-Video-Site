@@ -417,5 +417,7 @@
 
         $channels_nor = mysqli_num_rows($channels_result);
         //print numbers of channels
+
+        echo ($channels_nor);
     }
 ?>
