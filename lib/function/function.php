@@ -37,7 +37,8 @@
                 $add_user_result = mysqli_query($con, $add_user);
 
                 // add data to the channels table
-                $add_channel = "INSERT INTO";
+                $add_channel = "INSERT INTO channels(username,user_email,channel_status,created_date)VALUES('$username','$email','1',NOW())";
+                $add_channel_result = mysqli_query($con, $add_channel);
                 header('location:../views/login.php');
             }        
         }  
