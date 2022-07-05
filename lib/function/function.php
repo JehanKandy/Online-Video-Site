@@ -389,7 +389,8 @@
         echo ($free_user_nor);
     }
 
-    //function count_admis 
+    //function for count_pro_users
+    //function for count_admis 
 
     function count_admins(){
         $con = Connection();
