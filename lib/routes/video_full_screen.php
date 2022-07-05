@@ -23,6 +23,6 @@
 
 <div class="video-full-view">
     <div class="content">
-
+        <?php video_title_desc(); ?>
     </div>
 </div>
