@@ -408,6 +408,9 @@
 
     function count_channels(){
         $con = Connection();
-        
+
+        //gat all data from database 
+        $channels = "SELECT * FROM channels";
+        $channels_result = mysqli_query($con, $channels);
     }
 ?>
