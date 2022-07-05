@@ -476,5 +476,11 @@
         //gat all data according to catagery
         $catagery = "SELECT * FROM categories";
         $catagery_result = mysqli_query($con,$catagery);
+
+        //count catagery in database
+        $catagery_nor = mysqli_num_rows($catagery_result);
+
+        //print number of catagery
+        echo $catagery_nor;
     }
 ?>
