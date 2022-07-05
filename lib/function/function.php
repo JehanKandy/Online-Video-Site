@@ -253,10 +253,9 @@
                                     <div class='card-body'>
                                         <video src='../../upload/".$video_row_loged['video_url']."'controls></video>
                                         <div class='title-video'>
-                                            <span class='uploder'>Upload By : ".$video_row_loged['username']."</span><br>
-                                            <span class='title'>Video Title : ".$video_row_loged['video_title']."</span><br>
-                                            <span class='desc'>Video Description : ".$video_row_loged['video_description']."</span><br>                          
-                                         </div>
+
+                                            <span class='title'>Video Title : ".$video_row_loged['video_title']."</span>
+                                        </div>
                                     </div>
                                 </div>
                             
