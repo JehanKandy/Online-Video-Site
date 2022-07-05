@@ -385,5 +385,10 @@
 
     function count_admins(){
         $con = Connection();
+
+        // get all data from database according admins
+        $admin_data = "SELECT * FROM user_tbl WHERE roll = 'admin'";
+        $admin_data_result = mysqli_query($con, $admin_data); 
+
     }
 ?>
