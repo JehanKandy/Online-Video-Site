@@ -287,7 +287,10 @@
 
         //echo $vid_id;
 
-        //
+        //now get all data from database according to video id
+
+        $get_video_data = "SELECT * FROM videos WHERE id = '$vid_id'";
+        $get_video_data_result = mysqli_query($con, $get_video_data);
     }
 
 
