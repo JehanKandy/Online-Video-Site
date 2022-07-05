@@ -307,6 +307,55 @@ video {
     height: 240px;
 }
 
+.admin-content {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #1d1d1d;
+    color: white;
+    min-height: calc(100vh);
+    padding-top: 25px;
+    padding-left: 25px;
+}
+
+.sidebar .nav-bar li {
+    list-style: none;
+    height: 50px;
+    line-height: 50px;
+}
+
+.sidebar .nav-bar li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+.sidebar .nav-bar li:hover a {
+    color: rgb(153, 153, 153);
+    font-size: 20px;
+}
+
+.admin-panel {
+    padding-top: 25px;
+    padding-left: 15px;
+    padding-bottom: 150px;
+    width: 90%;
+}
+
+.admin-panel .row .card {
+    margin: 20px;
+    width: 300px;
+}
+
+.row {
+    padding-top: 50px;
+}
+
 
 /* for standard laptop screen size 
         width : 1366px
@@ -340,6 +389,20 @@ video {
         padding-left: 250px;
         padding-right: 250px;
         padding-bottom: 60px;
+    }
+    .video-full-view {
+        padding-top: 20px;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-bottom: 20px;
+    }
+    .video-full-view .content video {
+        height: 720px;
+        width: 1150px;
+    }
+    .video-full-view .content .similer_videos video {
+        width: 315px;
+        height: 210px;
     }
 }
 
@@ -398,6 +461,20 @@ for standard iPad screen size
         border: 1px solid #d4d4d4;
         resize: none;
         border-radius: 5px;
+    }
+    .video-full-view {
+        padding-top: 15px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 15px;
+    }
+    .video-full-view .content video {
+        height: 480px;
+        width: 670px;
+    }
+    .video-full-view .content .similer_videos video {
+        width: 250px;
+        height: 150px;
     }
 }
 
