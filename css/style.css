@@ -260,23 +260,19 @@ video {
 
 .title-video {
     background-color: rgb(228, 228, 228);
-    height: 100px;
+    height: 60px;
     padding-top: 10px;
     padding-left: 15px;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
 }
 
-.title-video .uploder {
-    color: red;
-}
-
 .title-video .title {
     color: green;
 }
 
-.title-video .desc {
-    color: green;
+.footer {
+    background-color: dark;
 }
 
 
