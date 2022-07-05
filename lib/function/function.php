@@ -503,7 +503,16 @@
                 <td>".$all_free_users_row['email']."</td>
                 <td>user</td>
                 <td>".$all_free_users_row['roll']."</td>
-                <td>".$all_free_users_row['join_date']."</td>
+                <td>".$all_free_users_row['join_date']."</td> ";
+
+                if($all_free_users_row['user_status'] == 1){
+                    $free_user .= "<h2 class='badge badge-pill badge-success'>Active</h2>";
+                }
+                elseif($all_free_users_row['user_status'] == 0){
+                    $free_user .= "<h2 class='badge badge-pill badge-danger'>Deactive</h2>";
+                }
+
+            $free_user .="    
                 <td>action</td>
             </tr>
             
