@@ -404,6 +404,14 @@ video {
         width: 315px;
         height: 210px;
     }
+    .sidebar {
+        width: 300px;
+        background-color: #1d1d1d;
+        color: white;
+        min-height: calc(100vh);
+        padding-top: 20px;
+        padding-left: 10px;
+    }
 }
 
 
@@ -475,6 +483,14 @@ for standard iPad screen size
     .video-full-view .content .similer_videos video {
         width: 250px;
         height: 150px;
+    }
+    .sidebar {
+        width: 300px;
+        background-color: #1d1d1d;
+        color: white;
+        min-height: calc(100vh);
+        padding-top: 20px;
+        padding-left: 10px;
     }
 }
 
