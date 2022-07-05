@@ -377,6 +377,8 @@
         $free_user = "SELECT * FROM user_tbl WHERE roll = 'user'";
         $free_user_result = mysqli_query($con, $free_user);
 
+        //cont free users in database
+
         $free_user_nor = mysqli_num_rows($free_user_result);
         echo ($free_user_nor);
     }
