@@ -23,11 +23,6 @@
 
 <div class="video-full-view">
     <div class="content">
-        <div class="video-title">
-            Make Cake
-        </div>
-        <div class="video-desc">
-            <?php  video_full_screen(); ?>
-        </div>
+
     </div>
 </div>
