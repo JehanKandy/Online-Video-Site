@@ -468,4 +468,9 @@
 
         echo ($pro_videos_nor);
     }
+
+    //function for count catagery
+    function count_catagery(){
+        $con = Connection();
+    }
 ?>
