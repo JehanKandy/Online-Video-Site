@@ -443,7 +443,13 @@
         //get all data from database according to Pro videos
         $pro_videos = "SELECT * FROM videos WHERE video_type = 'pro'";
         $pro_videos_result = mysqli_query($con, $pro_videos);
-        
-    
+
+        //count pro videos in database 
+
+        $pro_videos_nor = mysqli_num_rows($pro_videos_result);
+
+        //print Pro-videos
+
+        echo ($pro_videos_nor);
     }
 ?>
