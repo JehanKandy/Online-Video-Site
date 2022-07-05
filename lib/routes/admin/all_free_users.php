@@ -67,16 +67,25 @@
             <thead>
             <tr>
                 <td>
-                Name
+                ID
                 </td>
                 <td>
-                Class
+                Username
                 </td>
                 <td>
-                Address
+                Email
                 </td>
                 <td>
-                Mobile
+                Roll
+                </td>
+                <td>
+                Account Type
+                </td>
+                <td>
+                Join Date
+                </td>
+                <td>
+                Action
                 </td>
             </tr>
             </thead>
