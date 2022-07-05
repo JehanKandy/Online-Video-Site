@@ -440,6 +440,8 @@
     function count_pro_videos(){
         $con = Connection();
 
-                //get all data from database according to Pro videos
+        //get all data from database according to Pro videos
+        $pro_videos = "SELECT * FROM videos WHERE video_type = 'pro'";
+    
     }
 ?>
