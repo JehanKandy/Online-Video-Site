@@ -291,6 +291,8 @@
 
         $get_video_data = "SELECT * FROM videos WHERE id = '$vid_id'";
         $get_video_data_result = mysqli_query($con, $get_video_data);
+
+        //get video description from database
     }
 
 
