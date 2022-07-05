@@ -66,31 +66,34 @@
             <table class="table table-fluid" id="myTable">
             <thead>
             <tr>
-                <td>
+                <th>
                 ID
-                </td>
-                <td>
+                </th>
+                <th>
                 Username
-                </td>
-                <td>
+                </th>
+                <th>
                 Email
-                </td>
-                <td>
+                </th>
+                <th>
                 Roll
-                </td>
-                <td>
+                </th>
+                <th>
                 Account Type
-                </td>
-                <td>
+                </th>
+                <th>
                 Join Date
-                </td>
-                <td>
+                </th>
+                <th>
+                Account Status
+                </th>
+                <th>
                 Action
-                </td>
+                </th>
             </tr>
             </thead>
             <tbody>
-            <tr><td>1</td><td>Jehan</td><td>jehan@123</td><td>user</td><td>free</td><td>date</td><td>action</td></tr>
+            <tr><td>1</td><td>Jehan</td><td>jehan@123</td><td>user</td><td>free</td><td>date</td><td>Active</td><td>action</td></tr>
 
             </tbody>
             </table>
