@@ -926,7 +926,24 @@
         //fetch channel data
 
         $channel_data_row = mysqli_fetch_assoc($channel_data_result);
-        
+
+        $channel_data_edit = "
+                            <div class='body'>
+                                <form action='' method='POST'>
+                                    <table border='1'>
+                                        <tr>
+                                            <td>ID</td>
+                                            <td>".$channel_data_row['id']."
+                                            <input type='hidden' name='id' value='".$channel_data_row['id']."'></td>
+                                        </tr>
+                                        
+                                </form>
+                            </div>
+
+                        ";
+
+        echo $channel_data_edit;
+
     }
 
 ?>
