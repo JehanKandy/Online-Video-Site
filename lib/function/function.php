@@ -1015,6 +1015,37 @@
 
     function all_free_videos(){
         $con = Connection();
+
+        //get all data from databes
+        $all_videos = "SELECT * FROM videos";
+        $all_videos_result = mysqli_query($con, $all_videos);
+
+        //fetch all data 
+        while($all_videos_row = mysqli_fetch_assoc($all_videos_result)){
+            $all_video_data = "
+                        <tr>
+                            <td>".$all_videos_row['id']."</td>
+                            <td>".$all_videos_row['video_title']."</td>
+                            <td>".$all_videos_row['username']."</td>
+                            <td>".$all_videos_row['category']."</td>
+                            <td>".$all_videos_row['video_type']."</td>";
+
+                            if($all_videos_row['video_status'] == 1){
+                                $all_video_data .="<td><h2 class='badge badge-pill badge-success'>Active</h2></td>";
+                            }
+                            elseif($all_videos_row['video_status'] == 0){
+                                $all_video_data .="<td><h2 class='badge badge-pill badge-danger'>Active</h2></td>";
+                            }
+
+            $all_video_data .="    
+                                                     
+                        </tr>                   
+                    
+                        ";
+            echo $all_video_data;
+
+        }
+        
     }
 
 ?>
