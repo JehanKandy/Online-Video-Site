@@ -12,7 +12,8 @@
     ---- 04 July 2022 - check_user_id() and update --> reg_user(), user_login(), video_upoload(), uploded_videos(),uploded_videos_loged()
     ---- 05 July 2022 - get_video_id(), video_title_desc(), video_full_screen(), similer_videos(), count_users(), count_admis()
     ---- 06 July 2022 - count_channels(), count_videos(), count_pro_videos(), count_pro_users(), count_catagery(), all_free_users(), update_to_view_info(),
-                        update_user(), deactive_free_user(), deactive_pro_user(), all_pro_users(), video_select_category() and update --> reg_uer(),video_upoload()
+                        update_user(), deactive_free_user(), deactive_pro_user(), all_pro_users(), video_select_category(),
+                        count_deactive_channels(),and update --> reg_uer(),video_upoload()
                         
     */
 
@@ -459,7 +460,7 @@
         $con = Connection();
 
         //gat all data from database 
-        $channels = "SELECT * FROM channels";
+        $channels = "SELECT * FROM channels WHERE channel_status = '1'";
         $channels_result = mysqli_query($con, $channels);
 
         //count all channels
@@ -470,6 +471,23 @@
         echo ($channels_nor);
     }
 
+    //function for count deactive channels
+
+    function count_deactive_channels(){
+        $con = Connection();
+    
+        //gat all data from database 
+        $channels_deactive = "SELECT * FROM channels WHERE channel_status = '0'";
+        $channels_deactive_result = mysqli_query($con, $channels_deactive);
+    
+        //count all channels
+    
+        $channels_deactive_nor = mysqli_num_rows($channels_deactive_result);
+        //print numbers of channels
+    
+        echo ($channels_deactive_nor);
+        }
+    
     //function for count videos
 
     function count_videos(){
