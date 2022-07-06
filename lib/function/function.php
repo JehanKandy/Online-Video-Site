@@ -124,7 +124,7 @@
 
     // function for upload videos
 
-    function video_upoload($video_title, $video_des, $video){
+    function video_upoload($video_title, $video_des, $video, $video_catagery, $video_type){
         $con = Connection();
 
         //get email form loginSession
