@@ -62,7 +62,7 @@
         <br>
         <hr>
         <br>
-            <h2>All Free Users</h2>
+            <h2>All Channels</h2>
             <table class="table table-fluid" id="myTable">
             <thead>
             <tr>
