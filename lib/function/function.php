@@ -12,7 +12,7 @@
     ---- 04 July 2022 - check_user_id() and update --> reg_user(), user_login(), video_upoload(), uploded_videos(),uploded_videos_loged()
     ---- 05 July 2022 - get_video_id(), video_title_desc(), video_full_screen(), similer_videos(), count_users(), count_admis()
     ---- 06 July 2022 - count_channels(), count_videos(), count_pro_videos(), count_pro_users(), count_catagery(), all_free_users(), update_to_view_info(),
-                        update_user(); and update --> reg_uer(),
+                        update_user(), deactive_free_user() and update --> reg_uer(),
     */
 
     //function for register an user
@@ -390,6 +390,12 @@
         echo ($free_user_nor);
     }
 
+    //function for deactive free users
+    function deactive_free_user(){
+        $con = Connection();
+        
+    }
+
     //function for count_pro_users
     function count_pro_users(){
         $con = Connection();
@@ -638,7 +644,7 @@
         $update_user_data = "UPDATE user_tbl SET user_status = '$update_user_status' WHERE username = '$update_user'";
         $update_user_data_result = mysqli_query($con, $update_user_data);
 
-        header("location:../routes/admin/all_free_users.php");
+        header("location:all_free_users.php");
 
     }
 
