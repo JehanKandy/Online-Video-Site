@@ -132,8 +132,10 @@ My one of University Projects<br>
   - lib
   - - lib/routes
   - - - lib/routes/admin
-  - - - - lib/routes/all_free_users.php
+  - - - - lib/routes/admin/all_free_users.php
+  - - - - lib/routes/admin/edit_free_user_info.php
   - js
   - - js/script.js
+  
   
 
