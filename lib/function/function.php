@@ -627,6 +627,16 @@
 
 
         echo $update_user;
-       }
+    }
 
+    // function for update user
+
+    function update_user(){
+        $con = Connection();
+    }
+
+
+
+
+       
 ?>
