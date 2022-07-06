@@ -393,6 +393,16 @@
     //function for deactive free users
     function deactive_free_user(){
         $con = Connection();
+
+        
+        //get all data from database according to free deactive users
+        $free_deactive_user = "SELECT * FROM user_tbl WHERE roll = 'free' && user_status = '0'";
+        $free_deactive_user_result = mysqli_query($con, $free_deactive_user);
+
+        //cont free users in database
+
+        $free_deactive_user_nor = mysqli_num_rows($free_deactive_user_result);
+        echo ($free_deactive_user_nor);
         
     }
 
