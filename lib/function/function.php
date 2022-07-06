@@ -14,6 +14,7 @@
     ---- 06 July 2022 - count_channels(), count_videos(), count_pro_videos(), count_pro_users(), count_catagery(), all_free_users(), update_to_view_info(),
                         update_user(), deactive_free_user(), deactive_pro_user(), all_pro_users(), video_select_category(),
                         count_deactive_channels(), channal_info(), channal_update_view(),  update_channel(), count_videos_deavtive(), all_free_videos()
+                        video_update_view(),                         
                         and update --> reg_uer(),video_upoload()
                         
     */
@@ -1048,6 +1049,89 @@
 
         }
         
+    }
+
+    //function for video update view
+    function video_update_view(){
+        $con = Connection();
+
+        //get id from all_free_videos()
+        $id = $_GET['id'];
+
+        $update_video = "SELECT * FROM videos WHERE id = '$id'";
+        $update_video_result = mysqli_query($con, $update_video);
+
+
+        //fetch data
+        $update_video_row = mysqli_fetch_assoc($update_video_result);
+
+        //echo data
+
+        $update_video = "
+                <div class='body'>
+                    <form action='' mathod='POST'>
+                        <table border='0'>
+                            <tr>
+                                <td>ID : </td>
+                                <td>".$update_video_row['id']."
+                                <input type='hidden' name='id' value='".$update_video_row['id']."'>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Video Title : </td>
+                                <td>".$update_video_row['video_title']."</td>
+                            </tr>
+                            <tr>
+                                <td>Username : </td>
+                                <td>".$update_video_row['username']."</td>
+                            </tr>
+                            <tr>
+                                <td>Category : </td>
+                                <td>".$update_video_row['category']."</td>
+                            </tr>
+                            <tr>
+                                <td>Video Type : </td>
+                                <td>".$update_video_row['video_type']."</td>
+                            </tr>
+                            <tr>
+                                <td>Video Add Date : </td>
+                                <td>".$update_video_row['add_date']."</td>
+                            </tr>
+                            <tr>
+                                <td>Video Status : </td>";
+
+                                if($update_video_row['video_status'] == 1){
+                                    $update_video .="<td><h2 class='badge badge-pill badge-success'>Active</h2></td>";
+                                }
+                                elseif($update_video_row['video_status'] == 0){
+                                    $update_video .="<td><h2 class='badge badge-pill badge-danger'>Deactive</h2></td>";
+                                }
+
+                        
+                $update_video .="</tr>
+                            <tr>
+                                <td>Video Status : </td>
+                                <td>
+                                    <select name='video_status' id='video_status'>
+                                        <option value='1'>Active</option>
+                                        <option value='0'>Deactive</option>                                        
+                                    </select>    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type='submit' name='update' value='Update' class='btn btn-succsee'>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                    <br><br>
+                    <a href='all_free_videos.php'><button class='btn btn-primary'>Back</button></a>
+                </div>
+
+            ";
+
+        echo $update_video;
     }
 
 ?>
