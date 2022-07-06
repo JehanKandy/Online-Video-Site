@@ -18,7 +18,7 @@
         </div>
         <?php 
             if(isset($_POST['upload'])){
-                $result = video_upoload($_POST['video_title'], $_POST['video_desc'], $_FILES['video']);
+                $result = video_upoload($_POST['video_title'], $_POST['video_desc'], $_FILES['video'],$_POST['video_catagory'], $_POST['video_type']);
                 echo $result;
             }
         
@@ -33,9 +33,13 @@
 
                 <span class="label">Video File : </span>
                 <input type="file" name="video" id="video" accept="video/*">
-                
+                <br><br>
+
+                <?php video_select_category(); ?>
+
+                <br><br>
                 <span class="label">Video Type : </span>
-                <select name="video_type" id="video_type">
+                <select name="video_type" id="video_type" class="video_input">
                     <option value="free">Free</option>
                     <option value="pro">Pro</option>                    
                 </select>
