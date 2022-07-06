@@ -96,7 +96,7 @@
             </tr>
             </thead>
             <tbody>
-           <?php  ?>
+           <?php channal_info(); ?>
 
             </tbody>
             </table>
