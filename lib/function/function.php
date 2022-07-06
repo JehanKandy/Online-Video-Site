@@ -70,7 +70,7 @@
 
                     //create a session for login as user 
                     $_SESSION['loginSession'] = $check_login_user_row['email'];
-                    header("location:../routes/index_loged.php");
+                    header("location:../routes/user.php");
                 }
                 elseif($check_login_user_row['roll'] == 'admin'){
                     //set a cookie for login as user with 1 hour
@@ -883,24 +883,31 @@
     function channal_info(){
         $con = Connection();
 
-        //get channel info
-        $channel_info = "SELECT * FROM channels";
-        $channel_info_result = mysqli_query($con, $channel_info);
-
-        //fetch data from channel table for get id
-        $channel_id_row = mysqli_fetch_assoc($channel_info_result);
-        $ch_id = $channel_id_row['username'];
-
-        //fetch data from video table for view free and provideos
-        $get_videos = "SELECT * FROM videos WHERE username = '$ch_id'";
-        $get_videos_result = mysqli_query($con, $get_videos);
-        
-        $get_video_row = mysqli_fetch_assoc($get_videos_result);
-
         //fetch channel data with videos
+        $channel_info_echo = "SELECT * FROM channels";
+        $channel_info_echo_result = mysqli_query($con, $channel_info_echo);
 
-        while($channel_row = mysqli_fetch_assoc($channel_info_result)){
-            echo "data";
+        while($channel_row = mysqli_fetch_assoc($channel_info_echo_result)){
+            $channel = "
+                    <tr>
+                        <td>".$channel_row['id']."</td>
+                        <td>".$channel_row['channel_name']."</td>
+                        <td>".$channel_row['username']."</td>";
+                        
+                        if($channel_row['channel_status'] == 1){
+                            $channel .="<td><h2 class='badge badge-pill badge-success'>Active</h2></td>";
+                        }
+                        elseif($channel_row['channel_status'] == 0){
+                            $channel .="<td><h2 class='badge badge-pill badge-danger'>Deactive</h2></td>";
+                        }
+
+
+                    $channel .="
+                        <td>".$channel_row['created_date']."</td>
+                        <td>Action</td>
+                    </tr>
+                    ";
+            echo $channel;
         }
 
 
