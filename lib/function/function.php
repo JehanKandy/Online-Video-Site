@@ -882,6 +882,19 @@
     //function for channal info
     function channal_info(){
         $con = Connection();
+
+        //get channel info
+        $channel_info = "SELECT * FROM channels";
+        $channel_info_result = mysqli_query($con, $channel_info);
+
+        //fetch data from channel table for get id
+        $channel_id_row = mysqli_fetch_assoc($channel_info_result);
+        $ch_id = $channel_id_row['username'];
+
+        //fetch data from video table for view free and provideos
+        $get_videos = "SELECT * FROM videos WHERE username = '$ch_id'";
+        $get_videos_data_result = mysqli_query($con, $get_videos);
+        
     }
 
 
