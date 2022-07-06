@@ -970,7 +970,7 @@
                                             </td>
                                         </tr>
                                     <tr>
-                                        <td><input type='sumbit' name='update' value='Update' class='btn btn-success'></td>
+                                        <td><input type='submit' name='update' value='Update' class='btn btn-success'></td>
                                     </tr>
                                 </form>
                                 </table>
@@ -986,8 +986,14 @@
     }
 
     //function for update channel
-    function update_channel(){
+    function update_channel($channel_id, $channel_status){
         $con = Connection();
+
+        //update channel
+        $update_channel_data = "UPDATE channels SET channel_status = '$channel_status' WHERE id = '$channel_id'";
+        $update_channel_data_result = mysqli_query($con, $update_channel_data);
+        header("location:all_channels.php");
+
 
     }
 
