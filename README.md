@@ -135,6 +135,7 @@ My one of University Projects<br>
   - lib/routes/user/video_upload.php
   - lib/routes/admin/edit_channel_info.php
   - lib/routes/admin/all_free_videos.php
+  - lib/routes/admin/edit_free_videos_info.php
   
 
   02. develop
