@@ -971,7 +971,7 @@
                                         <input type='sumbit' name='update' value='Update' class='btn btn-success'>
                                 </form>
                                 <br><br>
-                                <a href='all_channels.php'><button class='btn btn-primary'>
+                                <a href='all_channels.php'><button class='btn btn-primary'>Back</button></a>
                             </div>
 
                         ";
