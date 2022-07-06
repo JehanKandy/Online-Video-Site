@@ -633,6 +633,10 @@
 
     function update_user(){
         $con = Connection();
+
+        //update user
+        
+
     }
 
 
