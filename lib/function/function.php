@@ -189,7 +189,7 @@
 
 
                 //now upload files to the database
-                $insert_video = "INSERT INTO videos(video_title,video_description,video_url,username,add_date)VALUES('$video_title','$video_des','$new_video','$username',NOW())";
+                $insert_video = "INSERT INTO videos(video_title,video_description,video_url,username,category,video_type,add_date)VALUES('$video_title','$video_des','$new_video','$username','$video_catagery','$video_type',NOW())";
                 $insert_video_result = mysqli_query($con, $insert_video);
 
                 //header to  view.php file for view uploaded videos
