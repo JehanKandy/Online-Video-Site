@@ -142,6 +142,8 @@ My one of University Projects<br>
   - - - - lib/routes/admin/edit_free_user_info.php
   - - - - lib/routes/admin/all_pro_users.php
   - - - - lib/routes/admin/all_channels.php
+  - - - - lib/routes/admin/edit_channel_info.php
+  
   
   - js
   - - js/script.js
