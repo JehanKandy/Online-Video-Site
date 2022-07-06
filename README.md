@@ -128,6 +128,8 @@ My one of University Projects<br>
   - lib/layouts/header.php
   - lib/routes/admin/all_free_users.php
   - css/style.css
+  - lib/routes/admin/edit_free_user_info.php
+  - lib/routes/admin/all_pro_users.php
 
   02. develop
   - lib
