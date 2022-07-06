@@ -367,6 +367,15 @@ video {
     font-family: 'Roboto Flex', sans-serif;
 }
 
+.update-page .update-content .title {
+    font-size: 50px;
+    padding-bottom: 30px;
+}
+
+.update-page .update-content .body {
+    font-size: 25px;
+}
+
 
 /* for standard laptop screen size 
         width : 1366px
