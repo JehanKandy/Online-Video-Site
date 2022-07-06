@@ -85,6 +85,12 @@
                 Create Date
                 </th>
                 <th>
+                  Free Videos
+                </th>
+                <th>
+                  Pro Videos
+                </th>
+                <th>
                 Action
                 </th>
             </tr>
