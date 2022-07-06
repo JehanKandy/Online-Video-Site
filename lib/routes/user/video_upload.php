@@ -16,10 +16,32 @@
             <i class="fas fa-upload"></i>&nbsp;&nbsp;Upload a Video
             <hr>
         </div>
+        <?php 
+            if(isset($_POST['upload'])){
+                $result = video_upoload($_POST['video_title'], $_POST['video_desc'], $_FILES['video']);
+                echo $result;
+            }
+        
+        ?>
         <div class="video-upload-content-body">
-            <form action="<?php echo($_SERVER['PHP_SELF']); ?>" method="POST">
+            <form action="<?php echo($_SERVER['PHP_SELF']); ?>" method="POST" enctype="multipart/form-data">
                 <span class="label">Video Title : </span>
                 <input type="text" name="video_title" id="video_title" placeholder="Video Title" class="video_input">
+
+                <span class="label">Video Description : </span><br>
+                <textarea name="video_desc" id="video_desc" class="video-text_area" placeholder="Video Description"></textarea>
+
+                <span class="label">Video File : </span>
+                <input type="file" name="video" id="video" accept="video/*">
+                
+                <span class="label">Video Type : </span>
+                <select name="video_type" id="video_type">
+                    <option value="free">Free</option>
+                    <option value="pro">Pro</option>                    
+                </select>
+
+                <br>
+                <input type="submit" value="Upload Video" name="upload" class="video-btn">
             </form>
         </div>
     </div>
