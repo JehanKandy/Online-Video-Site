@@ -526,7 +526,17 @@
 
        function update_to_view_info(){
         $con = Connection();
+
+        if(isset($_GET['id'])){
+            $id = $_GET['id'];
+            echo $id;
+
+        }
         
+        //get data from database
+        //$update_user_data = "SELECT * FROM user_tbl WHERE "
+
+
        }
     }
 
