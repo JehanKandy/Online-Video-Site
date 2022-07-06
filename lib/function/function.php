@@ -611,11 +611,15 @@
                                 </td>
                             </tr>
                                    
-                                    
-                                     
+                            <tr>
+                                <td colspan='2'>
+                                    <input type='submit' name='update' class='btn btn-success' value='Update'>
+                                </td>
+                            </tr>   
                                 </table>   
                             </form>
-
+                            <br><br>
+                        <a href='all_free_users.php'><button class='btn btn-primary'>Back</button></a>
                             
                         </div>
                         ";
