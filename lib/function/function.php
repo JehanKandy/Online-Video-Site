@@ -215,7 +215,7 @@
     function uploded_videos(){
         $con = Connection();
         
-        $all_videos = "SELECT * FROM videos LIMIT 30";
+        $all_videos = "SELECT * FROM videos WHERE video_status = '1' LIMIT 30";
         $all_videos_result = mysqli_query($con, $all_videos);
         $all_video_nor = mysqli_num_rows($all_videos_result);
         
@@ -252,7 +252,7 @@
     function uploded_videos_loged(){
         $con = Connection();
         
-        $all_videos_loged = "SELECT * FROM videos LIMIT 30";
+        $all_videos_loged = "SELECT * FROM videos WHERE video_status = '1' LIMIT 30";
         $all_videos_loged_result = mysqli_query($con, $all_videos_loged);
         $all_video_loged_nor = mysqli_num_rows($all_videos_loged_result);
         
@@ -502,6 +502,21 @@
         $free_videos_nor = mysqli_num_rows($free_videos_result);
 
         echo($free_videos_nor);
+    }
+
+        //function for count videos
+
+    function count_videos_deavtive(){
+        $con = Connection();
+
+        //get all data from database according to free videos
+        $free_videos_deactive = "SELECT * FROM videos WHERE video_type = 'free'";
+        $free_videos_deactive_result = mysqli_query($con, $free_videos_deactive);
+
+        //count free videos
+        $free_videos_deactive_nor = mysqli_num_rows($free_videos_deactive_result);
+
+        echo($free_videos_deactive_nor);
     }
 
     //function for count pro videos
@@ -993,8 +1008,8 @@
         $update_channel_data = "UPDATE channels SET channel_status = '$channel_status' WHERE id = '$channel_id'";
         $update_channel_data_result = mysqli_query($con, $update_channel_data);
         header("location:all_channels.php");
-
-
     }
+
+
 
 ?>
