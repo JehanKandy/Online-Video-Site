@@ -924,6 +924,9 @@
         $channel_data_result = mysqli_query($con, $channel_data);
 
         //fetch channel data
+
+        $channel_data_row = mysqli_fetch_assoc($channel_data_result);
+        
     }
 
 ?>
