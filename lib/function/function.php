@@ -1069,7 +1069,7 @@
 
         $update_video = "
                 <div class='body'>
-                    <form action='' mathod='POST'>
+                    <form action='' method='POST'>
                         <table border='0'>
                             <tr>
                                 <td>ID : </td>
