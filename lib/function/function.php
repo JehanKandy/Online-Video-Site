@@ -585,17 +585,38 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <span class='label'>Email:</span>
-                                        </td>
-                                        <td>
-                                            ".$update_user_row['user_status']."
-                                        </td>
-                                    </tr>
-                                   
+                                            <span class='label'>User Status:</span>
+                                        </td>";
 
+                                        if($update_user_row['user_status'] == 1){
+                                            $update_user .= "<td><h2 class='badge badge-pill badge-success'>Active</h2></td>";
+                                        }
+                                        elseif($update_user_row['user_status'] == 0){
+                                            $update_user .= "<td><h2 class='badge badge-pill badge-danger'>Deactive</h2></td>";
+                                        }
+                        
+
+
+                            $update_user .="</tr>
+
+                            <tr>
+                                <td>
+                                    <span class='label'>Join Date:</span>
+                                </td>
+                                <td>
+                                    <select name='user_status' id='user_status'>
+                                        <option value='1'>Active</option>
+                                        <option value='0'>Deactive</option>    
+                                    </select>
+                                </td>
+                            </tr>
+                                   
+                                    
                                      
                                 </table>   
                             </form>
+
+                            
                         </div>
                         ";
 
