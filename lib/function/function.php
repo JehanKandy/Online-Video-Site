@@ -831,4 +831,19 @@
         header("location:all_pro_users.php");
 
     }
+
+    //function for video select category
+    function video_select_category(){
+        $con = Connection();
+
+        //view avalabel categories for select to user
+
+        $all_categories = "SELECT * FROM categories";
+        $all_categories_result = mysqli_query($con, $all_categories);
+
+        //fetch data from categories table
+        $all_categories_row = mysqli_fetch_assoc($all_categories_result);
+
+        echo "";
+    }
 ?>
