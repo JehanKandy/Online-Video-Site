@@ -550,10 +550,19 @@
                                             .$update_user_row['id'].                                            
                                             "<input type='hidden' name='username'> 
                                         </td>
-                                        
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class='label'>Username :</span>
+                                        </td>
+                                        <td>
+                                            ".$update_user_row['username']."
+                                        </td>
+                                    </tr>
+
                                    
 
-                                    <span class='label'>Username : ".$update_user_row['username']."</span>
+                                     
                                 </table>   
                             </form>
                         </div>
