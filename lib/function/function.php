@@ -893,8 +893,17 @@
 
         //fetch data from video table for view free and provideos
         $get_videos = "SELECT * FROM videos WHERE username = '$ch_id'";
-        $get_videos_data_result = mysqli_query($con, $get_videos);
+        $get_videos_result = mysqli_query($con, $get_videos);
         
+        $get_video_row = mysqli_fetch_assoc($get_videos_result);
+
+        //fetch channel data with videos
+
+        while($channel_row = mysqli_fetch_assoc($channel_info_result)){
+            echo "data";
+        }
+
+
     }
 
 
