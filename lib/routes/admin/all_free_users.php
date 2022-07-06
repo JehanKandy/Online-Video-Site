@@ -52,7 +52,7 @@
                   <h4><i class='fas fa-user-alt-slash' style='font-size:40px'></i>&nbsp;Deactive Users&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
                   <hr style="background-color:white">
                   <h5>
-                    <b><?php count_pro_users(); ?></b>
+                    <b><?php deactive_free_user(); ?></b>
                   </h5>
                 </div>
               </div>
@@ -62,7 +62,7 @@
         <br>
         <hr>
         <br>
-            <h2>Data in Table with pagination</h2>
+            <h2>All Free Users</h2>
             <table class="table table-fluid" id="myTable">
             <thead>
             <tr>
