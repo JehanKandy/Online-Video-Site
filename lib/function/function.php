@@ -914,6 +914,16 @@
     //funtion for channel update view
     function channal_update_view(){
         $con = Connection();
+
+        //get id from channal_info()
+        $id = $_GET['id'];
+        
+        
+        //get channel data from database
+        $channel_data = "SELECT * FROM channel WHERE id='$id'";
+        $channel_data_result = mysqli_query($con, $channel_data);
+
+        //fetch channel data
     }
 
 ?>
