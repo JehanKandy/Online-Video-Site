@@ -381,7 +381,7 @@
         $con = Connection();
 
         //get all data from database according to free users
-        $free_user = "SELECT * FROM user_tbl WHERE roll = 'free'";
+        $free_user = "SELECT * FROM user_tbl WHERE roll = 'free' && user_status = '1'";
         $free_user_result = mysqli_query($con, $free_user);
 
         //cont free users in database
