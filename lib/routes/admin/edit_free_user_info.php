@@ -13,7 +13,8 @@
 
 <?php 
     if(isset($_POST['update'])){
-        
+        $result = update_user($_POST['username'], $_POST['user_status']);
+        echo $result;
     }
 ?>
 
