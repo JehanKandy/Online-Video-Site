@@ -841,9 +841,22 @@
         $all_categories = "SELECT * FROM categories";
         $all_categories_result = mysqli_query($con, $all_categories);
 
-        //fetch data from categories table
-        $all_categories_row = mysqli_fetch_assoc($all_categories_result);
 
-        echo "";
+        $category =  "
+                    <span class='label'>Video Category</span>
+
+                    <select name='video_catagory' id='video_catagory' class='video_input'>
+                        <option>SELECT</option>";
+                        
+                        while($all_categories_row = mysqli_fetch_assoc($all_categories_result)){
+          
+ 
+        $category .= "<option value='".$all_categories_row['category_name']."'>".$all_categories_row['category_name']."</option>
+                    </select>
+        
+            ";
+        }
+        
+        echo $category;
     }
 ?>
