@@ -638,7 +638,7 @@
         $update_user_data = "UPDATE user_tbl SET user_status = '$update_user_status' WHERE username = '$update_user'";
         $update_user_data_result = mysqli_query($con, $update_user_data);
 
-        
+        header("location:../routes/admin/all_free_users.php");
 
     }
 
