@@ -13,7 +13,8 @@
     ---- 05 July 2022 - get_video_id(), video_title_desc(), video_full_screen(), similer_videos(), count_users(), count_admis()
     ---- 06 July 2022 - count_channels(), count_videos(), count_pro_videos(), count_pro_users(), count_catagery(), all_free_users(), update_to_view_info(),
                         update_user(), deactive_free_user(), deactive_pro_user(), all_pro_users(), video_select_category(),
-                        count_deactive_channels(), channal_info(), channal_update_view(), and update --> reg_uer(),video_upoload()
+                        count_deactive_channels(), channal_info(), channal_update_view(),  update_channel(), 
+                        and update --> reg_uer(),video_upoload()
                         
     */
 
@@ -920,7 +921,7 @@
         
         
         //get channel data from database
-        $channel_data = "SELECT * FROM channel WHERE id='$id'";
+        $channel_data = "SELECT * FROM channels WHERE id ='$id'";
         $channel_data_result = mysqli_query($con, $channel_data);
 
         //fetch channel data
@@ -930,7 +931,7 @@
         $channel_data_edit = "
                             <div class='body'>
                                 <form action='' method='POST'>
-                                    <table border='1'>
+                                    <table border='0'>
                                         <tr>
                                             <td>ID : </td>
                                             <td>".$channel_data_row['id']."
@@ -944,7 +945,8 @@
                                             <td>Username :</td>
                                             <td>".$channel_data_row['username']."</td>
                                         </tr>
-                                        <tr>";
+                                        <tr>
+                                            <td>Channel Status</td>";
                                             if($channel_data_row['channel_status'] == 1){
                                                 $channel_data_edit .="<td><h2 class='badge badge-pill badge-success'>Active</h2></td>";
                                             }
@@ -967,16 +969,25 @@
                                                 </select>                                                   
                                             </td>
                                         </tr>
-
-                                        <input type='sumbit' name='update' value='Update' class='btn btn-success'>
+                                    <tr>
+                                        <td><input type='sumbit' name='update' value='Update' class='btn btn-success'></td>
+                                    </tr>
                                 </form>
+                                </table>
                                 <br><br>
                                 <a href='all_channels.php'><button class='btn btn-primary'>Back</button></a>
                             </div>
 
+
                         ";
 
         echo $channel_data_edit;
+
+    }
+
+    //function for update channel
+    function update_channel(){
+        $con = Connection();
 
     }
 
