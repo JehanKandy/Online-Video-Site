@@ -631,11 +631,11 @@
 
     // function for update user
 
-    function update_user(){
+    function update_user($update_user, $update_user_status){
         $con = Connection();
 
         //update user
-        
+        $update_user_data = "UPDATE user_tbl SET user_status = '$update_user_status' WHERE username = '$update_user'";
 
     }
 
