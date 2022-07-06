@@ -936,7 +936,29 @@
                                             <td>".$channel_data_row['id']."
                                             <input type='hidden' name='id' value='".$channel_data_row['id']."'></td>
                                         </tr>
-                                        
+                                        <tr>
+                                            <td>Channel Name:</td>
+                                            <td>".$channel_data_row['channel_name']."</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Username:</td>
+                                            <td>".$channel_data_row['username']."</td>
+                                        </tr>
+                                        <tr>";
+                                            if($channel_data_row['channel_status'] == 1){
+                                                $channel_data_edit .="<td><h2 class='badge badge-pill badge-success'>Active</h2></td>";
+                                            }
+                                            elseif($channel_data_row['channel_status'] == 0){
+                                                $channel_data_edit .="<td><h2 class='badge badge-pill badge-danger'>Deactive</h2></td>";
+                                            }
+
+
+                   $channel_data_edit .="</tr>
+                                        <tr>
+                                            <td>Username:</td>
+                                            <td>".$channel_data_row['username']."</td>
+                                        </tr>
+
                                 </form>
                             </div>
 
