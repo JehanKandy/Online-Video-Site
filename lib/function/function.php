@@ -539,10 +539,28 @@
         $update_user_row = mysqli_fetch_assoc($update_user_result);
 
         $update_user = "
-                    
+                        <div class='body'>
+                            <form action='' method='POST'>
+                                <table border='0'>
+                                    <tr>
+                                        <td>
+                                            <span class='label'>ID : </span>
+                                        </td>
+                                        <td>"
+                                            .$update_user_row['id'].                                            
+                                            "<input type='hidden' name='username'> 
+                                        </td>
+                                        
+                                   
 
+                                    <span class='label'>Username : ".$update_user_row['username']."</span>
+                                </table>   
+                            </form>
+                        </div>
                         ";
 
+
+        echo $update_user;
 
 
 
