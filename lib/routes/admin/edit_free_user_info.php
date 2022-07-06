@@ -10,3 +10,13 @@
 
 ?>
 
+<div class="update-page">
+    <div class="update-content">
+        <div class="title">
+            Update
+        </div>
+        <div class="body">
+            Body
+        </div>
+    </div>
+</div>
