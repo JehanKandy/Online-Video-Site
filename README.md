@@ -133,6 +133,7 @@ My one of University Projects<br>
   - lib/routes/admin/all_pro_users.php
   - lib/routes/admin/all_channels.php
   - lib/routes/user/video_upload.php
+  - lib/routes/admin/edit_channel_info.php
   
   
 
