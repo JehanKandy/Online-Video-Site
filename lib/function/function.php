@@ -519,6 +519,7 @@
                 ";
 
             echo $free_user;
+        }
 
        }
 
@@ -527,18 +528,18 @@
        function update_to_view_info(){
         $con = Connection();
 
-        if(isset($_GET['id'])){
-            $id = $_GET['id'];
-            echo $id;
+        $id = $_GET['id'];
+        //echo $id;
 
-        }
+        //get data from user_tbl according to id
+        $update_user = "SELECT * FROM user_tbl WHERE username = '$id'";
+        $update_user_result = mysqli_query($con, $update_user);
+
         
-        //get data from database
-        //$update_user_data = "SELECT * FROM user_tbl WHERE "
 
 
        }
-    }
+    
 
 
 ?>
