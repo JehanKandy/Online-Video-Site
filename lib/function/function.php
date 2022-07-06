@@ -12,7 +12,7 @@
     ---- 04 July 2022 - check_user_id() and update --> reg_user(), user_login(), video_upoload(), uploded_videos(),uploded_videos_loged()
     ---- 05 July 2022 - get_video_id(), video_title_desc(), video_full_screen(), similer_videos(), count_users(), count_admis()
     ---- 06 July 2022 - count_channels(), count_videos(), count_pro_videos(), count_pro_users(), count_catagery(), all_free_users(), update_to_view_info(),
-                        update_user(), deactive_free_user() and update --> reg_uer(),
+                        update_user(), deactive_free_user(), deactive_pro_user() and update --> reg_uer(),
     */
 
     //function for register an user
@@ -421,6 +421,21 @@
         echo $pro_users_nor;
     }
 
+        //function for deactive pro users
+        function deactive_pro_user(){
+            $con = Connection();
+    
+            
+            //get all data from database according to free deactive users
+            $pro_deactive_user = "SELECT * FROM user_tbl WHERE roll = 'pro' && user_status = '0'";
+            $pro_deactive_user_result = mysqli_query($con, $pro_deactive_user);
+    
+            //cont free users in database
+    
+            $pro_deactive_user_nor = mysqli_num_rows($pro_deactive_user_result);
+            echo ($pro_deactive_user_nor);
+            
+        }
 
     //function for count_admis 
 
