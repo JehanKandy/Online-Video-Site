@@ -13,10 +13,8 @@
 <div class="update-page">
     <div class="update-content">
         <div class="title">
-            Update
+            Update Personal Information
         </div>
-        <div class="body">
-            Body
-        </div>
+        <?php update_to_view_info(); ?>
     </div>
 </div>
