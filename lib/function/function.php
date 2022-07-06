@@ -1028,17 +1028,19 @@
                             <td>".$all_videos_row['video_title']."</td>
                             <td>".$all_videos_row['username']."</td>
                             <td>".$all_videos_row['category']."</td>
-                            <td>".$all_videos_row['video_type']."</td>";
+                            <td>".$all_videos_row['video_type']."</td>
+                            <td>".$all_videos_row['add_date']."</td>";
+                            
 
                             if($all_videos_row['video_status'] == 1){
                                 $all_video_data .="<td><h2 class='badge badge-pill badge-success'>Active</h2></td>";
                             }
                             elseif($all_videos_row['video_status'] == 0){
-                                $all_video_data .="<td><h2 class='badge badge-pill badge-danger'>Active</h2></td>";
+                                $all_video_data .="<td><h2 class='badge badge-pill badge-danger'>Deactive</h2></td>";
                             }
 
             $all_video_data .="    
-                                                     
+                            <td><a href='edit_free_user_info.php?id=".$all_videos_row['id']."'><button class='btn btn-primary'>Action</button></a></td>                      
                         </tr>                   
                     
                         ";
