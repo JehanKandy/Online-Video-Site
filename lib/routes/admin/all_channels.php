@@ -70,22 +70,19 @@
                 ID
                 </th>
                 <th>
+                Channel Name
+                </th>
+                <th>
                 Username
                 </th>
                 <th>
-                Email
+                User Email
                 </th>
                 <th>
-                Roll
+                Channel Status
                 </th>
                 <th>
-                Account Type
-                </th>
-                <th>
-                Join Date
-                </th>
-                <th>
-                Account Status
+                Create Date
                 </th>
                 <th>
                 Action
@@ -93,7 +90,7 @@
             </tr>
             </thead>
             <tbody>
-           <?php all_pro_users(); ?>
+           <?php  ?>
 
             </tbody>
             </table>
