@@ -1,4 +1,4 @@
-<?php 
+aA<?php 
     include("config.php");
 
     use FTP\Connection;
@@ -513,7 +513,7 @@
                 }
 
             $free_user .="    
-                <td>action</td>
+                <td><a href='edit_free_user_info.php?id=".$all_free_users_row['username']."'><button class='btn btn-primary'>Action</button></a></td>
             </tr>
             
                 ";
