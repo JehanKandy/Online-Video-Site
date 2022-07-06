@@ -932,16 +932,16 @@
                                 <form action='' method='POST'>
                                     <table border='1'>
                                         <tr>
-                                            <td>ID</td>
+                                            <td>ID : </td>
                                             <td>".$channel_data_row['id']."
                                             <input type='hidden' name='id' value='".$channel_data_row['id']."'></td>
                                         </tr>
                                         <tr>
-                                            <td>Channel Name:</td>
+                                            <td>Channel Name :</td>
                                             <td>".$channel_data_row['channel_name']."</td>
                                         </tr>
                                         <tr>
-                                            <td>Username:</td>
+                                            <td>Username :</td>
                                             <td>".$channel_data_row['username']."</td>
                                         </tr>
                                         <tr>";
@@ -953,13 +953,25 @@
                                             }
 
 
-                   $channel_data_edit .="</tr>
+                         $channel_data_edit .="</tr>
                                         <tr>
-                                            <td>Username:</td>
-                                            <td>".$channel_data_row['username']."</td>
+                                            <td>Create Date:</td>
+                                            <td>".$channel_data_row['created_date']."</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Channel Status : </td>
+                                            <td>
+                                                <select name='channel_status' id='channel_status'>
+                                                    <option value='1'>Active</option>
+                                                    <option value='0'>Deactive</option> 
+                                                </select>                                                   
+                                            </td>
                                         </tr>
 
+                                        <input type='sumbit' name='update' value='Update' class='btn btn-success'>
                                 </form>
+                                <br><br>
+                                <a href='all_channels.php'><button class='btn btn-primary'>
                             </div>
 
                         ";
