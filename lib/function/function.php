@@ -14,7 +14,7 @@
     ---- 06 July 2022 - count_channels(), count_videos(), count_pro_videos(), count_pro_users(), count_catagery(), all_free_users(), update_to_view_info(),
                         update_user(), deactive_free_user(), deactive_pro_user(), all_pro_users(), video_select_category(),
                         count_deactive_channels(), channal_info(), channal_update_view(),  update_channel(), count_videos_deavtive(), all_free_videos()
-                        video_update_view(),                         
+                        video_update_view(), update_free_video()                        
                         and update --> reg_uer(),video_upoload()
                         
     */
@@ -1041,7 +1041,7 @@
                             }
 
             $all_video_data .="    
-                            <td><a href='edit_free_user_info.php?id=".$all_videos_row['id']."'><button class='btn btn-primary'>Action</button></a></td>                      
+                            <td><a href='edit_free_video_info.php?id=".$all_videos_row['id']."'><button class='btn btn-primary'>Action</button></a></td>                      
                         </tr>                   
                     
                         ";
@@ -1120,7 +1120,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input type='submit' name='update' value='Update' class='btn btn-succsee'>
+                                    <input type='submit' name='update' value='Update' class='btn btn-success'>
                                 </td>
                             </tr>
                         </table>
@@ -1134,4 +1134,15 @@
         echo $update_video;
     }
 
+    //function for update free video
+    function update_free_video($video_id, $video_status){
+        $con = Connection();
+
+        //update video table
+        $update_vid = "UPDATE videos SET video_status = '$video_status' WHERE id = '$video_id'";
+        $update_video_result = mysqli_query($con, $update_vid);
+
+        header("location:all_free_videos.php");
+
+    }
 ?>
