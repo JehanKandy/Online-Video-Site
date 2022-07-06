@@ -535,7 +535,17 @@
         $update_user = "SELECT * FROM user_tbl WHERE username = '$id'";
         $update_user_result = mysqli_query($con, $update_user);
 
-        
+        //fetch data 
+        $update_user_row = mysqli_fetch_assoc($update_user_result);
+
+        $update_user = "
+                    
+
+                        ";
+
+
+
+
 
 
        }
