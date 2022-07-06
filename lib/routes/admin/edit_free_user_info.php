@@ -10,6 +10,13 @@
 
 ?>
 
+
+<?php 
+    if(isset($_POST['update'])){
+        
+    }
+?>
+
 <div class="update-page">
     <div class="update-content">
         <div class="title">
