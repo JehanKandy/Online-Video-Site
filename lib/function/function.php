@@ -904,13 +904,11 @@
 
                     $channel .="
                         <td>".$channel_row['created_date']."</td>
-                        <td>Action</td>
+                        <td><a href='edit_channel_info.php?id=".$channel_row['id']."'><button class='btn btn-primary'>Action</button></td>
                     </tr>
                     ";
             echo $channel;
         }
-
-
     }
 
 
