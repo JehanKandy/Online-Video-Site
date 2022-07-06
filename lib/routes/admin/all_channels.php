@@ -76,19 +76,10 @@
                 Username
                 </th>
                 <th>
-                User Email
-                </th>
-                <th>
                 Channel Status
                 </th>
                 <th>
                 Create Date
-                </th>
-                <th>
-                  Free Videos
-                </th>
-                <th>
-                  Pro Videos
                 </th>
                 <th>
                 Action
