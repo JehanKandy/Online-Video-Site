@@ -31,14 +31,14 @@
     </section>
     <section class="admin-panel">
         <div class="container-fluid">
-          <h1 class="display-4">All Pro Users</h1>
+          <h1 class="display-4">All Videos</h1>
           <hr>
 
           <div class="row">
             <div class="col-auto">
               <div class="card bg-success text-white">
                 <div class="card-body">
-                  <h4><i class='fas fa-user-tie' style='font-size:40px'></i>&nbsp;Active Pro Users&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+                  <h4><i class='fas fa-user-tie' style='font-size:40px'></i>&nbsp;Active Videoss&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
                   <hr style="background-color:white">
                   <h5>
                     <b><?php count_videos(); ?></b>
@@ -49,10 +49,10 @@
             <div class="col-auto">
               <div class="card bg-danger text-white">
                 <div class="card-body">
-                  <h4><i class='fas fa-user-alt-slash' style='font-size:40px'></i>&nbsp;Deactive Pro &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+                  <h4><i class='fas fa-user-alt-slash' style='font-size:40px'></i>&nbsp;Deactive Videos &nbsp;&nbsp;&nbsp;</h4>
                   <hr style="background-color:white">
                   <h5>
-                    <b><?php deactive_pro_user(); ?></b>
+                    <b><?php count_videos_deavtive(); ?></b>
                   </h5>
                 </div>
               </div>
@@ -70,22 +70,22 @@
                 ID
                 </th>
                 <th>
+                Video Title
+                </th>
+                <th>
                 Username
                 </th>
                 <th>
-                Email
+                Category
                 </th>
                 <th>
-                Roll
+                Video Type
                 </th>
                 <th>
-                Account Type
+                Add Date
                 </th>
                 <th>
-                Join Date
-                </th>
-                <th>
-                Account Status
+                Video Status
                 </th>
                 <th>
                 Action
@@ -93,7 +93,7 @@
             </tr>
             </thead>
             <tbody>
-           <?php all_pro_users(); ?>
+           <?php all_free_videos(); ?>
 
             </tbody>
             </table>
