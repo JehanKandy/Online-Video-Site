@@ -130,6 +130,8 @@ My one of University Projects<br>
   - css/style.css
   - lib/routes/admin/edit_free_user_info.php
   - lib/routes/admin/all_pro_users.php
+  - lib/routes/admin/all_channels.php
+  
 
   02. develop
   - lib
