@@ -878,4 +878,12 @@
         
         echo $category;
     }
+
+    //function for channal info
+    function channal_info(){
+        $con = Connection();
+    }
+
+
+
 ?>
