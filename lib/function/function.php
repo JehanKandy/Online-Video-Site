@@ -13,7 +13,7 @@
     ---- 05 July 2022 - get_video_id(), video_title_desc(), video_full_screen(), similer_videos(), count_users(), count_admis()
     ---- 06 July 2022 - count_channels(), count_videos(), count_pro_videos(), count_pro_users(), count_catagery(), all_free_users(), update_to_view_info(),
                         update_user(), deactive_free_user(), deactive_pro_user(), all_pro_users(), video_select_category(),
-                        count_deactive_channels(), channal_info(), channal_update_view(),  update_channel(), 
+                        count_deactive_channels(), channal_info(), channal_update_view(),  update_channel(), count_videos_deavtive(), all_free_videos()
                         and update --> reg_uer(),video_upoload()
                         
     */
@@ -1011,5 +1011,10 @@
     }
 
 
+    //function for all free videos
+
+    function all_free_videos(){
+        $con = Connection();
+    }
 
 ?>
