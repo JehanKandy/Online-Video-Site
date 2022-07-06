@@ -559,7 +559,38 @@
                                             ".$update_user_row['username']."
                                         </td>
                                     </tr>
-
+                                    <tr>
+                                        <td>
+                                            <span class='label'>Email:</span>
+                                        </td>
+                                        <td>
+                                            ".$update_user_row['email']."
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class='label'>Roll:</span>
+                                        </td>
+                                        <td>
+                                            ".$update_user_row['roll']."
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class='label'>Join Date:</span>
+                                        </td>
+                                        <td>
+                                            ".$update_user_row['join_date']."
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class='label'>Email:</span>
+                                        </td>
+                                        <td>
+                                            ".$update_user_row['user_status']."
+                                        </td>
+                                    </tr>
                                    
 
                                      
