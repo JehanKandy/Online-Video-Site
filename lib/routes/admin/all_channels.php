@@ -41,7 +41,7 @@
                   <h4><i class='fas fa-user-tie' style='font-size:40px'></i>&nbsp;Active Pro Users&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
                   <hr style="background-color:white">
                   <h5>
-                    <b><?php count_pro_users(); ?></b>
+                    <b><?php count_channels(); ?></b>
                   </h5>
                 </div>
               </div>
@@ -52,7 +52,7 @@
                   <h4><i class='fas fa-user-alt-slash' style='font-size:40px'></i>&nbsp;Deactive Pro &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
                   <hr style="background-color:white">
                   <h5>
-                    <b><?php deactive_pro_user(); ?></b>
+                    <b><?php count_deactive_channels(); ?></b>
                   </h5>
                 </div>
               </div>
