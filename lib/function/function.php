@@ -12,7 +12,7 @@
     ---- 04 July 2022 - check_user_id() and update --> reg_user(), user_login(), video_upoload(), uploded_videos(),uploded_videos_loged()
     ---- 05 July 2022 - get_video_id(), video_title_desc(), video_full_screen(), similer_videos(), count_users(), count_admis()
     ---- 06 July 2022 - count_channels(), count_videos(), count_pro_videos(), count_pro_users(), count_catagery(), all_free_users(), update_to_view_info(),
-                        update_user(), deactive_free_user(), deactive_pro_user() and update --> reg_uer(),
+                        update_user(), deactive_free_user(), deactive_pro_user(), all_pro_users() and update --> reg_uer(),
     */
 
     //function for register an user
@@ -411,7 +411,7 @@
         $con = Connection();
 
         //get data according to pro users in table
-        $pro_users = "SELECT * FROM user_tbl WHERE roll = 'pro'";
+        $pro_users = "SELECT * FROM user_tbl WHERE roll = 'pro' && user_status = '1'";
         $pro_users_result = mysqli_query($con, $pro_users);
 
         //count pro_users
@@ -555,6 +555,45 @@
 
        }
 
+    //fucntion for all pro users
+    function all_pro_users(){
+        $con = Connection();
+
+        //gat all data from database accorfing to pro users
+
+        $all_pro_users = "SELECT * FROM user_tbl WHERE roll = 'pro'";
+        $all_pro_users_result = mysqli_query($con, $all_pro_users);
+        
+        //now print all data in table
+
+        while($all_pro_users_row = mysqli_fetch_assoc($all_pro_users_result)){
+            $free_user =  "
+            <tr>
+                <td>".$all_pro_users_row['id']."</td>
+                <td>".$all_pro_users_row['username']."</td>
+                <td>".$all_pro_users_row['email']."</td>
+                <td>user</td>
+                <td>".$all_pro_users_row['roll']."</td>
+                <td>".$all_pro_users_row['join_date']."</td> ";
+
+                if($all_pro_users_row['user_status'] == 1){
+                    $free_user .= "<td><h2 class='badge badge-pill badge-success'>Active</h2></td>";
+                }
+                elseif($all_pro_users_row['user_status'] == 0){
+                    $free_user .= "<td><h2 class='badge badge-pill badge-danger'>Deactive</h2></td>";
+                }
+
+            $free_user .="    
+                <td><a href='edit_pro_user_info.php?id=".$all_pro_users_row['username']."'><button class='btn btn-primary'>Action</button></a></td>
+            </tr>
+            
+                ";
+
+            echo $free_user;
+        }
+
+       }
+
        //function for update to view info
 
        function update_to_view_info(){
@@ -660,6 +699,7 @@
         echo $update_user;
     }
 
+    
     // function for update user
 
     function update_user($update_user, $update_user_status){
@@ -675,6 +715,120 @@
 
 
 
+ //function for update to view info
 
-       
+    function update_to_view_info_pro(){
+        $con = Connection();
+
+        $id = $_GET['id'];
+        //echo $id;
+
+        //get data from user_tbl according to id
+        $update_user_pro = "SELECT * FROM user_tbl WHERE username = '$id'";
+        $update_user_pro_result = mysqli_query($con, $update_user_pro);
+
+        //fetch data 
+        $update_user_pro_row = mysqli_fetch_assoc($update_user_pro_result);
+
+        $update_user = "
+                        <div class='body'>
+                            <form action='' method='POST'>
+                                <table border='0'>
+                                    <tr>
+                                        <td>
+                                            <span class='label'>ID : </span>
+                                        </td>
+                                        <td>"
+                                            .$update_user_pro_row['id'].                                            
+                                            "<input type='hidden' name='username' value='".$update_user_pro_row['username']."'> 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class='label'>Username :</span>
+                                        </td>
+                                        <td>
+                                            ".$update_user_pro_row['username']."
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class='label'>Email:</span>
+                                        </td>
+                                        <td>
+                                            ".$update_user_pro_row['email']."
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class='label'>Roll:</span>
+                                        </td>
+                                        <td>
+                                            ".$update_user_pro_row['roll']."
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class='label'>Join Date:</span>
+                                        </td>
+                                        <td>
+                                            ".$update_user_pro_row['join_date']."
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class='label'>User Status:</span>
+                                        </td>";
+
+                                        if($update_user_pro_row['user_status'] == 1){
+                                            $update_user .= "<td><h2 class='badge badge-pill badge-success'>Active</h2></td>";
+                                        }
+                                        elseif($update_user_pro_row['user_status'] == 0){
+                                            $update_user .= "<td><h2 class='badge badge-pill badge-danger'>Deactive</h2></td>";
+                                        }
+                        
+
+
+                            $update_user .="</tr>
+
+                            <tr>
+                                <td>
+                                    <span class='label'>Join Date:</span>
+                                </td>
+                                <td>
+                                    <select name='user_status' id='user_status'>
+                                        <option value='1'>Active</option>
+                                        <option value='0'>Deactive</option>    
+                                    </select>
+                                </td>
+                            </tr>
+                                
+                            <tr>
+                                <td colspan='2'>
+                                    <input type='submit' name='update' class='btn btn-success' value='Update'>
+                                </td>
+                            </tr>   
+                                </table>   
+                            </form>
+                            <br><br>
+                        <a href='all_pro_users.php'><button class='btn btn-primary'>Back</button></a>
+                            
+                        </div>
+                        ";
+
+
+        echo $update_user;
+    }
+    // function for update user
+
+    function update_user_pro($update_user_pro, $update_user_status_pro){
+        $con = Connection();
+
+        //update user pro
+        $update_user_pro_data = "UPDATE user_tbl SET user_status = '$update_user_status_pro' WHERE username = '$update_user_pro'";
+        $update_user_pro_data_result = mysqli_query($con, $update_user_pro_data);
+
+        header("location:all_pro_users.php");
+
+    }
 ?>
