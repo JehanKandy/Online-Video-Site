@@ -1402,13 +1402,33 @@
                     <table border='0'>
                         <tr>
                             <td>Channel Name : </td>
+                            <td><input type='text' class='channel-input' value='".$channel_information_row['channel_name']."'></td>
+                        </tr>
+                        <tr>
+                            <td>Channel Username : </td>
+                            <td><input type='text' class='channel-input' value='".$channel_information_row['username']."'></td>
+                        </tr>
+                        <tr>
+                            <td>Channel User Email : </td>
+                            <td><input type='text' class='channel-input' value='".$channel_information_row['user_email']."'></td>
+                        </tr>
+                        <tr>
+                            <td>Channel User Email : </td>";
+                            if($channel_information_row['channel_status'] == 1){
+                                $channel_infor_view .="<td><h1 class='badge badge-pill badge-success'>Active</h1></td>";
+                            }
+                            elseif($channel_information_row['channel_status'] == 0){
+                                $channel_infor_view .="<td><h1 class='badge badge-pill badge-danger'>Deactive</h1></td>";
+                            }
+
+        $channel_infor_view .="                                
+                        </tr>
+                        <tr>
+                            <td>Channel Created Date</td>
                             <td></td>
                         </tr>
                     </table>
                 </div>
-
-        
-        
         ";
     }
 ?>
