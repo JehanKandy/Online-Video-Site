@@ -17,7 +17,7 @@
                         video_update_view(), update_free_video()                        
                         and update --> reg_uer(),video_upoload()
     ---- 07 July 2022 - count_pro_videos_deactive(), all_pro_videos(),pro_video_update_view(),update_ro_video(),
-    ---- 08 July 2022 -  all_admins(),all_categories(), login_user_name(), channel_info(), channel_free_videos()
+    ---- 08 July 2022 -  all_admins(),all_categories(), login_user_name(), channel_info(), channel_free_videos(),  channel_pro_videos(), 
                         
     */
 
@@ -1447,7 +1447,7 @@
         $get_username_result = mysqli_query($con, $get_username);
 
         //fecth username
-        $get_username_row = mysqli_num_rows($get_username_result);
+        $get_username_row = mysqli_fetch_assoc($get_username_result);
 
         $username = $get_username_row['username'];
 
@@ -1455,14 +1455,44 @@
 
         //now get all free videos from videos table
         $all_free_videos = "SELECT * FROM videos WHERE username='$username' && video_type = 'free' && video_status = '1'";
-        $all_free_videos_result = mysqli_query($con, $all_free_videos);\
+        $all_free_videos_result = mysqli_query($con, $all_free_videos);
 
         //now count free active videos
-        $all_free_videos_nor = mysqli_fetch_assoc($all_free_videos_result);
+        $all_free_videos_nor = mysqli_num_rows($all_free_videos_result);
 
         //print free videos
         echo $all_free_videos_nor;
     }
-
     
+    // function for count channel pro videos
+    function channel_pro_videos(){
+        $con = Connection();
+
+        //get loginSession email
+        $email = strval($_SESSION['loginSession']);
+
+        //get username using login email
+        $get_username_pro = "SELECT * FROM user_tbl WHERE email = '$email'";
+        $get_username_pro_result = mysqli_query($con, $get_username_pro);
+
+        //fecth username
+        $get_username_pro_row = mysqli_fetch_assoc($get_username_pro_result);
+
+        $username = $get_username_pro_row['username'];
+
+        //------------------------
+
+        //now get all free videos from videos table
+        $all_pro_videos = "SELECT * FROM videos WHERE username='$username' && video_type = 'pro' && video_status = '1'";
+        $all_pro_videos_result = mysqli_query($con, $all_pro_videos);
+
+        //now count free active videos
+        $all_pro_videos_nor = mysqli_num_rows($all_pro_videos_result);
+
+        //print free videos
+        echo $all_pro_videos_nor;
+    }
+
+
+
 ?>
