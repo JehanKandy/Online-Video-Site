@@ -188,16 +188,4 @@ My one of University Projects<br>
   - - - lib/routes/admin
   - - - - lib/routes/admin/all_free_users.php
   - - - - lib/routes/admin/edit_free_user_info.php
-  - - - - lib/routes/admin/all_pro_users.php
-  - - - - lib/routes/admin/all_channels.php
-  - - - - lib/routes/admin/edit_channel_info.php
-  - - - - lib/routes/admin/edit_pro_user_info.php
-  - - - - lib/routes/admin/all_free_videos.php
-  - - - - lib/routes/admin/edit_free_videos_info.php
-  
-
-  
-  
-  - js
-  - - js/script.js
 
