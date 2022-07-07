@@ -16,7 +16,7 @@
                         count_deactive_channels(), channal_info(), channal_update_view(),  update_channel(), count_videos_deavtive(), all_free_videos()
                         video_update_view(), update_free_video()                        
                         and update --> reg_uer(),video_upoload()
-    ---- 07 July 2022 - count_pro_videos_deactive(), all_pro_videos(),pro_video_update_view(),
+    ---- 07 July 2022 - count_pro_videos_deactive(), all_pro_videos(),pro_video_update_view(),update_ro_video(),
                         
     */
 
@@ -1283,6 +1283,17 @@
         ";
 
     echo $update_pro_video;
-}
+    }
     
+    //function for update free video
+    function update_ro_video($video_id_pro, $video_status_pro){
+        $con = Connection();
+
+        //update video table
+        $update_vid_pro = "UPDATE videos SET video_status = '$video_status_pro' WHERE id = '$video_id_pro'";
+        $update_vid_pro_result = mysqli_query($con, $update_vid_pro);
+
+        header("location:all_pro_videos.php");
+
+    }
 ?>
