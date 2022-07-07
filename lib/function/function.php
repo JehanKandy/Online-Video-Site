@@ -17,7 +17,7 @@
                         video_update_view(), update_free_video()                        
                         and update --> reg_uer(),video_upoload()
     ---- 07 July 2022 - count_pro_videos_deactive(), all_pro_videos(),pro_video_update_view(),update_ro_video(),
-    ---- 08 July 2022 -  all_admins(),all_categories(), login_user_name(), channel_info()
+    ---- 08 July 2022 -  all_admins(),all_categories(), login_user_name(), channel_info(), channel_free_videos()
                         
     */
 
@@ -1433,5 +1433,10 @@
         ";
 
         echo $channel_infor_view;
+    }
+
+    // function for count channel free videos
+    function channel_free_videos(){
+        $con = Connection();
     }
 ?>
