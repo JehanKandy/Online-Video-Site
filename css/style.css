@@ -374,15 +374,16 @@ video {
 }
 
 .channel-infor {
-    width: 200px;
+    width: 500px;
     height: 100%;
     border: 1px solid rgb(182, 182, 182);
-    border-radius: 5px;
+    border: none;
     font-size: 20px;
 }
 
 .channel-input {
     width: 100%;
+    margin-top: 15px;
 }
 
 
