@@ -24,12 +24,6 @@
 
 */
 
-.home {
-    height: 100%;
-    width: 100%;
-    background-color: rgba(238, 238, 238, 0.281);
-}
-
 .home-content {
     padding: 60px;
 }
@@ -376,6 +370,10 @@ video {
     font-size: 25px;
 }
 
+.navbar {
+    width: 100%;
+}
+
 
 /* for standard laptop screen size 
         width : 1366px
@@ -445,13 +443,9 @@ for standard iPad screen size
        
 */
 
-@media screen and (min-width: 712px) and (max-width: 1024px) {
-    .home {
-        height: 100%;
-        width: 100%;
-        background-color: rgba(238, 238, 238, 0.281);
-    }
+@media screen and (max-width: 768px) {
     .home-content {
+        width: 100%;
         padding-left: 40px;
         padding-right: 20px;
     }
@@ -513,6 +507,9 @@ for standard iPad screen size
         padding-top: 20px;
         padding-left: 10px;
     }
+    .nav-index {
+        width: 768px;
+    }
 }
 
 
@@ -524,7 +521,46 @@ for standard iPad screen size
         height : 1024px
         landscape 
        
+
+
 */
+
+@media screen and (min-width: 1023px) and (max-width: 1024px) {
+    .home-content {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    video {
+        width: 320px;
+        height: 240px;
+    }
+    .reg {
+        padding-top: 100px;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-bottom: 30px;
+    }
+    .login {
+        padding-top: 100px;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-bottom: 30px;
+    }
+    .reg-content {
+        width: 800px;
+        height: 100%;
+        border: 1px solid rgb(182, 182, 182);
+        border-radius: 5px;
+        font-size: 20px;
+    }
+    .login-content {
+        width: 800px;
+        height: 100%;
+        border: 1px solid rgb(182, 182, 182);
+        border-radius: 5px;
+        font-size: 20px;
+    }
+}
 
 
 /*Samsung Galaxy A51/71 
