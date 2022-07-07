@@ -1398,7 +1398,7 @@
         //view channel infor in table
         $channel_infor_view ="
 
-                <div>
+                <div class='channel-infor'>
                     <table border='0'>
                         <tr>
                             <td>Channel Name : </td>
@@ -1430,5 +1430,7 @@
                     </table>
                 </div>
         ";
+
+        echo $channel_infor_view;
     }
 ?>
