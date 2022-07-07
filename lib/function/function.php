@@ -1438,5 +1438,31 @@
     // function for count channel free videos
     function channel_free_videos(){
         $con = Connection();
+
+        //get loginSession email
+        $email = strval($_SESSION['loginSession']);
+
+        //get username using login email
+        $get_username = "SELECT * FROM user_tbl WHERE email = '$email'";
+        $get_username_result = mysqli_query($con, $get_username);
+
+        //fecth username
+        $get_username_row = mysqli_num_rows($get_username_result);
+
+        $username = $get_username_row['username'];
+
+        //------------------------
+
+        //now get all free videos from videos table
+        $all_free_videos = "SELECT * FROM videos WHERE username='$username' && video_type = 'free' && video_status = '1'";
+        $all_free_videos_result = mysqli_query($con, $all_free_videos);\
+
+        //now count free active videos
+        $all_free_videos_nor = mysqli_fetch_assoc($all_free_videos_result);
+
+        //print free videos
+        echo $all_free_videos_nor;
     }
+
+    
 ?>
