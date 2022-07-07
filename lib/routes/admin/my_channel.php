@@ -48,7 +48,7 @@
                   <h4><i class='far fa-file-video' style='font-size:40px'></i>&nbsp;Videos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
                   <hr style="background-color:white">
                   <h5>
-                    <b><?php count_admins(); ?></b>
+                    <b><?php channel_free_videos(); ?></b>
                   </h5>
                 </div>
               </div>
@@ -59,7 +59,7 @@
                   <h4><i class='fas fa-film' style='font-size:40px'></i>&nbsp;Pro - Videos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
                   <hr style="background-color:white">
                   <h5>
-                    <b><?php count_admins(); ?></b>
+                    <b><?php channel_pro_videos(); ?></b>
                   </h5>
                 </div>
               </div>
@@ -68,7 +68,9 @@
           <br>
           <hr>
           <br>
-        
+        <div class="row">
+          
+        </div>
     </section>
 </div>
 
