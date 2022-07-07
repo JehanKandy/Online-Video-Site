@@ -1424,7 +1424,7 @@
         $channel_infor_view .="                                
                         </tr>
                         <tr>
-                            <td>Channel Created Date</td>
+                            <td>Channel Created Date : </td>
                             <td><input type='text' class='channel-input' value='".$channel_information_row['created_date']."' disabled></td>
                         </tr>
                     </table>
