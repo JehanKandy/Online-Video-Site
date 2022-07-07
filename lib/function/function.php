@@ -1301,5 +1301,32 @@
     //function for all admins
     function all_admins(){
         $con = Connection();
+
+        //get all data from databes
+        $all_admin = "SELECT * FROM user_tbl WHERE roll = 'admin'";
+        $all_admin_result = mysqli_query($con, $all_admin);
+
+        //fetch all data 
+        while($all_admin_row = mysqli_fetch_assoc($all_admin_result)){
+            $all_admin_data = "
+                        <tr>
+                            <td>".$all_admin_row['id']."</td>
+                            <td>".$all_admin_row['username']."</td>
+                            <td>".$all_admin_row['email']."</td>
+                            <td>".$all_admin_row['roll']."</td>
+                            <td>".$all_admin_row['account_type']."</td>
+                            <td>".$all_admin_row['join_date']."</td>";
+                            
+
+                            if($all_admin_row['user_status'] == 1){
+                                $all_admin_data .="<td><h2 class='badge badge-pill badge-success'>Active</h2></td>";
+                            }
+                            elseif($all_admin_row['user_status'] == 0){
+                                $all_admin_data .="<td><h2 class='badge badge-pill badge-danger'>Deactive</h2></td>";
+                            }
+
+            echo $all_admin_data;
+
+        }
     }
 ?>
