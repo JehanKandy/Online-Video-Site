@@ -1402,15 +1402,15 @@
                     <table border='0'>
                         <tr>
                             <td>Channel Name : </td>
-                            <td><input type='text' class='channel-input' value='".$channel_information_row['channel_name']."'></td>
+                            <td><input type='text' class='channel-input' value='".$channel_information_row['channel_name']."' disabled></td>
                         </tr>
                         <tr>
                             <td>Channel Username : </td>
-                            <td><input type='text' class='channel-input' value='".$channel_information_row['username']."'></td>
+                            <td><input type='text' class='channel-input' value='".$channel_information_row['username']."' disabled></td>
                         </tr>
                         <tr>
                             <td>Channel User Email : </td>
-                            <td><input type='text' class='channel-input' value='".$channel_information_row['user_email']."'></td>
+                            <td><input type='text' class='channel-input' value='".$channel_information_row['user_email']."' disabled></td>
                         </tr>
                         <tr>
                             <td>Channel User Email : </td>";
@@ -1425,7 +1425,7 @@
                         </tr>
                         <tr>
                             <td>Channel Created Date</td>
-                            <td></td>
+                            <td><input type='text' class='channel-input' value='".$channel_information_row['created_date']."' disabled></td>
                         </tr>
                     </table>
                 </div>
