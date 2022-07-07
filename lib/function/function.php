@@ -1396,5 +1396,19 @@
         $channel_information_row = mysqli_fetch_assoc($channel_information_result);
 
         //view channel infor in table
+        $channel_infor_view ="
+
+                <div>
+                    <table border='0'>
+                        <tr>
+                            <td>Channel Name : </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+
+        
+        
+        ";
     }
 ?>
