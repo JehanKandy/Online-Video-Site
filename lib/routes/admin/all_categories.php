@@ -41,7 +41,7 @@
                   <h4><i class='fas fa-lightbulb' style='font-size:40px'></i>&nbsp;All Categories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
                   <hr style="background-color:white">
                   <h5>
-                    <b><?php count_admins(); ?></b>
+                    <b><?php count_catagery(); ?></b>
                   </h5>
                 </div>
               </div>
@@ -62,24 +62,18 @@
                 Username
                 </th>
                 <th>
-                Email
+                Categories Name
                 </th>
                 <th>
-                Roll
+                Categories Status
                 </th>
                 <th>
-                Account Type
-                </th>
-                <th>
-                Join Date
-                </th>
-                <th>
-                Account Status
+                Categories Create Date
                 </th>
             </tr>
             </thead>
             <tbody>
-           <?php all_admins(); ?>
+           <?php all_categories(); ?>
 
             </tbody>
             </table>
