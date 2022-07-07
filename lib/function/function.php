@@ -17,7 +17,9 @@
                         video_update_view(), update_free_video()                        
                         and update --> reg_uer(),video_upoload()
     ---- 07 July 2022 - count_pro_videos_deactive(), all_pro_videos(),pro_video_update_view(),update_ro_video(),
-    ---- 08 July 2022 -  all_admins(),all_categories(), login_user_name(), channel_info(), channel_free_videos(),  channel_pro_videos(), 
+    ---- 08 July 2022 - all_admins(),all_categories(), login_user_name(), channel_info(), channel_free_videos(),  channel_pro_videos(), channel_videos()
+
+
                         
     */
 
@@ -1493,6 +1495,65 @@
         echo $all_pro_videos_nor;
     }
 
+    //function for view all channel videos
+    function channel_videos(){
+        $con = Connection();
 
+        //get loginSession email
+        $email = strval($_SESSION['loginSession']);
+        
+        //get username using login email
+        $get_username_pro = "SELECT * FROM user_tbl WHERE email = '$email'";
+        $get_username_pro_result = mysqli_query($con, $get_username_pro);
+        
+        //fecth username
+        $get_username_pro_row = mysqli_fetch_assoc($get_username_pro_result);
+        
+        $username = $get_username_pro_row['username'];
+
+        $channel_videos = "SELECT * FROM videos WHERE video_status = '1' && username='$username'";
+        $channel_videos_result = mysqli_query($con, $channel_videos);
+        $channel_videos_nor = mysqli_num_rows($channel_videos_result);
+        
+        if($channel_videos_nor > 0){
+            while($channel_videos_row = mysqli_fetch_assoc($channel_videos_result)){
+
+                    /*  ********* for find database table column of video 
+                        and also we can use it for images, files for view to the
+                        database ***********    
+
+                    echo "<pre>";
+                    print_r($video_row);  */
+                        
+                $video_display = "
+                            
+                                <div class='col-auto'>
+                                    <a href='../routes/video_full_screen.php?id=".$channel_videos_row['id']."'>
+                                        <div class='card-body'>
+                                            <video src='../../upload/".$channel_videos_row['video_url']."'controls></video>
+                                            <div class='title-video'>";
+
+                                            if($channel_videos_row['video_type'] == 'free'){
+                                                $video_display .="<span class='label'>Free</span>";
+                                            }
+                                            elseif($channel_videos_row['video_type'] == 'pro'){
+                                                $video_display .="<span class='label'><i class='fas fa-star' style='color=gold;'></i>Pro</span>";
+                                            }
+
+                                $video_display .="<span class='label'>
+                                            </div>                                    
+                                        </div>
+                                    </a>
+                                </div>
+                            
+                        ";
+                echo $video_display;
+
+            }
+        }else{
+            echo "<center>&nbsp<div class='alert alert-info col-10' role='alert'>No Videos Found...!</div>&nbsp</center>";
+        }
+
+    }
 
 ?>
