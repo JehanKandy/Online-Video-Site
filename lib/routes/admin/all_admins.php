@@ -22,23 +22,23 @@
             <li><a href="all_free_videos.php"><i class='far fa-file-video' style='font-size:20px'></i>&nbsp;&nbsp;Videos</a></li>
             <li><a href="all_pro_videos.php"><i class='fas fa-film' style='font-size:20px'></i>&nbsp;&nbsp;Pro Videos</a></li>
             <li><a href="all_admins.php"><i class='fas fa-user-alt' style='font-size:20px'></i>&nbsp;&nbsp;Admins</a></li>
-            <li><a href="#"><i class='fas fa-lightbulb' style='font-size:20px'></i>&nbsp;&nbsp;Categories</a></li>
-            <li><a href="#"><i class='fas fa-tv' style='font-size:20px'></i>&nbsp;&nbsp;My Channel</a></li>
-            <li><a href="#"><i class='fas fa-cog' style='font-size:20px'></i>&nbsp;&nbsp;Account Settings</a></li>
+            <li><a href="all_categories.php"><i class='fas fa-lightbulb' style='font-size:20px'></i>&nbsp;&nbsp;Categories</a></li>
+            <li><a href="my_channel.php"><i class='fas fa-tv' style='font-size:20px'></i>&nbsp;&nbsp;My Channel</a></li>
+            <li><a href="edit_account.php"><i class='fas fa-cog' style='font-size:20px'></i>&nbsp;&nbsp;Account Settings</a></li>
 
         </ul>
 
     </section>
     <section class="admin-panel">
         <div class="container-fluid">
-          <h1 class="display-4">All Pro Users</h1>
+          <h1 class="display-4">All Admins</h1>
           <hr>
 
           <div class="row">
             <div class="col-auto">
               <div class="card bg-success text-white">
                 <div class="card-body">
-                  <h4><i class='fas fa-user-tie' style='font-size:40px'></i>&nbsp;All Admins&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+                  <h4><i class='fas fa-user-alt' style='font-size:40px'></i>&nbsp;All Admins&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
                   <hr style="background-color:white">
                   <h5>
                     <b><?php count_admins(); ?></b>
@@ -51,7 +51,7 @@
         <br>
         <hr>
         <br>
-            <h2>All Free Users</h2>
+            <h2>All Admins</h2>
             <table class="table table-fluid" id="myTable">
             <thead>
             <tr>
