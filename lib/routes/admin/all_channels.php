@@ -22,9 +22,9 @@
             <li><a href="all_free_videos.php"><i class='far fa-file-video' style='font-size:20px'></i>&nbsp;&nbsp;Videos</a></li>
             <li><a href="all_pro_videos.php"><i class='fas fa-film' style='font-size:20px'></i>&nbsp;&nbsp;Pro Videos</a></li>
             <li><a href="all_admins.php"><i class='fas fa-user-alt' style='font-size:20px'></i>&nbsp;&nbsp;Admins</a></li>
-            <li><a href="#"><i class='fas fa-lightbulb' style='font-size:20px'></i>&nbsp;&nbsp;Categories</a></li>
-            <li><a href="#"><i class='fas fa-tv' style='font-size:20px'></i>&nbsp;&nbsp;My Channel</a></li>
-            <li><a href="#"><i class='fas fa-cog' style='font-size:20px'></i>&nbsp;&nbsp;Account Settings</a></li>
+            <li><a href="all_categories.php"><i class='fas fa-lightbulb' style='font-size:20px'></i>&nbsp;&nbsp;Categories</a></li>
+            <li><a href="my_channel.php"><i class='fas fa-tv' style='font-size:20px'></i>&nbsp;&nbsp;My Channel</a></li>
+            <li><a href="edit_account.php"><i class='fas fa-cog' style='font-size:20px'></i>&nbsp;&nbsp;Account Settings</a></li>
 
         </ul>
 
@@ -38,7 +38,7 @@
             <div class="col-auto">
               <div class="card bg-success text-white">
                 <div class="card-body">
-                  <h4><i class='fas fa-user-tie' style='font-size:40px'></i>&nbsp;Active Pro Users&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+                  <h4><i class='fas fa-tv' style='font-size:40px'></i>&nbsp;Channels&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
                   <hr style="background-color:white">
                   <h5>
                     <b><?php count_channels(); ?></b>
@@ -49,7 +49,7 @@
             <div class="col-auto">
               <div class="card bg-danger text-white">
                 <div class="card-body">
-                  <h4><i class='fas fa-user-alt-slash' style='font-size:40px'></i>&nbsp;Deactive Pro &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+                  <h4><i class='fas fa-tv' style='font-size:40px'></i>&nbsp;Channels&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
                   <hr style="background-color:white">
                   <h5>
                     <b><?php count_deactive_channels(); ?></b>
