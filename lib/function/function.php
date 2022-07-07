@@ -16,6 +16,7 @@
                         count_deactive_channels(), channal_info(), channal_update_view(),  update_channel(), count_videos_deavtive(), all_free_videos()
                         video_update_view(), update_free_video()                        
                         and update --> reg_uer(),video_upoload()
+    ---- 07 July 2022 - count_pro_videos_deactive(), all_pro_videos(),pro_video_update_view(),
                         
     */
 
@@ -193,7 +194,7 @@
 
 
                 //now upload files to the database
-                $insert_video = "INSERT INTO videos(video_title,video_description,video_url,username,category,video_type,add_date)VALUES('$video_title','$video_des','$new_video','$username','$video_catagery','$video_type',NOW())";
+                $insert_video = "INSERT INTO videos(video_title,video_description,video_url,username,category,video_type,video_status,add_date)VALUES('$video_title','$video_des','$new_video','$username','$video_catagery','$video_type','1',NOW())";
                 $insert_video_result = mysqli_query($con, $insert_video);
 
                 //header to  view.php file for view uploaded videos
@@ -525,7 +526,7 @@
         $con = Connection();
 
         //get all data from database according to Pro videos
-        $pro_videos = "SELECT * FROM videos WHERE video_type = 'pro'";
+        $pro_videos = "SELECT * FROM videos WHERE video_type = 'pro' && video_status = '1'";
         $pro_videos_result = mysqli_query($con, $pro_videos);
 
         //count pro videos in database 
@@ -535,6 +536,23 @@
         //print Pro-videos
 
         echo ($pro_videos_nor);
+    }
+
+    //function for count pro videos
+    function count_pro_videos_deactive(){
+        $con = Connection();
+
+        //get all data from database according to Pro videos
+        $pro_videos_deactive = "SELECT * FROM videos WHERE video_type = 'pro' && video_status = '0'";
+        $pro_videos_deactive_result = mysqli_query($con, $pro_videos_deactive);
+
+        //count pro videos in database 
+
+        $pro_videos_deactive_nor = mysqli_num_rows($pro_videos_deactive_result);
+
+        //print Pro-videos
+
+        echo ($pro_videos_deactive_nor);
     }
 
     //function for count catagery
@@ -1043,7 +1061,7 @@
             $all_video_data .="    
                             <td><a href='edit_free_video_info.php?id=".$all_videos_row['id']."'><button class='btn btn-primary'>Action</button></a></td>                      
                         </tr>                   
-                    q
+                    
                         ";
             echo $all_video_data;
 
@@ -1146,5 +1164,125 @@
 
     }
 
+    //function for all pro videos
+
+    function all_pro_videos(){
+        $con = Connection();
+
+        //get all data from databes
+        $all_videos_pro = "SELECT * FROM videos WHERE video_type = 'pro'";
+        $all_videos_pro_result = mysqli_query($con, $all_videos_pro);
+
+        //fetch all data 
+        while($all_videos_pro_row = mysqli_fetch_assoc($all_videos_pro_result)){
+            $all_video_pro_data = "
+                        <tr>
+                            <td>".$all_videos_pro_row['id']."</td>
+                            <td>".$all_videos_pro_row['video_title']."</td>
+                            <td>".$all_videos_pro_row['username']."</td>
+                            <td>".$all_videos_pro_row['category']."</td>
+                            <td>".$all_videos_pro_row['video_type']."</td>
+                            <td>".$all_videos_pro_row['add_date']."</td>";
+                            
+
+                            if($all_videos_pro_row['video_status'] == 1){
+                                $all_video_pro_data .="<td><h2 class='badge badge-pill badge-success'>Active</h2></td>";
+                            }
+                            elseif($all_videos_pro_row['video_status'] == 0){
+                                $all_video_pro_data .="<td><h2 class='badge badge-pill badge-danger'>Deactive</h2></td>";
+                            }
+
+            $all_video_pro_data .="    
+                            <td><a href='edit_pro_video_info.php?id=".$all_videos_pro_row['id']."'><button class='btn btn-primary'>Action</button></a></td>                      
+                        </tr>                   
+                    
+                        ";
+            echo $all_video_pro_data;
+
+        }
+        
+    }
+ //function for pro video update view
+ function pro_video_update_view(){
+    $con = Connection();
+
+    //get id from all_free_videos()
+    $id = $_GET['id'];
+
+    $update_video_pro = "SELECT * FROM videos WHERE id = '$id'";
+    $update_video_pro_result = mysqli_query($con, $update_video_pro);
+
+
+    //fetch data
+    $update_video_pro_row = mysqli_fetch_assoc($update_video_pro_result);
+
+    //echo data
+
+    $update_pro_video = "
+            <div class='body'>
+                <form action='' method='POST'>
+                    <table border='0'>
+                        <tr>
+                            <td>ID : </td>
+                            <td>".$update_video_pro_row['id']."
+                            <input type='hidden' name='id' value='".$update_video_pro_row['id']."'>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Video Title : </td>
+                            <td>".$update_video_pro_row['video_title']."</td>
+                        </tr>
+                        <tr>
+                            <td>Username : </td>
+                            <td>".$update_video_pro_row['username']."</td>
+                        </tr>
+                        <tr>
+                            <td>Category : </td>
+                            <td>".$update_video_pro_row['category']."</td>
+                        </tr>
+                        <tr>
+                            <td>Video Type : </td>
+                            <td>".$update_video_pro_row['video_type']."</td>
+                        </tr>
+                        <tr>
+                            <td>Video Add Date : </td>
+                            <td>".$update_video_pro_row['add_date']."</td>
+                        </tr>
+                        <tr>
+                            <td>Video Status : </td>";
+
+                            if($update_video_pro_row['video_status'] == 1){
+                                $update_pro_video .="<td><h2 class='badge badge-pill badge-success'>Active</h2></td>";
+                            }
+                            elseif($update_video_pro_row['video_status'] == 0){
+                                $update_pro_video .="<td><h2 class='badge badge-pill badge-danger'>Deactive</h2></td>";
+                            }
+
+                    
+            $update_pro_video .="</tr>
+                        <tr>
+                            <td>Video Status : </td>
+                            <td>
+                                <select name='video_status' id='video_status'>
+                                    <option value='1'>Active</option>
+                                    <option value='0'>Deactive</option>                                        
+                                </select>    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type='submit' name='update' value='Update' class='btn btn-success'>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <br><br>
+                <a href='all_free_videos.php'><button class='btn btn-primary'>Back</button></a>
+            </div>
+
+        ";
+
+    echo $update_pro_video;
+}
     
 ?>
