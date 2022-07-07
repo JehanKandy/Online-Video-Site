@@ -177,6 +177,6 @@ My one of University Projects<br>
   - lib
   - - lib/routes
   - - - lib/routes/admin
-  - - - - lib/routes/admin/all_free_users.php
-  - - - - lib/routes/admin/edit_free_user_info.php
+  - - - - lib/routes/admin/all_pro_videos.php
+  - - - - lib/routes/admin/edit_pro_videos_info.php
 
