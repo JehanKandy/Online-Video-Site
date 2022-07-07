@@ -436,11 +436,12 @@ video {
 
 
 /*
-    iPad
+    iPad - portrait
 
 for standard iPad screen size 
         width : 768px
         height : 1024px
+        portrait
        
 */
 
@@ -513,6 +514,17 @@ for standard iPad screen size
         padding-left: 10px;
     }
 }
+
+
+/*
+    iPad - landscape 
+
+for standard iPad screen size 
+        width : 768px
+        height : 1024px
+        landscape 
+       
+*/
 
 
 /*Samsung Galaxy A51/71 
