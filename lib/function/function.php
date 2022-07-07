@@ -1428,6 +1428,7 @@
                             <td><input type='text' class='channel-input' value='".$channel_information_row['created_date']."' disabled></td>
                         </tr>
                     </table>
+                    <a hre='edit_my_channel.php?id=".$channel_information_row['channel_name']."'><button class='btn btn-primary'>Edit</button></a>
                 </div>
         ";
 
