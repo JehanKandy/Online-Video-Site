@@ -18,6 +18,7 @@
                         and update --> reg_uer(),video_upoload()
     ---- 07 July 2022 - count_pro_videos_deactive(), all_pro_videos(),pro_video_update_view(),update_ro_video(),
     ---- 08 July 2022 - all_admins(),all_categories(), login_user_name(), channel_info(), channel_free_videos(),  channel_pro_videos(), channel_videos()
+                        channal_info_edit(),
 
 
                         
@@ -1437,6 +1438,12 @@
         echo $channel_infor_view;
     }
 
+    //function for channel edit
+    function channal_info_edit(){
+        $con = Connection();
+    }
+
+
     // function for count channel free videos
     function channel_free_videos(){
         $con = Connection();
@@ -1528,22 +1535,20 @@
                 $video_display = "
                             
                                 <div class='col-auto'>
-                                    <a href='../routes/video_full_screen.php?id=".$channel_videos_row['id']."'>
                                         <div class='card-body'>
-                                            <video src='../../upload/".$channel_videos_row['video_url']."'controls></video>
+                                            <video src='../../../upload/".$channel_videos_row['video_url']."'controls></video>
                                             <div class='title-video'>";
 
                                             if($channel_videos_row['video_type'] == 'free'){
                                                 $video_display .="<span class='label'>Free</span>";
                                             }
                                             elseif($channel_videos_row['video_type'] == 'pro'){
-                                                $video_display .="<span class='label'><i class='fas fa-star' style='color=gold;'></i>Pro</span>";
+                                                $video_display .="<span class='label'><i class='fas fa-star' style='color:gold;'></i>&nbsp;Pro</span>";
                                             }
 
                                 $video_display .="<span class='label'>
                                             </div>                                    
                                         </div>
-                                    </a>
                                 </div>
                             
                         ";
