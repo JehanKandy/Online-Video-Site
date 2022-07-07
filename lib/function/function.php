@@ -17,7 +17,7 @@
                         video_update_view(), update_free_video()                        
                         and update --> reg_uer(),video_upoload()
     ---- 07 July 2022 - count_pro_videos_deactive(), all_pro_videos(),pro_video_update_view(),update_ro_video(),
-    ---- 08 July 2022 -  all_admins(),all_categories(), 
+    ---- 08 July 2022 -  all_admins(),all_categories(), login_user_name(),
                         
     */
 
@@ -1360,5 +1360,15 @@
             echo $all_categories_data;
 
         }
+    }
+
+    //function for get login_user name for my_channel
+    function login_user_name(){
+        $con = Connection();
+
+        //get loginSession username
+        $email = strval($_SESSION['loginSession']);
+
+        //get Username form database according to loginSession
     }
 ?>
