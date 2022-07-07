@@ -17,6 +17,7 @@
                         video_update_view(), update_free_video()                        
                         and update --> reg_uer(),video_upoload()
     ---- 07 July 2022 - count_pro_videos_deactive(), all_pro_videos(),pro_video_update_view(),update_ro_video(),
+    ---- 08 July 2022 -  all_admins(),
                         
     */
 
@@ -1286,7 +1287,7 @@
     }
     
     //function for update free video
-    function update_ro_video($video_id_pro, $video_status_pro){
+    function update_pro_video($video_id_pro, $video_status_pro){
         $con = Connection();
 
         //update video table
@@ -1295,5 +1296,10 @@
 
         header("location:all_pro_videos.php");
 
+    }
+
+    //function for all admins
+    function all_admins(){
+        $con = Connection();
     }
 ?>
