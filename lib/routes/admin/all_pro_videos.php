@@ -31,17 +31,17 @@
     </section>
     <section class="admin-panel">
         <div class="container-fluid">
-          <h1 class="display-4">All Videos</h1>
+          <h1 class="display-4">All Pro Videos</h1>
           <hr>
 
           <div class="row">
             <div class="col-auto">
               <div class="card bg-success text-white">
                 <div class="card-body">
-                  <h4><i class='fas fa-user-tie' style='font-size:40px'></i>&nbsp;Active Videoss&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+                  <h4><i class='fas fa-user-tie' style='font-size:40px'></i>&nbsp;Pro Videos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
                   <hr style="background-color:white">
                   <h5>
-                    <b><?php count_videos(); ?></b>
+                    <b><?php count_pro_videos(); ?></b>
                   </h5>
                 </div>
               </div>
@@ -49,10 +49,10 @@
             <div class="col-auto">
               <div class="card bg-danger text-white">
                 <div class="card-body">
-                  <h4><i class='fas fa-user-alt-slash' style='font-size:40px'></i>&nbsp;Deactive Videos &nbsp;&nbsp;&nbsp;</h4>
+                  <h4><i class='fas fa-user-alt-slash' style='font-size:40px'></i>&nbsp;Pro Videos &nbsp;&nbsp;&nbsp;</h4>
                   <hr style="background-color:white">
                   <h5>
-                    <b><?php count_videos_deavtive(); ?></b>
+                    <b><?php count_pro_videos_deactive(); ?></b>
                   </h5>
                 </div>
               </div>
