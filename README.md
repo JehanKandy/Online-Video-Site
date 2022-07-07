@@ -172,8 +172,8 @@ My one of University Projects<br>
   - css/style.css
   - lib/routes/admin/all_pro_videos.php
   - lib/routes/admin/edit_pro_videos_info.php
-  - lib/routes/admin/edit_pro_videos_info.php
-  - lib/routes/admin/all_pro_videos.php
+  - lib/routes/admin/all_free_videos.php
+
 
   
 
