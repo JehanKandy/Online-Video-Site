@@ -23,6 +23,6 @@
         <div class="title">
             Update Free Video Information
         </div>
-        <?php video_update_view(); ?>
+        <?php pro_video_update_view(); ?>
     </div>
 </div>
