@@ -496,7 +496,7 @@
         $con = Connection();
 
         //get all data from database according to free videos
-        $free_videos = "SELECT * FROM videos WHERE video_type = 'free'";
+        $free_videos = "SELECT * FROM videos WHERE video_status = '1' && video_type = 'free'";
         $free_videos_result = mysqli_query($con, $free_videos);
 
         //count free videos
@@ -511,7 +511,7 @@
         $con = Connection();
 
         //get all data from database according to free videos
-        $free_videos_deactive = "SELECT * FROM videos WHERE video_type = 'free'";
+        $free_videos_deactive = "SELECT * FROM videos WHERE video_status = '0' && video_type = 'free'";
         $free_videos_deactive_result = mysqli_query($con, $free_videos_deactive);
 
         //count free videos
@@ -1018,7 +1018,7 @@
         $con = Connection();
 
         //get all data from databes
-        $all_videos = "SELECT * FROM videos";
+        $all_videos = "SELECT * FROM videos WHERE video_type = 'free'";
         $all_videos_result = mysqli_query($con, $all_videos);
 
         //fetch all data 
@@ -1043,7 +1043,7 @@
             $all_video_data .="    
                             <td><a href='edit_free_video_info.php?id=".$all_videos_row['id']."'><button class='btn btn-primary'>Action</button></a></td>                      
                         </tr>                   
-                    
+                    q
                         ";
             echo $all_video_data;
 
@@ -1145,4 +1145,6 @@
         header("location:all_free_videos.php");
 
     }
+
+    
 ?>
