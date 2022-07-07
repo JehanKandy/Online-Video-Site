@@ -207,6 +207,7 @@ My one of University Projects<br>
   - - lib/routes
   - - - lib/routes/admin
   - - - - lib/routes/admin/all_admin.php
+  - - - - lib/routes/admin/all_categories.php
 
 
 
