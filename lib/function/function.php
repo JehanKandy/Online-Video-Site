@@ -1384,5 +1384,17 @@
     //function for view channel information
     function channel_info(){
         $con = Connection();
+
+        //get loginSession email
+        $email = strval($_SESSION['loginSession']);
+
+        //get channel infor 
+        $channel_information = "SELECT * FROM channels WHERE user_email = '$email'";
+        $channel_information_result = mysqli_query($con, $channel_information);
+
+        //fetch channel data
+        $channel_information_row = mysqli_fetch_assoc($channel_information_result);
+
+        //view channel infor in table
     }
 ?>
