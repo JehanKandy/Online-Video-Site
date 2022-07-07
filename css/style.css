@@ -373,6 +373,18 @@ video {
     width: 100%;
 }
 
+.channel-infor {
+    width: 200px;
+    height: 100%;
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.channel-input {
+    width: 100%;
+}
+
 
 /* for standard laptop screen size 
         width : 1366px
