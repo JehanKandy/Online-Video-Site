@@ -76,13 +76,10 @@
                 <th>
                 Account Status
                 </th>
-                <th>
-                Action
-                </th>
             </tr>
             </thead>
             <tbody>
-           <?php all_pro_users(); ?>
+           <?php all_admins(); ?>
 
             </tbody>
             </table>
