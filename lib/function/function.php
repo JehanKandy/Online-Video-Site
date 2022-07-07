@@ -1413,7 +1413,7 @@
                             <td><input type='text' class='channel-input' value='".$channel_information_row['user_email']."' disabled></td>
                         </tr>
                         <tr>
-                            <td>Channel User Email : </td>";
+                            <td>Channel Status : </td>";
                             if($channel_information_row['channel_status'] == 1){
                                 $channel_infor_view .="<td><h1 class='badge badge-pill badge-success'>Active</h1></td>";
                             }
