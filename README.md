@@ -184,3 +184,29 @@ My one of University Projects<br>
   - - - - lib/routes/admin/all_pro_videos.php
   - - - - lib/routes/admin/edit_pro_videos_info.php
 
+   
+      
+   
+   <hr>
+
+<br><br>
+<b>07 July 2022 :</b><br>
+  01. update<br>
+  - lib/routes/admin.php
+  - lib/function/function.php
+  - css/style.css
+  - lib/routes/admin/all_pro_videos.php
+  - lib/routes/admin/edit_pro_videos_info.php
+  - lib/routes/admin/all_free_videos.php
+
+
+  
+
+  02. develop
+  - lib
+  - - lib/routes
+  - - - lib/routes/admin
+  - - - - lib/routes/admin/all_admin.php
+
+
+
