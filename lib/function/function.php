@@ -1333,5 +1333,32 @@
     //function for all Categories
     function all_categories(){
         $con = Connection();
+
+        //get all data from databes
+        $all_categories = "SELECT * FROM categories";
+        $all_categories_result = mysqli_query($con, $all_categories);
+
+        //fetch all data 
+        while($all_categories_row = mysqli_fetch_assoc($all_categories_result)){
+            $all_categories_data = "
+                        <tr>
+                            <td>".$all_categories_row['id']."</td>
+                            <td>".$all_categories_row['username']."</td>
+                            <td>".$all_categories_row['category_name']."</td>";
+
+                            if($all_categories_row['category_status'] == 1){
+                                $all_categories_data .="<td><h2 class='badge badge-pill badge-success'>Active</h2></td>";
+                            }
+                            elseif($all_categories_row['category_status'] == 0){
+                                $all_categories_data .="<td><h2 class='badge badge-pill badge-danger'>Deactive</h2></td>";
+                            }
+
+            $all_categories_data  .=" <td>".$all_categories_row['category_date']."</td>";
+
+
+
+            echo $all_categories_data;
+
+        }
     }
 ?>
