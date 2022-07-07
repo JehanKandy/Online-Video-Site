@@ -17,7 +17,7 @@
                         video_update_view(), update_free_video()                        
                         and update --> reg_uer(),video_upoload()
     ---- 07 July 2022 - count_pro_videos_deactive(), all_pro_videos(),pro_video_update_view(),update_ro_video(),
-    ---- 08 July 2022 -  all_admins(),
+    ---- 08 July 2022 -  all_admins(),all_categories(), 
                         
     */
 
@@ -1328,5 +1328,10 @@
             echo $all_admin_data;
 
         }
+    }
+
+    //function for all Categories
+    function all_categories(){
+        $con = Connection();
     }
 ?>
