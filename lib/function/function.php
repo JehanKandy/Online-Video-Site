@@ -1370,5 +1370,14 @@
         $email = strval($_SESSION['loginSession']);
 
         //get Username form database according to loginSession
+
+        $channel_id = "SELECT * FROM user_tbl WHERE email = '$email'";
+        $channel_id_result = mysqli_query($con, $channel_id);
+
+        //fetch channel username
+        $channel_id_row = mysqli_fetch_assoc($channel_id_result);
+
+        //echo channel username 
+        echo($channel_id_row['username']);
     }
 ?>
