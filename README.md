@@ -199,6 +199,7 @@ My one of University Projects<br>
   - lib/routes/admin/all_pro_videos.php
   - lib/routes/admin/all_channels.php
   - lib/routes/admin/all_categories.php
+  - lib/routes/admin/my_channel.php
 
 
   
