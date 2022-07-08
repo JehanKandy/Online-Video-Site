@@ -18,7 +18,7 @@
                         and update --> reg_uer(),video_upoload()
     ---- 07 July 2022 - count_pro_videos_deactive(), all_pro_videos(),pro_video_update_view(),update_ro_video(),
     ---- 08 July 2022 - all_admins(),all_categories(), login_user_name(), channel_info(), channel_free_videos(),  channel_pro_videos(), channel_videos()
-                        channal_info_edit(), update_channl_info();
+
 
 
                         
@@ -1430,84 +1430,11 @@
                             <td>Channel Created Date : </td>
                             <td><input type='text' class='channel-input' value='".$channel_information_row['created_date']."' disabled></td>
                         </tr>
-                    </table>
-                    <a href='edit_my_channel.php?id=".$channel_information_row['username']."'><button class='btn btn-primary'><i class='fas fa-edit'></i>&nbsp;Edit</button></a>
+                    </table>                   
                 </div>
         ";
 
         echo $channel_infor_view;
-    }
-
-    //function for channel edit
-    function channal_info_edit(){
-        $con = Connection();
-        
-        //get loginSession email
-        $email = strval($_SESSION['loginSession']);
-
-        //get channel infor 
-        $channel_information_edit = "SELECT * FROM channels WHERE user_email = '$email'";
-        $channel_information_edit_result = mysqli_query($con, $channel_information_edit);
-
-        //fetch channel data
-        $channel_information_edit_row = mysqli_fetch_assoc($channel_information_edit_result);
-
-        //view channel infor in table
-        $channel_infor_edit_view ="
-
-                <div class='channel-infor'>
-                    <table border='0'>
-                        <form action='' method='POST'>
-                        <tr>
-                            <td>Channel Name : </td>
-                            <td><input type='text' class='channel-input' value='".$channel_information_edit_row['channel_name']."' name='channel_name'></td>                            
-                        </tr>
-                        <tr>
-                            <td>Channel Username : </td>
-                            <td><input type='text' class='channel-input' value='".$channel_information_edit_row['username']."' disabled>
-                                <input='hidden' name='id' value='".$channel_information_edit_row['id']."'>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Channel User Email : </td>
-                            <td><input type='text' class='channel-input' value='".$channel_information_edit_row['user_email']."' disabled></td>
-                        </tr>
-                        <tr>
-                            <td>Channel Status : </td>";
-                            if($channel_information_edit_row['channel_status'] == 1){
-                                $channel_infor_edit_view .="<td><h1 class='badge badge-pill badge-success'>Active</h1></td>";
-                            }
-                            elseif($channel_information_edit_row['channel_status'] == 0){
-                                $channel_infor_edit_view .="<td><h1 class='badge badge-pill badge-danger'>Deactive</h1></td>";
-                            }
-
-        $channel_infor_edit_view .="                                
-                        </tr>
-                        <tr>
-                            <td>Channel Created Date : </td>
-                            <td><input type='text' class='channel-input' value='".$channel_information_edit_row['created_date']."' disabled></td>
-                        </tr>
-                        <tr>
-                            <td colspan='2'>
-                                <input type='submit' name='update' value='Update' class='btn btn-success'>
-                            </td>
-                        </tr>
-                    </form>
-                    </table>
-                </div>
-        ";
-
-        echo $channel_infor_edit_view;
-    }
-
-    //function for update_channl_info
-    function update_channl_info($channel_id, $channel_name){
-        $con = Connection();
-
-        //update channel infor
-        $update_channel = "UPDATE channels SET channel_name = '$channel_name' WHERE id = '$channel_id'";
-        $update_channel_result = mysqli_query($con, $update_channel);
-        header("location:my_channel.php");
     }
 
 
