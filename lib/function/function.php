@@ -1559,6 +1559,19 @@
     //function for edit account
     function edit_account(){
         $con = Connection();
+        
+        //get loginSession email
+        $email = strval($_SESSION['loginSession']);
+
+        //get user information
+        $account_info = "SELECT * FROM user_tbl WHERE email = '$email'";
+        $account_info_result = mysqli_query($con, $account_info);
+
+        //fetch data 
+        $account_info_row = mysqli_fetch_assoc($account_info_result);
+
+        //echo user data
+        
     }
 
 ?>
