@@ -1571,7 +1571,20 @@
         $account_info_row = mysqli_fetch_assoc($account_info_result);
 
         //echo user data
-        
+        $account = "
+            <div class='col-auto'>
+                <div class='card-body'>
+                    <table border='0'>
+                        <tr>
+                            <td>Username</td>
+                            <td>".$account_info_row['username']."</td>
+                        </tr>
+                        
+                    </table>
+                </div>
+            </div>
+
+                ";
     }
 
 ?>
