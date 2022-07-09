@@ -386,6 +386,21 @@ video {
     margin-top: 15px;
 }
 
+.acc-edit-label {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 20px;
+}
+
+.acc-edit {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
 
 /* for standard laptop screen size 
         width : 1366px
