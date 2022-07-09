@@ -1577,8 +1577,8 @@
                 <div class='card-body'>
                     <table border='0'>
                         <tr>
-                            <td>Username</td>
-                            <td>".$account_info_row['username']."</td>
+                            <td><span class='acc-edit-label'>Username : </span></td>
+                            <td><input type='text' value='".$account_info_row['username']."' class='acc-edit' disabled></td>
                         </tr>
                         
                     </table>
@@ -1586,6 +1586,9 @@
             </div>
 
                 ";
+
+
+        echo $account;
     }
 
 
