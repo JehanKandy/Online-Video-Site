@@ -217,7 +217,7 @@ My one of University Projects<br>
    <hr>
 
 <br><br>
-<b>08 July 2022 :</b><br>
+<b>09 July 2022 :</b><br>
   01. update<br>
   - lib/routes/admin.php
   - lib/function/function.php
@@ -233,13 +233,7 @@ My one of University Projects<br>
 
   
 
-  02. develop
-  - lib
-  - - lib/routes
-  - - - lib/routes/admin
-  - - - - lib/routes/admin/all_admin.php
-  - - - - lib/routes/admin/all_categories.php
-  - - - - lib/routes/admin/my_channel.php
+
   
 
 
