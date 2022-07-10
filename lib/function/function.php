@@ -1618,8 +1618,15 @@
                         <td><span class='acc-edit-label'>Join Date : </span></td>
                         <td><input type='date' value='".$account_info_row['join_date']."' class='acc-edit' disabled></td>
                     </tr> 
-                    <tr>
-                        <td colspan='2'><a href='edit_account_info.php?id=".$account_info_row['email']."'><button class='btn btn-primary'><i class='fas fa-user-edit'></i>&nbsp;Edit Account Info</button></a></td>
+                    <tr>";
+                        
+                        if($account_info_row['roll'] == 'admin'){
+                            $account .="<td colspan='2'><a href='edit_account_info.php?id=".$account_info_row['email']."'><button class='btn btn-primary'><i class='fas fa-user-edit'></i>&nbsp;Edit Account Info</button></a></td>";
+                        }
+                        elseif($account_info_row['roll'] == 'user'){
+                            $account .="<td colspan='2'><a href='edit_account_user_info.php?id=".$account_info_row['email']."'><button class='btn btn-primary'><i class='fas fa-user-edit'></i>&nbsp;Edit Account Info</button></a></td>";
+                        }
+        $account .="                
                     </tr>           
                 </table>
                 </div>
@@ -1710,6 +1717,8 @@
         //update database
         $update_user_data = "UPDATE user_tbl SET username='$user_update_username', email = '$user_update_email' WHERE id = '$user_update_id'";
         $update_user_data_result = mysqli_query($con, $update_user_data);
+
+
         header("location:edit_account.php");
     }
 
@@ -1732,11 +1741,11 @@
             print message when free ueser login -> welcome 'username' update to Pro 
         */
 
-            if($pro_msg_row['account_type' == 'pro']){
-                $pro_msg_print ="Welocome to Dashboard ".$pro_msg_row['username']."...!";
+            if($pro_msg_row['account_type'] == 'pro'){
+                $pro_msg_print ="Welocome Back ".$pro_msg_row['username']." ...!";
             }
-            if($pro_msg_row['account_type' == 'free']){
-                $pro_msg_print .="Welocome to Dashboard ".$pro_msg_row['username']."Update to PRO account...!";
+            if($pro_msg_row['account_type'] == 'free'){
+                $pro_msg_print ="Welocome Back ".$pro_msg_row['username']." Update to PRO account...!";
             }
 
         echo $pro_msg_print;
