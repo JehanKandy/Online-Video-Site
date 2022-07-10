@@ -20,7 +20,7 @@
     ---- 08 July 2022 - all_admins(),all_categories(), login_user_name(), channel_info(), channel_free_videos(),  channel_pro_videos(), channel_videos()
                         edit_account()
     ---- 09 July 2022 - update --> edit_account()
-    ---- 10 July 2022 - account_update_view(), update_account(),  update --> edit_account()
+    ---- 10 July 2022 - account_update_view(), update_account(), update_to_pro_msg(),  update --> edit_account()
 
 
 
@@ -1713,5 +1713,9 @@
         header("location:edit_account.php");
     }
 
+    //funtion for echo update to pro
+    function update_to_pro_msg(){
+        $con = Connection();
+    }
 
 ?>
