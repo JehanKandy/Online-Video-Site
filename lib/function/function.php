@@ -20,7 +20,7 @@
     ---- 08 July 2022 - all_admins(),all_categories(), login_user_name(), channel_info(), channel_free_videos(),  channel_pro_videos(), channel_videos()
                         edit_account()
     ---- 09 July 2022 - update --> edit_account()
-    ---- 10 July 2022 - update --> edit_account()
+    ---- 10 July 2022 - account_update_view(),  update --> edit_account()
 
 
 
@@ -1629,6 +1629,11 @@
 
 
         echo $account;
+    }
+
+    //function for account update view
+    function account_update_view(){
+        $con = Connection();
     }
 
 
