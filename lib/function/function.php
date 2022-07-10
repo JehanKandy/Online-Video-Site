@@ -1634,6 +1634,25 @@
     //function for account update view
     function account_update_view(){
         $con = Connection();
+
+        //get id form edit_account()
+        $id = $_GET['id']; 
+
+        //get data form database
+        $account_update = "SELECT * FROM user_tbl WHERE email='$id'";
+        $account_update_result = mysqli_query($con, $account_update);
+
+        //fecth user  date
+        $account_update_row = mysqli_fetch_assoc($account_update_result);
+
+        //echo all data in form
+        $account_update_echo = "
+                    <div>
+        
+        
+        
+        ";
+
     }
 
 
