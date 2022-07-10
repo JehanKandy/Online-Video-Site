@@ -16,7 +16,7 @@
                         count_deactive_channels(), channal_info(), channal_update_view(),  update_channel(), count_videos_deavtive(), all_free_videos()
                         video_update_view(), update_free_video()                        
                         and update --> reg_uer(),video_upoload()
-    ---- 07 July 2022 - count_pro_videos_deactive(), all_pro_videos(),pro_video_update_view(),update_ro_video(),
+    ---- 07 July 2022 - count_pro_videos_deactive(), all_pro_videos(),pro_video_update_view(),update_pro_video(),
     ---- 08 July 2022 - all_admins(),all_categories(), login_user_name(), channel_info(), channel_free_videos(),  channel_pro_videos(), channel_videos()
                         edit_account()
     ---- 09 July 2022 - update --> edit_account()
@@ -1587,7 +1587,7 @@
                         </tr>";
 
                     if($account_info_row['roll'] == 'admin'){
-                        
+
                     }
 
 
