@@ -1658,6 +1658,20 @@
                                 <td><span class='label'>Email : </span></td>
                                 <td><input type='email' name='update_email' class='acc-edit' value='".$account_update_row['email']."'></td>
                             </tr>
+                            <tr>
+                                <td><span class='label'> User : </span></td>";
+
+                                if($account_update_row['roll'] == 'admin' && $account_update_row['account_type'] == 'pro'){
+                                    $account_update_echo .="<td><h1 class='badge badge-pill badge-warning'>Admin</h1>&nbsp;<h1 class='badge badge-pill badge-warning'><i class='fas fa-star'></i>PRO</h1></td>";
+                                }
+                                elseif($account_update_row['roll'] == 'user' && $account_update_row['account_type'] == 'pro'){
+                                    $account_update_echo .="<td><h1 class='badge badge-pill badge-info'>User</h1>&nbsp;<h1 class='badge badge-pill badge-warning'><i class='fas fa-star'></i>PRO</h1></td>";
+                                }
+                                elseif($account_update_row['roll'] == 'user' && $account_update_row['account_type'] == 'free'){
+                                    $account_update_echo .="<td><h1 class='badge badge-pill badge-info'>User</h1>&nbsp;<h1 class='badge badge-pill badge-info'>FREE</h1></td>";
+                                }
+                
+     $account_update_echo .="</tr>
                         </table>
                     </form>
                 </div>
