@@ -46,7 +46,7 @@
             }
             else{
                 //add data to the user_tbl
-                $add_user = "INSERT INTO user_tbl(username,email,pass1,roll,user_status,join_date)VALUES('$username','$email','$password','user','1',NOW())";
+                $add_user = "INSERT INTO user_tbl(username,email,pass1,roll,account_type,user_status,join_date)VALUES('$username','$email','$password','user','free','1',NOW())";
                 $add_user_result = mysqli_query($con, $add_user);
 
                 // add data to the channels table
@@ -408,7 +408,7 @@
 
         
         //get all data from database according to free deactive users
-        $free_deactive_user = "SELECT * FROM user_tbl WHERE roll = 'free' && user_status = '0'";
+        $free_deactive_user = "SELECT * FROM user_tbl WHERE roll = 'user' && user_status = '0' && account_type = 'free'";
         $free_deactive_user_result = mysqli_query($con, $free_deactive_user);
 
         //cont free users in database
@@ -423,7 +423,7 @@
         $con = Connection();
 
         //get data according to pro users in table
-        $pro_users = "SELECT * FROM user_tbl WHERE roll = 'pro' && user_status = '1'";
+        $pro_users = "SELECT * FROM user_tbl WHERE roll = 'user' && user_status = '1' && account_type = 'pro'";
         $pro_users_result = mysqli_query($con, $pro_users);
 
         //count pro_users
@@ -439,7 +439,7 @@
     
             
             //get all data from database according to free deactive users
-            $pro_deactive_user = "SELECT * FROM user_tbl WHERE roll = 'pro' && user_status = '0'";
+            $pro_deactive_user = "SELECT * FROM user_tbl WHERE roll = 'user' && user_status = '0' && account_type = 'pro'";
             $pro_deactive_user_result = mysqli_query($con, $pro_deactive_user);
     
             //cont free users in database
@@ -583,7 +583,7 @@
 
         //gat all data from database accorfing to free users
 
-        $all_free_users = "SELECT * FROM user_tbl WHERE roll = 'free'";
+        $all_free_users = "SELECT * FROM user_tbl WHERE roll = 'user' && account_type = 'free'";
         $all_free_users_result = mysqli_query($con, $all_free_users);
         
         //now print all data in table
@@ -594,8 +594,8 @@
                 <td>".$all_free_users_row['id']."</td>
                 <td>".$all_free_users_row['username']."</td>
                 <td>".$all_free_users_row['email']."</td>
-                <td>user</td>
                 <td>".$all_free_users_row['roll']."</td>
+                <td>".$all_free_users_row['account_type']."</td>
                 <td>".$all_free_users_row['join_date']."</td> ";
 
                 if($all_free_users_row['user_status'] == 1){
@@ -622,7 +622,7 @@
 
         //gat all data from database accorfing to pro users
 
-        $all_pro_users = "SELECT * FROM user_tbl WHERE roll='user' && roll = 'pro'";
+        $all_pro_users = "SELECT * FROM user_tbl WHERE roll='user' && account_type = 'pro'";
         $all_pro_users_result = mysqli_query($con, $all_pro_users);
         
         //now print all data in table
@@ -633,8 +633,8 @@
                 <td>".$all_pro_users_row['id']."</td>
                 <td>".$all_pro_users_row['username']."</td>
                 <td>".$all_pro_users_row['email']."</td>
-                <td>user</td>
                 <td>".$all_pro_users_row['roll']."</td>
+                <td>".$all_pro_users_row['account_type']."</td>
                 <td>".$all_pro_users_row['join_date']."</td> ";
 
                 if($all_pro_users_row['user_status'] == 1){
