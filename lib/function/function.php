@@ -393,7 +393,7 @@
         $con = Connection();
 
         //get all data from database according to free users
-        $free_user = "SELECT * FROM user_tbl WHERE roll = 'free' && user_status = '1'";
+        $free_user = "SELECT * FROM user_tbl WHERE roll = 'user' && user_status = '1' && account_type = 'free'";
         $free_user_result = mysqli_query($con, $free_user);
 
         //cont free users in database
@@ -622,7 +622,7 @@
 
         //gat all data from database accorfing to pro users
 
-        $all_pro_users = "SELECT * FROM user_tbl WHERE roll = 'pro'";
+        $all_pro_users = "SELECT * FROM user_tbl WHERE roll='user' && roll = 'pro'";
         $all_pro_users_result = mysqli_query($con, $all_pro_users);
         
         //now print all data in table
@@ -1704,8 +1704,13 @@
     }
 
     //function for update account
-    function update_account(){
+    function update_account($user_update_id, $user_update_username, $user_update_email){
         $con = Connection();
+
+        //update database
+        $update_user_data = "UPDATE user_tbl SET username='$user_update_username', email = '$user_update_email' WHERE id = '$user_update_id'";
+        $update_user_data_result = mysqli_query($con, $update_user_data);
+        header("location:edit_account.php");
     }
 
 
