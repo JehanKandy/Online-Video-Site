@@ -1652,7 +1652,10 @@
                         <table border='0'>
                             <tr>
                                 <td><span class='label'>Username : </span></td>
-                                <td><input type='text' name='update_username' class='acc-edit' value='".$account_update_row['username']."'></td>
+                                <td><input type='text' name='update_username' class='acc-edit' value='".$account_update_row['username']."'>
+                                <input type='hidden' value='".$account_update_row['id']."' name='user_id'>
+                                </td>
+
                             </tr>
                             <tr>
                                 <td><span class='label'>Email : </span></td>
@@ -1681,10 +1684,18 @@
                                 elseif($account_update_row['user_status'] == '0'){
                                     $account_update_echo .="<td><h1 class='badge badge-pill badge-danger'>Deactive</h1></td>";
                                 }
-                                
+
      $account_update_echo .="</tr>
+                            <tr>
+                                <td><span class='label'>Join Date : </span></td>
+                                <td><input type='date' value='".$account_update_row['join_date']."' class='acc-edit' disabled></td>
+                            </tr> 
+                            <tr>
+                                <td><input type='submit' name='update' class='btn btn-success' value='Update Account Info'></td>
+                            </tr>
                         </table>
                     </form>
+                    <a href='edit_account.php'><button class='btn btn-primary'>Back</button></a>
                 </div>
         ";
 
