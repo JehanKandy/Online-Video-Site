@@ -20,6 +20,7 @@
     ---- 08 July 2022 - all_admins(),all_categories(), login_user_name(), channel_info(), channel_free_videos(),  channel_pro_videos(), channel_videos()
                         edit_account()
     ---- 09 July 2022 - update --> edit_account()
+    ---- 10 July 2022 - update --> edit_account()
 
 
 
@@ -1580,7 +1581,17 @@
                             <td><span class='acc-edit-label'>Username : </span></td>
                             <td><input type='text' value='".$account_info_row['username']."' class='acc-edit' disabled></td>
                         </tr>
+                        <tr>
+                            <td><span class='acc-edit-label'>Email : </span></td>
+                            <td><input type='text' value='".$account_info_row['email']."' class='acc-edit' disabled></td>
+                        </tr>";
+
+                    if($account_info_row['roll'] == 'admin'){
                         
+                    }
+
+
+        $account .= "                        
                     </table>
                 </div>
             </div>
