@@ -1599,9 +1599,22 @@
                         $account .="<td><h1 class='badge badge-pill badge-info'>User</h1>&nbsp;<h1 class='badge badge-pill badge-info'>FREE</h1></td>";
                     }
 
-
         $account .= "</tr>                        
-                    </table>
+                    <tr>
+                        <td><span class='acc-edit-label'> Account Status : </span></td>
+                    ";
+                        if($account_info_row['user_status'] == '1'){
+                            $account .="<td><h1 class='badge badge-pill badge-success'>Active</h1></td>";
+                        }
+                        elseif($account_info_row['user_status'] == '0'){
+                            $account .="<td><h1 class='badge badge-pill badge-danger'>Deactive</h1></td>";
+                        }
+
+
+
+        $account .="
+                    </tr>            
+                </table>
                 </div>
             </div>
 
