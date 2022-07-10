@@ -1716,6 +1716,31 @@
     //funtion for echo update to pro
     function update_to_pro_msg(){
         $con = Connection();
+
+        //get loginSession email
+        $email = strval($_SESSION['loginSession']);
+
+        //get data from database
+        $pro_msg = "SELECT * FROM user_tbl WHERE email = '$email' && roll = 'user'";
+        $pro_msg_result = mysqli_query($con, $pro_msg);
+
+        //fetch data
+        $pro_msg_row = mysqli_fetch_assoc($pro_msg_result);
+
+        /*
+            print message when pro user login -> welcome 'username'
+            print message when free ueser login -> welcome 'username' update to Pro 
+        */
+
+            if($pro_msg_row['account_type' == 'pro']){
+                $pro_msg_print ="Welocome to Dashboard ".$pro_msg_row['username']."...!";
+            }
+            if($pro_msg_row['account_type' == 'free']){
+                $pro_msg_print .="Welocome to Dashboard ".$pro_msg_row['username']."Update to PRO account...!";
+            }
+
+        echo $pro_msg_print;
+        
     }
 
 ?>
