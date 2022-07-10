@@ -236,7 +236,6 @@ My one of University Projects<br>
 <br><br>
 <b>10 July 2022 :</b><br>
   01. update<br>
-  - lib/routes/admin.php
   - lib/function/function.php
 
   02. Develop
