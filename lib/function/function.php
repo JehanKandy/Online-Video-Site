@@ -1592,6 +1592,12 @@
                     if($account_info_row['roll'] == 'admin' && $account_info_row['account_type'] == 'pro'){
                         $account .="<td><h1 class='badge badge-pill badge-warning'>Admin</h1>&nbsp;<h1 class='badge badge-pill badge-warning'><i class='fas fa-star'></i>PRO</h1></td>";
                     }
+                    elseif($account_info_row['roll'] == 'user' && $account_info_row['account_type'] == 'pro'){
+                        $account .="<td><h1 class='badge badge-pill badge-info'>User</h1>&nbsp;<h1 class='badge badge-pill badge-warning'><i class='fas fa-star'></i>PRO</h1></td>";
+                    }
+                    elseif($account_info_row['roll'] == 'user' && $account_info_row['account_type'] == 'free'){
+                        $account .="<td><h1 class='badge badge-pill badge-info'>User</h1>&nbsp;<h1 class='badge badge-pill badge-info'>FREE</h1></td>";
+                    }
 
 
         $account .= "</tr>                        
