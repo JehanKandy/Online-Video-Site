@@ -1670,6 +1670,12 @@
                                 elseif($account_update_row['roll'] == 'user' && $account_update_row['account_type'] == 'free'){
                                     $account_update_echo .="<td><h1 class='badge badge-pill badge-info'>User</h1>&nbsp;<h1 class='badge badge-pill badge-info'>FREE</h1></td>";
                                 }
+     $account_update_echo .= "
+                            </tr>
+                            <tr>
+                                <td>Account Status</td>";
+                                
+                                
                 
      $account_update_echo .="</tr>
                         </table>
