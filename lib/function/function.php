@@ -1584,14 +1584,17 @@
                         <tr>
                             <td><span class='acc-edit-label'>Email : </span></td>
                             <td><input type='text' value='".$account_info_row['email']."' class='acc-edit' disabled></td>
-                        </tr>";
+                        </tr>
+                        <tr>
+                            <td><span class='acc-edit-label'>User : </span></td>
+                        ";
 
-                    if($account_info_row['roll'] == 'admin'){
-
+                    if($account_info_row['roll'] == 'admin' && $account_info_row['account_type'] == 'pro'){
+                        $account .="<td><h1 class='badge badge-pill badge-warning'>Admin</h1>&nbsp;<h1 class='badge badge-pill badge-warning'><i class='fas fa-star'></i>PRO</h1></td>";
                     }
 
 
-        $account .= "                        
+        $account .= "</tr>                        
                     </table>
                 </div>
             </div>
