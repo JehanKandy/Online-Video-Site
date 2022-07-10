@@ -234,18 +234,10 @@ My one of University Projects<br>
    <hr>
 
 <br><br>
-<b>09 July 2022 :</b><br>
+<b>10 July 2022 :</b><br>
   01. update<br>
   - lib/routes/admin.php
   - lib/function/function.php
-  - css/style.css
-  - lib/routes/admin/all_pro_videos.php
-  - lib/routes/admin/all_free_videos.php
-  - lib/routes/admin/all_free_videos.php
-  - lib/routes/admin/all_pro_videos.php
-  - lib/routes/admin/all_channels.php
-  - lib/routes/admin/all_categories.php
-  - lib/routes/admin/my_channel.php
 
   
 
