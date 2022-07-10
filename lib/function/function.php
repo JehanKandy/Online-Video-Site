@@ -20,7 +20,7 @@
     ---- 08 July 2022 - all_admins(),all_categories(), login_user_name(), channel_info(), channel_free_videos(),  channel_pro_videos(), channel_videos()
                         edit_account()
     ---- 09 July 2022 - update --> edit_account()
-    ---- 10 July 2022 - account_update_view(), update_account(), update_to_pro_msg(),  update --> edit_account()
+    ---- 10 July 2022 - account_update_view(), update_account(), update_to_pro_msg(),  update --> edit_account(), login_user() 
 
 
 
@@ -74,7 +74,7 @@
             if($login_pwd == $check_login_user_row['pass1']){
                 //check user rolls
 
-                if($check_login_user_row['roll'] == 'user'){
+                if(($check_login_user_row['roll'] == 'user' && $check_login_user_row['account_type'] == 'free') || ($check_login_user_row['roll'] == 'user' && $check_login_user_row['account_type'] == 'pro')){
                     //set a cookie for login as user with 1 hour
                     setcookie('login',$check_login_user_row['email'],time()+60*60,'/');
 
@@ -82,7 +82,7 @@
                     $_SESSION['loginSession'] = $check_login_user_row['email'];
                     header("location:../routes/user.php");
                 }
-                elseif($check_login_user_row['roll'] == 'admin'){
+                elseif($check_login_user_row['roll'] == 'admin' && $check_login_user_row['account_type'] == 'pro'){
                     //set a cookie for login as user with 1 hour
                     setcookie('login',$check_login_user_row['email'],time()+60*60,'/');
 
@@ -1833,10 +1833,10 @@
         */
 
             if($pro_msg_row['account_type'] == 'pro'){
-                $pro_msg_print ="Welocome Back ".$pro_msg_row['username']." ...!";
+                $pro_msg_print ="Welcome Back ".$pro_msg_row['username']." ...!";
             }
             if($pro_msg_row['account_type'] == 'free'){
-                $pro_msg_print ="Welocome Back ".$pro_msg_row['username']." Update to PRO account...!";
+                $pro_msg_print ="Welcome Back ".$pro_msg_row['username']." Update to PRO account...!";
             }
 
         echo $pro_msg_print;
