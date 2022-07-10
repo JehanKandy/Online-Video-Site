@@ -1654,6 +1654,10 @@
                                 <td><span class='label'>Username : </span></td>
                                 <td><input type='text' name='update_username' class='acc-edit' value='".$account_update_row['username']."'></td>
                             </tr>
+                            <tr>
+                                <td><span class='label'>Email : </span></td>
+                                <td><input type='email' name='update_email' class='acc-edit' value='".$account_update_row['email']."'></td>
+                            </tr>
                         </table>
                     </form>
                 </div>
