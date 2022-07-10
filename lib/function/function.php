@@ -1673,10 +1673,15 @@
      $account_update_echo .= "
                             </tr>
                             <tr>
-                                <td>Account Status</td>";
+                                <td><span class='label'> Account Status : </span></td>";
+                            
+                                if($account_update_row['user_status'] == '1'){
+                                    $account_update_echo .="<td><h1 class='badge badge-pill badge-success'>Active</h1></td>";
+                                }
+                                elseif($account_update_row['user_status'] == '0'){
+                                    $account_update_echo .="<td><h1 class='badge badge-pill badge-danger'>Deactive</h1></td>";
+                                }
                                 
-                                
-                
      $account_update_echo .="</tr>
                         </table>
                     </form>
