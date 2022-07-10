@@ -1613,6 +1613,10 @@
 
 
         $account .="
+                    </tr>
+                    <tr>
+                        <td><span class='acc-edit-label'>Join Date : </span></td>
+                        <td><input type='date' value='".$account_info_row['join_date']."' class='acc-edit' disabled></td>
                     </tr>            
                 </table>
                 </div>
