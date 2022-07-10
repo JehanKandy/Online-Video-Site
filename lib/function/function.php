@@ -1647,11 +1647,16 @@
 
         //echo all data in form
         $account_update_echo = "
-                    <div>
-        
-        
-        
+                <div class='body'>
+                    <form action='' method='POST'>
+                        <table border='0'>
+
+                        </table>
+                    </form>
+                </div>
         ";
+
+        echo $account_update_echo;
 
     }
 
