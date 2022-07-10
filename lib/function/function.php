@@ -1617,7 +1617,10 @@
                     <tr>
                         <td><span class='acc-edit-label'>Join Date : </span></td>
                         <td><input type='date' value='".$account_info_row['join_date']."' class='acc-edit' disabled></td>
-                    </tr>            
+                    </tr> 
+                    <tr>
+                        <td colspan='2'><a href='edit_account_info.php?id=".$account_info_row['email']."'><button class='btn btn-primary'><i class='fas fa-user-edit'></i>&nbsp;Edit Account Info</button></a></td>
+                    </tr>           
                 </table>
                 </div>
             </div>
@@ -1627,6 +1630,7 @@
 
         echo $account;
     }
+
 
 
 ?>
