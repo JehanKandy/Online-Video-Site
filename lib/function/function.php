@@ -21,7 +21,7 @@
                         edit_account()
     ---- 09 July 2022 - update --> edit_account()
     ---- 10 July 2022 - account_update_view(), update_account(), update_to_pro_msg(),  update --> edit_account(), login_user() 
-    ---- 11 July 2022 - update -->channel_info(),
+    ---- 11 July 2022 - admin_channel_infor_edit(), update -->channel_info(),
 
 
                         
@@ -1443,6 +1443,10 @@
         echo $channel_infor_view;
     }
 
+    //function for edit my channel infor for admin
+    function admin_channel_infor_edit(){
+        $con = Connection();
+    }
 
     // function for count channel free videos
     function channel_free_videos(){
