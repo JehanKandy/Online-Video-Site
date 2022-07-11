@@ -1446,6 +1446,10 @@
     //function for edit my channel infor for admin
     function admin_channel_infor_edit(){
         $con = Connection();
+        //login email
+        $email = strval($_SESSION['loginSession']);
+        
+        //get admin channel data according to login email
     }
 
     // function for count channel free videos
