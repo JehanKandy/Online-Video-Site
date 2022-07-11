@@ -21,7 +21,8 @@
                         edit_account()
     ---- 09 July 2022 - update --> edit_account()
     ---- 10 July 2022 - account_update_view(), update_account(), update_to_pro_msg(),  update --> edit_account(), login_user() 
-    ---- 11 July 2022 - admin_channel_infor_edit(), update_channel_info(),  user_channel_infor_edit(), update_channel_info_user()  update -->channel_info(),
+    ---- 11 July 2022 - admin_channel_infor_edit(), update_channel_info(),  user_channel_infor_edit(), update_channel_info_user(),count_channels_user
+                          update -->channel_info(),
 
 
                         
@@ -1999,5 +2000,10 @@
         echo $pro_msg_print;
         
     }
+    //function for count_channels_user
+    function count_channels_user(){
+        $con = Connection();
+    }
 
 ?>
+
