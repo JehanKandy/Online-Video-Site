@@ -1457,7 +1457,13 @@
         //fecth data
         $admin_cahannel_row = mysqli_fetch_assoc($admin_cahannel_result);
 
-        $admin_channel_echo = "";
+        $admin_channel_echo = "
+                    <div class='body'>
+                        <form action='' method='POST'>
+
+                        </form>
+                    </div>
+        ";
     }
 
     // function for count channel free videos
