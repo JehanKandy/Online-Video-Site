@@ -2018,7 +2018,7 @@
     
     }
 
-    //fucntion for view all channels
+    //function for view all channels
     function view_all_channels(){
         $con = Connection();
 
