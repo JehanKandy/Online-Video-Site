@@ -2021,6 +2021,18 @@
     //fucntion for view all channels
     function view_all_channels(){
         $con = Connection();
+
+        //get data from database 
+        $all_view_channels = "SELECT * FROM channels WHERE channel_status ='1'";
+        $all_view_channels_result = mysqli_query($con, $all_view_channels);
+       
+
+        //fetch and echo all channels
+        while($all_view_channels_row = mysqli_fetch_assoc($all_view_channels_result)){
+            $all_channels_view = "";
+        }
+
+
     }
 
 ?>
