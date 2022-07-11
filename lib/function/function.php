@@ -1451,19 +1451,42 @@
 
         //get admin channel data according to login email
 
-        $admin_cahannel = "SELECT * FROM channels WHERE user_email = '$email' && channel_status = '1'";
-        $admin_cahannel_result = mysqli_query($con, $admin_cahannel);
+        $admin_channel = "SELECT * FROM channels WHERE user_email = '$email' && channel_status = '1'";
+        $admin_channel_result = mysqli_query($con, $admin_channel);
 
         //fecth data
-        $admin_cahannel_row = mysqli_fetch_assoc($admin_cahannel_result);
+        $admin_channel_row = mysqli_fetch_assoc($admin_channel_result);
 
         $admin_channel_echo = "
                     <div class='body'>
                         <form action='' method='POST'>
-
+                            <table border='0'>
+                                <tr>
+                                    <td><span class='label'>Channel Name : </span></td>
+                                    <td><input type='text' name='channel_name' value='".$admin_channel_row['channel_name']."' class='channel-input'>
+                                    <input type='hidden' name='channel_id' value='".$admin_channel_row['id']."'></td>
+                                </tr>
+                                <tr>
+                                    <td><span class='label'>Channel Username : </span></td>
+                                    <td><input type='text' value='".$admin_channel_row['channel_name']."' class='channel-input' disabled>                                
+                                </tr>
+                                <tr>
+                                    <td><span class='label'>Channel Email : </span></td>
+                                    <td><input type='text' value='".$admin_channel_row['email']."' class='channel-input' disabled>                                
+                                </tr>
+                                <tr>
+                                    <td>Channel Status : </td>
+                                </tr>
+                                <tr>
+                                    <td><span class='label'>Channel Create Date : </span></td>
+                                    <td><input type='text' value='".$admin_channel_row['created_date']."' class='channel-input' disabled>                                
+                                </tr>
+                            </table>
                         </form>
                     </div>
         ";
+
+        echo $admin_channel_echo;
     }
 
     // function for count channel free videos
