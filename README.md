@@ -253,6 +253,7 @@ My one of University Projects<br>
 <br><br>
 <b>11 July 2022 :</b><br>
   01. update<br>
+  - css/styles.css
   - lib/routes/admin/all_pro_videos.php
   - lib/routes/admin/all_free_videos.php
   - lib/routes/admin/all_free_videos.php
