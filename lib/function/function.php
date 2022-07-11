@@ -22,7 +22,7 @@
     ---- 09 July 2022 - update --> edit_account()
     ---- 10 July 2022 - account_update_view(), update_account(), update_to_pro_msg(),  update --> edit_account(), login_user() 
     ---- 11 July 2022 - admin_channel_infor_edit(), update_channel_info(),  user_channel_infor_edit(), update_channel_info_user(),count_channels_user
-                          update -->channel_info(),
+                        view_all_channels(), update -->channel_info(),
 
 
                         
@@ -2016,6 +2016,11 @@
         $all_channels_row = mysqli_num_rows($all_channels_result);
         echo $all_channels_row;    
     
+    }
+
+    //fucntion for view all channels
+    function view_all_channels(){
+        $con = Connection();
     }
 
 ?>
