@@ -1489,8 +1489,12 @@
                                     <td><span class='label'>Channel Create Date : </span></td>
                                     <td><input type='text' value='".$admin_channel_row['created_date']."' class='channel-input' disabled>                                
                                 </tr>
+                                <tr>
+                                    <td colspan='2'><input type='submit' name='update' class='btn btn-success' value='Update Channel Information'></td>
+                                </tr>
                             </table>
                         </form>
+                        <a href='my_channel.php'><button class='btn btn-primary'>Back</button></a>
                     </div>
         ";
 
