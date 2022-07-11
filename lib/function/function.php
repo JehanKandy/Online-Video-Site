@@ -1448,8 +1448,16 @@
         $con = Connection();
         //login email
         $email = strval($_SESSION['loginSession']);
-        
+
         //get admin channel data according to login email
+
+        $admin_cahannel = "SELECT * FROM channels WHERE user_email = '$email' && channel_status = '1'";
+        $admin_cahannel_result = mysqli_query($con, $admin_cahannel);
+
+        //fecth data
+        $admin_cahannel_row = mysqli_fetch_assoc($admin_cahannel_result);
+
+        $admin_channel_echo = "";
     }
 
     // function for count channel free videos
