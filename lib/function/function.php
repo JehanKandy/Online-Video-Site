@@ -1475,8 +1475,16 @@
                                     <td><input type='text' value='".$admin_channel_row['email']."' class='channel-input' disabled>                                
                                 </tr>
                                 <tr>
-                                    <td>Channel Status : </td>
-                                </tr>
+                                    <td>Channel Status : </td>";
+                                    
+                                    if($admin_channel_row['channel_status'] == 1){
+                                        $admin_channel_echo .="<td><h1 class='badge badge-pill badge-success'>Active</h1></td>";
+                                    }elseif($admin_channel_row['channel_status'] == 1){
+                                        $admin_channel_echo .="<td><h1 class='badge badge-pill badge-danger'>Deactive</h1></td>";
+                                    }
+
+
+        $admin_channel_echo .=" </tr>
                                 <tr>
                                     <td><span class='label'>Channel Create Date : </span></td>
                                     <td><input type='text' value='".$admin_channel_row['created_date']."' class='channel-input' disabled>                                
