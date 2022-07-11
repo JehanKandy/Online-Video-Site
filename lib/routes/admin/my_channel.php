@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="../../css/style.css">
 
 <div class="admin-content">
-    <section class="sidebar">
+    <section id="sidebar">
         <ul class="nav-bar">
             <li><a href="../index_loged.php"><i class='far fa-file-video' style='font-size:20px'></i>&nbsp;&nbsp;View All Videos</a></li>
             <li><a href="../admin.php"><i class='fas fa-tachometer-alt' style='font-size:20px'></i>&nbsp;&nbsp;Dashboard</a></li>
