@@ -2003,7 +2003,19 @@
     //function for count_channels_user
     function count_channels_user(){
         $con = Connection();
+    
+        //get data from database
+        $all_channels = "SELECT * FROM channels WHERE channel_status ='1'";
+        $all_channels_result = mysqli_query($con, $all_channels);
+        
+        //fetch data
+        $all_channels_row = mysqli_fetch_assoc($all_channels_result);
+
+        //count all active channels
+
+        $all_channels_row = mysqli_num_rows($all_channels_result);
+        echo $all_channels_row;    
+    
     }
 
 ?>
-
