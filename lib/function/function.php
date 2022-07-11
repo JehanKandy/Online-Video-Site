@@ -2029,7 +2029,14 @@
 
         //fetch and echo all channels
         while($all_view_channels_row = mysqli_fetch_assoc($all_view_channels_result)){
-            $all_channels_view = "";
+            $all_channels_view = "
+            <div class='col-auto'>
+                <div class='card bg-primary text-white'>
+                    
+                </div>
+            </div>
+            
+            ";
         }
 
 
