@@ -8,6 +8,7 @@ My one of University Projects<br>
  - - responsive for following screens
 
 
+
         1. standard laptop screen 
         2. standard iPad screen
         3. standard iPad Air screen
@@ -262,7 +263,10 @@ My one of University Projects<br>
 
 
   02. Develop
-
+  - lib
+  - - lib/routes
+  - - - lib/routes/admin
+  - - - - lib/routes/admin/edit_my_channel.php
   
   
 
