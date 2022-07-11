@@ -1433,9 +1433,24 @@
                             <td>Channel Created Date : </td>
                             <td><input type='text' class='channel-input' value='".$channel_information_row['created_date']."' disabled></td>
                         </tr>
-                        <tr>
-                            <td colspan='2'><a href='edit_my_channel.php?id=".$channel_information_row['id']."'><button class='btn btn-primary'><i class='fas fa-edit'></i>&nbsp;Edit Channel Information</button></a></td>
-                        </tr>
+                        <tr>";
+
+                        //check user is admin or user
+                        $check_user = "SELECT *FROM user_tbl WHERE email= '$email'";
+                        $check_user_result = mysqli_query($con, $check_user);
+
+                        //fetch data
+                        $check_user_row = mysqli_fetch_assoc($check_user_result);
+
+                        if($check_user_row['roll'] == 'admin'){
+                            $channel_infor_view .="<td colspan='2'><a href='edit_my_channel.php?id=".$channel_information_row['id']."'><button class='btn btn-primary'><i class='fas fa-edit'></i>&nbsp;Edit Channel Information</button></a></td>";
+                        }
+                        elseif($check_user_row['roll'] == 'user'){
+                            $channel_infor_view .="<td colspan='2'><a href='edit_my_channel_user.php?id=".$channel_information_row['id']."'><button class='btn btn-primary'><i class='fas fa-edit'></i>&nbsp;Edit Channel Information</button></a></td>";
+                        }
+                          
+                        
+    $channel_infor_view .="</tr>
                     </table>                   
                 </div>
         ";
@@ -1468,7 +1483,7 @@
                                 </tr>
                                 <tr>
                                     <td><span class='label'>Channel Username : </span></td>
-                                    <td><input type='text' value='".$admin_channel_row['channel_name']."' class='channel-input' disabled>                                
+                                    <td><input type='text' value='".$admin_channel_row['username']."' class='channel-input' disabled>                                
                                 </tr>
                                 <tr>
                                     <td><span class='label'>Channel Email : </span></td>
@@ -1537,7 +1552,7 @@
                                 </tr>
                                 <tr>
                                     <td><span class='label'>Channel Username : </span></td>
-                                    <td><input type='text' value='".$admin_channel_row['channel_name']."' class='channel-input' disabled>                                
+                                    <td><input type='text' value='".$admin_channel_row['username']."' class='channel-input' disabled>                                
                                 </tr>
                                 <tr>
                                     <td><span class='label'>Channel Email : </span></td>
