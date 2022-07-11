@@ -21,7 +21,7 @@
                         edit_account()
     ---- 09 July 2022 - update --> edit_account()
     ---- 10 July 2022 - account_update_view(), update_account(), update_to_pro_msg(),  update --> edit_account(), login_user() 
-    ---- 11 July 2022 - admin_channel_infor_edit(), update_channel_info(),  update -->channel_info(),
+    ---- 11 July 2022 - admin_channel_infor_edit(), update_channel_info(),  user_channel_infor_edit(), update_channel_info_user()  update -->channel_info(),
 
 
                         
@@ -1472,7 +1472,7 @@
                                 </tr>
                                 <tr>
                                     <td><span class='label'>Channel Email : </span></td>
-                                    <td><input type='text' value='".$admin_channel_row['email']."' class='channel-input' disabled>                                
+                                    <td><input type='text' value='".$admin_channel_row['user_email']."' class='channel-input' disabled>                                
                                 </tr>
                                 <tr>
                                     <td>Channel Status : </td>";
@@ -1506,11 +1506,82 @@
         $con = Connection();
 
         //update channel
-        $update_channel = "UPDATE channel SET channel_name='$channel_name' WHERE id='$channel_id'";
+        $update_channel = "UPDATE channels SET channel_name='$channel_name' WHERE id='$channel_id'";
         $update_channel_result = mysqli_query($con, $update_channel);
 
         header("location:my_channel.php");
     }
+
+    //function for edit my channel infor for user
+    function user_channel_infor_edit(){
+        $con = Connection();
+        //login email
+        $email = strval($_SESSION['loginSession']);
+
+        //get admin channel data according to login email
+
+        $admin_channel = "SELECT * FROM channels WHERE user_email = '$email' && channel_status = '1'";
+        $admin_channel_result = mysqli_query($con, $admin_channel);
+
+        //fecth data
+        $admin_channel_row = mysqli_fetch_assoc($admin_channel_result);
+
+        $admin_channel_echo = "
+                    <div class='body'>
+                        <form action='' method='POST'>
+                            <table border='0'>
+                                <tr>
+                                    <td><span class='label'>Channel Name : </span></td>
+                                    <td><input type='text' name='channel_name' value='".$admin_channel_row['channel_name']."' class='channel-input'>
+                                    <input type='hidden' name='channel_id' value='".$admin_channel_row['id']."'></td>
+                                </tr>
+                                <tr>
+                                    <td><span class='label'>Channel Username : </span></td>
+                                    <td><input type='text' value='".$admin_channel_row['channel_name']."' class='channel-input' disabled>                                
+                                </tr>
+                                <tr>
+                                    <td><span class='label'>Channel Email : </span></td>
+                                    <td><input type='text' value='".$admin_channel_row['user_email']."' class='channel-input' disabled>                                
+                                </tr>
+                                <tr>
+                                    <td>Channel Status : </td>";
+                                    
+                                    if($admin_channel_row['channel_status'] == 1){
+                                        $admin_channel_echo .="<td><h1 class='badge badge-pill badge-success'>Active</h1></td>";
+                                    }elseif($admin_channel_row['channel_status'] == 1){
+                                        $admin_channel_echo .="<td><h1 class='badge badge-pill badge-danger'>Deactive</h1></td>";
+                                    }
+
+
+        $admin_channel_echo .=" </tr>
+                                <tr>
+                                    <td><span class='label'>Channel Create Date : </span></td>
+                                    <td><input type='text' value='".$admin_channel_row['created_date']."' class='channel-input' disabled>                                
+                                </tr>
+                                <tr>
+                                    <td colspan='2'><input type='submit' name='update' class='btn btn-success' value='Update Channel Information'></td>
+                                </tr>
+                            </table>
+                        </form>
+                        <a href='my_channel.php'><button class='btn btn-primary'>Back</button></a>
+                    </div>
+        ";
+
+        echo $admin_channel_echo;
+    }
+
+    //function for update channel infor user
+    function update_channel_info_user($channel_id, $channel_name){
+        $con = Connection();
+
+        //update channel
+        $update_channel = "UPDATE channels SET channel_name='$channel_name' WHERE id='$channel_id'";
+        $update_channel_result = mysqli_query($con, $update_channel);
+
+        header("location:my_channel_user.php");
+    }
+
+
 
     // function for count channel free videos
     function channel_free_videos(){
