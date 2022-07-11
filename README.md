@@ -260,6 +260,7 @@ My one of University Projects<br>
   - lib/routes/admin/all_channels.php
   - lib/routes/admin/all_categories.php
   - lib/routes/admin/my_channel.php
+  - lib/routes/admin/edit_my_channel.php
 
 
   02. Develop
