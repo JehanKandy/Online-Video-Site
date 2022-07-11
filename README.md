@@ -252,15 +252,17 @@ My one of University Projects<br>
 <br><br>
 <b>11 July 2022 :</b><br>
   01. update<br>
-  - lib/function/function.php
-  - lib/routes/admin/all_admins.php
+  - lib/routes/admin/all_pro_videos.php
+  - lib/routes/admin/all_free_videos.php
+  - lib/routes/admin/all_free_videos.php
+  - lib/routes/admin/all_pro_videos.php
+  - lib/routes/admin/all_channels.php
+  - lib/routes/admin/all_categories.php
+  - lib/routes/admin/my_channel.php
+
 
   02. Develop
-  - lib
-  - - lib/routes
-  - - - lib/routes/admin
-  - - - - lib/routes/admin/edit_account.php
-  - - - - lib/routes/admin/edit_account_info.php
+
   
 
 
