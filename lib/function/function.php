@@ -5,7 +5,6 @@
     session_start();
 
     
-
     /*
     Development history about fucntion.php file
     
@@ -22,7 +21,7 @@
                         edit_account()
     ---- 09 July 2022 - update --> edit_account()
     ---- 10 July 2022 - account_update_view(), update_account(), update_to_pro_msg(),  update --> edit_account(), login_user() 
-
+    ---- 11 July 2022 - update -->channel_info(),
 
 
                         
@@ -1433,6 +1432,9 @@
                         <tr>
                             <td>Channel Created Date : </td>
                             <td><input type='text' class='channel-input' value='".$channel_information_row['created_date']."' disabled></td>
+                        </tr>
+                        <tr>
+                            <td colspan='2'><a href='edit_my_channel.php?id=".$channel_information_row['id']."'><button class='btn btn-primary'><i class='fas fa-edit'></i>&nbsp;Edit Channel Information</button></a></td>
                         </tr>
                     </table>                   
                 </div>
