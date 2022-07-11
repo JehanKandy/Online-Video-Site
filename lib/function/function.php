@@ -21,7 +21,7 @@
                         edit_account()
     ---- 09 July 2022 - update --> edit_account()
     ---- 10 July 2022 - account_update_view(), update_account(), update_to_pro_msg(),  update --> edit_account(), login_user() 
-    ---- 11 July 2022 - admin_channel_infor_edit(), update -->channel_info(),
+    ---- 11 July 2022 - admin_channel_infor_edit(), update_channel_info(),  update -->channel_info(),
 
 
                         
@@ -1499,6 +1499,17 @@
         ";
 
         echo $admin_channel_echo;
+    }
+
+    //function for update channel infor
+    function update_channel_info($channel_id, $channel_name){
+        $con = Connection();
+
+        //update channel
+        $update_channel = "UPDATE channel SET channel_name='$channel_name' WHERE id='$channel_id'";
+        $update_channel_result = mysqli_query($con, $update_channel);
+
+        header("location:my_channel.php");
     }
 
     // function for count channel free videos
