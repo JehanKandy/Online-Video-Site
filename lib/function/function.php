@@ -23,7 +23,7 @@
     ---- 10 July 2022 - account_update_view(), update_account(), update_to_pro_msg(),  update --> edit_account(), login_user() 
     ---- 11 July 2022 - admin_channel_infor_edit(), update_channel_info(),  user_channel_infor_edit(), update_channel_info_user(),count_channels_user
                         view_all_channels(), update -->channel_info(),
-    ---- 12 July 2022 - add_catogery(),
+    ---- 12 July 2022 - add_catogery(), add_admin()
 
 
                         
@@ -2071,6 +2071,13 @@
             //header to page
             header("location:all_categories.php");
         }
+    }
+
+    //function for add_admin
+    function add_admin(){
+        $con = Connection();
+
+        //check existing category according to add data
     }
 
 ?>
