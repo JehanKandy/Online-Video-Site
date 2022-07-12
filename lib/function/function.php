@@ -2046,7 +2046,7 @@
     }
 
     //function for add categories
-    function add_catogery(){
+    function add_catogery($category_name, $catagery_desc){
         $con = Connection();
     }
 
