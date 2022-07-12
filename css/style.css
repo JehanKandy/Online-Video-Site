@@ -370,6 +370,14 @@ video {
     font-size: 25px;
 }
 
+.update-content .text-area {
+    width: 300px;
+    height: 100px;
+    border: 1px solid #d4d4d4;
+    resize: none;
+    border-radius: 5px;
+}
+
 .navbar {
     width: 100%;
 }
