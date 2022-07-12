@@ -16,6 +16,12 @@
             Add Category
         </div>
         <div class="body">
+            <?php 
+                if(isset($_POST['add'])){
+                    $result = add_catogery($_POST['category_name'], $_POST['category_desc']);
+                    echo $result;
+                }            
+            ?>
             <form action="<?php echo($SERVER['PHP_SELF']); ?>" method="POST">
                 <table border="0">
                     <tr>
