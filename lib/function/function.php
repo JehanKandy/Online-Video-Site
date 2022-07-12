@@ -2078,7 +2078,21 @@
         $con = Connection();
 
         //check existing category according to add data
-        $check_admin = "SELECT * FROM user_tbl WHERE "
+        $check_admin = "SELECT * FROM user_tbl WHERE username = '$admin_username' && email = '$admin_email'";
+        $check_admin_result = mysqli_query($con, $check_admin);
+
+        //count are there any existing admin
+        $check_admin_nor = mysqli_num_rows($check_admin_result);
+
+         //if are any exisiting admin in database retun with error message
+        if($check_admin_nor > 0){
+            return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Admin Already Exists..!</div>&nbsp</center>";
+        }
+        else{
+            //add admin to database
+            $add_admin = "INSERT INTO user_tbl(username,email,pass1,roll,account_type,user_status,join_date,update_to_pro)VALUES('$')"
+        }
+
     }
 
 ?>
