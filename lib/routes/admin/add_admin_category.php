@@ -22,7 +22,7 @@
                     echo $result;
                 }            
             ?>
-            <form action="<?php echo($SERVER['PHP_SELF']); ?>" method="POST">
+            <form action="<?php echo($_SERVER['PHP_SELF']); ?>" method="POST">
                 <table border="0">
                     <tr>
                         <td><span class="label">Category Name : </span></td>
