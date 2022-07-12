@@ -286,7 +286,7 @@ My one of University Projects<br>
   - lib
   - - lib/routes
   - - - lib/routes/admin
-  - - - - lib/routes/admin/edit_my_channel.php
+  - - - - lib/routes/admin/add_admin_category.php
 
   
   
