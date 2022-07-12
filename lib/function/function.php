@@ -2048,6 +2048,13 @@
     //function for add categories
     function add_catogery($category_name, $catagery_desc){
         $con = Connection();
+
+        //check existing category according to add data
+        $check_category = "SELECT * FROM categories WHERE category_name = '$category_name'"; 
+        $check_category_result = mysqli_query($con, $check_category);
+
+        //count rows in according to above
+        
     }
 
 ?>
