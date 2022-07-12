@@ -23,6 +23,7 @@
     ---- 10 July 2022 - account_update_view(), update_account(), update_to_pro_msg(),  update --> edit_account(), login_user() 
     ---- 11 July 2022 - admin_channel_infor_edit(), update_channel_info(),  user_channel_infor_edit(), update_channel_info_user(),count_channels_user
                         view_all_channels(), update -->channel_info(),
+    ---- 12 July 2022 - add_catogery(),
 
 
                         
@@ -2030,16 +2031,23 @@
         //fetch and echo all channels
         while($all_view_channels_row = mysqli_fetch_assoc($all_view_channels_result)){
             $all_channels_view = "
-            <div class='col-auto'>
+
                 <div class='card bg-primary text-white'>
-                    
+                    Channel Name : ".$all_view_channels_row['channel_name']."
                 </div>
-            </div>
+
             
             ";
+
+            echo $all_channels_view;
         }
 
 
+    }
+
+    //function for add categories
+    function add_catogery(){
+        $con = Connection();
     }
 
 ?>
