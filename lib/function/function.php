@@ -2074,10 +2074,11 @@
     }
 
     //function for add_admin
-    function add_admin(){
+    function add_admin($admin_username, $admin_email){
         $con = Connection();
 
         //check existing category according to add data
+        $check_admin = "SELECT * FROM user_tbl WHERE "
     }
 
 ?>
