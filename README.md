@@ -305,7 +305,7 @@ My one of University Projects<br>
   - lib
   - - lib/routes
   - - - lib/routes/admin
-  - - - - lib/routes/admin/add_admin_category.php
+  - - - - lib/routes/admin/add_admins.php
 
   
   
