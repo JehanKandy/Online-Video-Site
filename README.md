@@ -298,6 +298,7 @@ My one of University Projects<br>
   01. update<br>
   - lib/function/function.php
   - lib/routes/admin/all_admin.php
+  - lib/routes/admin/add_admins.php
 
 
   02. Develop
