@@ -2085,7 +2085,25 @@
         $rand_pwd = rand(00000,99999);
 
         //now send a email for newly created admin with randomly genarete password
+        //who you need to send the email
+
+        //receiver email should be $admin email
+        $receiver = $admin_email;
+
+        //subject of the email
+        $subject = "Password For Video Site";
         
+        //body of the email
+        $body = "Your logins";
+        $body .="Username : $admin_username ";
+        $body .="Password : $rand_pwd";
+        
+        //your email
+        $sender = "From:jehankandy@gmail.com";
+        
+        //now send the email to newly added admin 
+        
+
 
 
         //count are there any existing admin
@@ -2103,4 +2121,3 @@
     }
 
 ?>
-
