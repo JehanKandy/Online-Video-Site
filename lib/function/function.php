@@ -2090,7 +2090,7 @@
         }
         else{
             //add admin to database
-            $add_admin = "INSERT INTO user_tbl(username,email,pass1,roll,account_type,user_status,join_date,update_to_pro)VALUES('$')"
+            $add_admin = "INSERT INTO user_tbl(username,email,pass1,roll,account_type,user_status,join_date,update_to_pro)VALUES('$admin_username','$admin_email',)";
         }
 
     }
