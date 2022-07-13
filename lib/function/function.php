@@ -2081,6 +2081,13 @@
         $check_admin = "SELECT * FROM user_tbl WHERE username = '$admin_username' && email = '$admin_email'";
         $check_admin_result = mysqli_query($con, $check_admin);
 
+        //enter random password for admin user
+        $rand_pwd = rand(00000,99999);
+
+        //now send a email for newly created admin with randomly genarete password
+        
+
+
         //count are there any existing admin
         $check_admin_nor = mysqli_num_rows($check_admin_result);
 
@@ -2096,3 +2103,4 @@
     }
 
 ?>
+
