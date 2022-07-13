@@ -296,9 +296,8 @@ My one of University Projects<br>
 <br><br>
 <b>13 July 2022 :</b><br>
   01. update<br>
-  - css/styles.css
-  - lib/routes/admin/add_admin_category.php
   - lib/function/function.php
+  - lib/routes/admin/all_admin.php
 
 
   02. Develop
