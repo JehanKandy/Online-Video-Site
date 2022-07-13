@@ -2081,31 +2081,6 @@
         $check_admin = "SELECT * FROM user_tbl WHERE username = '$admin_username' && email = '$admin_email'";
         $check_admin_result = mysqli_query($con, $check_admin);
 
-        //enter random password for admin user
-        $rand_pwd = rand(00000,99999);
-
-        //now send a email for newly created admin with randomly genarete password
-        //who you need to send the email
-
-        //receiver email should be $admin email
-        $receiver = $admin_email;
-
-        //subject of the email
-        $subject = "Password For Video Site";
-        
-        //body of the email
-        $body = "Your logins";
-        $body .="Username : $admin_username ";
-        $body .="Password : $rand_pwd";
-        
-        //your email
-        $sender = "From:jehankandy@gmail.com";
-        
-        //now send the email to newly added admin 
-        
-
-
-
         //count are there any existing admin
         $check_admin_nor = mysqli_num_rows($check_admin_result);
 
@@ -2114,6 +2089,30 @@
             return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Admin Already Exists..!</div>&nbsp</center>";
         }
         else{
+
+            //enter random password for admin user
+            $rand_pwd = rand(00000,99999);
+
+            //now send a email for newly created admin with randomly genarete password
+            //who you need to send the email
+
+            //receiver email should be $admin email
+            $receiver = $admin_email;
+
+            //subject of the email
+            $subject = "Password For Video Site";
+            
+            //body of the email
+            $body = "Your logins";
+            $body .="Username : $admin_username ";
+            $body .="Password : $rand_pwd";
+            
+            //your email
+            $sender = "From:jehankandy@gmail.com";
+            
+            //now send the email to newly added admin 
+            mail($receiver, $subject, $body, $sender);
+
             //add admin to database
             $add_admin = "INSERT INTO user_tbl(username,email,pass1,roll,account_type,user_status,join_date,update_to_pro)VALUES('$admin_username','$admin_email',)";
         }
