@@ -24,6 +24,7 @@
     ---- 11 July 2022 - admin_channel_infor_edit(), update_channel_info(),  user_channel_infor_edit(), update_channel_info_user(),count_channels_user
                         view_all_channels(), update -->channel_info(),
     ---- 12 July 2022 - add_catogery(), add_admin()
+    ---- 13 July 2022 - update --> add_admin()
 
 
                         
