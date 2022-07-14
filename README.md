@@ -314,8 +314,7 @@ My one of University Projects<br>
 <b>14 July 2022 :</b><br>
   01. update<br>
   - lib/function/function.php
-  - lib/routes/admin/all_admin.php
-  - lib/routes/admin/add_admins.php
+  - css/style.css
 
 
   02. Develop
