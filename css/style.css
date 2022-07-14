@@ -410,6 +410,20 @@ video {
     font-size: 20px;
 }
 
+.pass-content {
+    padding-top: 50px;
+    padding-left: 150px;
+}
+
+.pass-title {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 40px;
+}
+
+.pass-body {
+    font-family: 'Roboto Flex', sans-serif;
+}
+
 
 /* for standard laptop screen size 
         width : 1366px
