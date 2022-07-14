@@ -2127,9 +2127,25 @@
     }
 
     //function for password reset
-    function pwd_reset(){
+    function pwd_reset($pwd_email){
         $con = Connection();
-    }
 
+        //get loginSession email
+        $email = strval($_SESSION['loginSession']);
+
+        //now check the email
+        $check_email = "SELECT * FROM user_tbl WHERE email='$email'";
+        $check_email_result = mysqli_query($con, $check_email);
+
+        //now validate email
+        $check_email_row = mysqli_fetch_assoc($check_email_result);
+
+        if($pwd_email == $check_email_row['email']){
+            header("location:pwd_change.php");
+        }   
+        elseif($pwd_email != $check_email_row['email']){
+            return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Email Doesn't match..!</div>&nbsp</center>";
+        }
+    }
 
 ?>
