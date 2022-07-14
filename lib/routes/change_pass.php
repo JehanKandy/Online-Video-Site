@@ -13,5 +13,13 @@
 <div class="pass-content">
   <div class="pass-title">
     Reset Password
+    <hr>
+  </div>
+  <div class="pass-body">
+    <form action="<?php echo($_SERVER['PHP_SELF']); ?>" method="POST">
+      <span>Enter Your  Email : </span>
+      <input type="email" name="pass_email" id="pass_email" class="pass-input" placeholder="Email" required>
+      <input type="submit" value="Verify Email">
+    </form>
   </div>
 </div>
