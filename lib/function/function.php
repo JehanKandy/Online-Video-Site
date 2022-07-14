@@ -25,6 +25,7 @@
                         view_all_channels(), update -->channel_info(),
     ---- 12 July 2022 - add_catogery(), add_admin()
     ---- 13 July 2022 - update --> add_admin()
+    ---- 14 July 2022 - pwd_reset()
 
 
                         
@@ -2107,6 +2108,7 @@
             $body = "Your logins";
             $body .="Username : $admin_username ";
             $body .="Password : $rand_pwd";
+            $body .="Update Your Password As soon As Posible";
             
             //your email
             $sender = "From:jehankandy@gmail.com";
@@ -2114,12 +2116,20 @@
             //now send the email to newly added admin 
             mail($receiver, $subject, $body, $sender);
 
+            //now encrypt the randomly genarete password useing md5
+            $new_pwd = md5($rand_pwd);
+
             //add admin to database
-            $add_admin = "INSERT INTO user_tbl(username,email,pass1,roll,account_type,user_status,join_date,update_to_pro)VALUES('$admin_username','$admin_email','$rand_pwd','admin','pro','1',NOW(),NOW())";
+            $add_admin = "INSERT INTO user_tbl(username,email,pass1,roll,account_type,user_status,join_date,update_to_pro)VALUES('$admin_username','$admin_email','$new_pwd','admin','pro','1',NOW(),NOW())";
             $add_admin_result = mysqli_query($con, $add_admin);
             header("location:all_admins.php");
         }
-
     }
+
+    //function for password reset
+    function pwd_reset(){
+        $con = Connection();
+    }
+
 
 ?>
