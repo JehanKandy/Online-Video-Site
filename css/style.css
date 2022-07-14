@@ -413,6 +413,7 @@ video {
 .pass-content {
     padding-top: 50px;
     padding-left: 150px;
+    padding-right: 150px;
 }
 
 .pass-title {
@@ -422,6 +423,7 @@ video {
 
 .pass-body {
     font-family: 'Roboto Flex', sans-serif;
+    font-size: 25px;
 }
 
 
