@@ -27,7 +27,8 @@
     ---- 13 July 2022 - update --> add_admin()
     ---- 14 July 2022 - pwd_reset()
     ---- 15 July 2022 - new update -----> my_account_admin(),admin_channel_edit(),update_admin_channel(),admin_account(),update_admin_account(),
-                                          edit_admin_account(),user_channel_info(), edit_account_user(), update_user_account(), add_catogery_user()
+                                          edit_admin_account(),user_channel_info(), edit_account_user(), update_user_account(), add_catogery_user(),
+                                          pwd_reset(),
 
 
                         
@@ -2365,7 +2366,9 @@
     }
 
 
-
-
+    //function for change password
+    function pwd_reset(){
+        $con = Connection();
+    }
     
 ?>
