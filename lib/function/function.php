@@ -2035,10 +2035,17 @@
         $update_admin_data .="
                         </tr>
                         <tr>
-                            <td>User Roll : </td>";
+                            <td>User Status : </td>";
+                                if($update_admin_row['user_status'] == 1){
+                                    $update_admin_data .="<td><h1 class='badge badge-success'>Active</h1></td>";
+                                }elseif($update_admin_row['user_status'] == 0){
+                                    $update_admin_data .="<td><h1 class='badge badge-danger'>Deactive</h1></td>";
+                                }
 
-                            
         $update_admin_data .="
+                        </tr>
+                        <tr>
+                            <td></td>
                         </tr>
                     </table>
                 </div>
