@@ -2087,7 +2087,8 @@
                     <table border='0'>
                         <tr>
                             <td><span class='label'>Username : </span></td>
-                            <td><input type='text' name='update_username' value='".$update_admin_data_row['username']."'></td>
+                            <td><input type='text' name='update_username' value='".$update_admin_data_row['username']."'>
+                                <input type='hidden' name='update_id' value='".$update_admin_data_row['id']."'></td>
                         </tr>
                         <tr>
                             <td><span class='label'>Email : </span></td>
