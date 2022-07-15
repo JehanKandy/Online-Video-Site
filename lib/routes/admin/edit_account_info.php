@@ -13,7 +13,7 @@
 
 <?php 
     if(isset($_POST['update'])){
-        $result = update_account($_POST['user_id'], $_POST['update_username'], $_POST['update_email']);
+        $result = update_admin_channel($_POST['update_channel_id'], $_POST['update_channel_name']);
         echo $result;
     }
 ?>
@@ -21,8 +21,8 @@
 <div class="update-page">
     <div class="update-content">
         <div class="title">
-            Update Account Information
+            Update My Channel Information
         </div>
-        <?php account_update_view(); ?>
-    </div>
+        <?php update_admin_account(); ?>
+    
 </div>
