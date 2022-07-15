@@ -2254,7 +2254,7 @@
         echo $update_user_data;
     }
 
-    //funtion for update admin accont
+    //funtion for update user accont
     function update_user_account(){
         $con = Connection();
 
@@ -2262,50 +2262,46 @@
         $acc_id = $_GET['id'];
 
         //get data from database according to id
-        $update_admin_data = "SELECT * FROM user_tbl WHERE id='$acc_id'";
-        $update_admin_data_result = mysqli_query($con, $update_admin_data);
+        $update_user_data = "SELECT * FROM user_tbl WHERE id='$acc_id'";
+        $update_user_data_result = mysqli_query($con, $update_user_data);
 
         //fetch data 
-        $update_admin_data_row = mysqli_fetch_assoc($update_admin_data_result);
+        $update_user_data_row = mysqli_fetch_assoc($update_user_data_result);
 
-        //decripy password
-        $dc_pwd = $update_admin_data_row['pass1'];
-
-        $pwd = md5($dc_pwd);
 
         //now print data in a form
-        $admin_info = "
+        $user_info = "
             <div class='body'>
                 <form action='' method='POST'>
                     <table border='0'>
                         <tr>
                             <td><span class='label'>Username : </span></td>
-                            <td><input type='text' name='update_username' value='".$update_admin_data_row['username']."'>
-                                <input type='hidden' name='update_id' value='".$update_admin_data_row['id']."'></td>
+                            <td><input type='text' name='update_username' value='".$update_user_data_row['username']."'>
+                                <input type='hidden' name='update_id' value='".$update_user_data_row['id']."'></td>
                         </tr>
                         <tr>
                             <td><span class='label'>Email : </span></td>
-                            <td><input type='email' name='update_email' value='".$update_admin_data_row['email']."' disabled></td>
+                            <td><input type='email' name='update_email' value='".$update_user_data_row['email']."' disabled></td>
                         </tr>
                         <tr>
                             <td>User Roll : </td>";
-                                if($update_admin_data_row['roll'] == 'admin'){
-                                    $admin_info .="<td><h1 class='badge badge-warning'>Admin</h1>&nbsp;<h1 class='badge badge-warning'>PRO</h1></td>";
+                                if($update_user_data_row['roll'] == 'admin'){
+                                    $user_info .="<td><h1 class='badge badge-warning'>Admin</h1>&nbsp;<h1 class='badge badge-warning'>PRO</h1></td>";
                                 }
-            $admin_info .="
+            $user_info .="
                         </tr>
                         <tr>
                             <td>User Status : </td>";
-                            if($update_admin_data_row['user_status'] == 1){
-                                $admin_info .="<td><h1 class='badge badge-success'>Active</h1></td>";
-                            }elseif($update_admin_data_row['user_status'] == 0){
-                                $admin_info .="<td><h1 class='badge badge-danger'>Deactive</h1></td>";
+                            if($update_user_data_row['user_status'] == 1){
+                                $user_info .="<td><h1 class='badge badge-success'>Active</h1></td>";
+                            }elseif($update_user_data_row['user_status'] == 0){
+                                $user_info .="<td><h1 class='badge badge-danger'>Deactive</h1></td>";
                             }
         
-            $admin_info .="
+            $user_info .="
                         <tr>
                             <td>Join Date : </td>
-                            <td><input type='date' value='".$update_admin_data_row['join_date']."' disabled></td>
+                            <td><input type='date' value='".$update_user_data_row['join_date']."' disabled></td>
                         </tr>
                         <tr>
                             <td colspan='2'><input type='submit' name='update' value='Update Account info' class='btn btn-success'></td>
@@ -2316,9 +2312,20 @@
             </div>
         ";
 
-        echo $admin_info;
+        echo $user_info;
     }
 
+    //function for update user account
+    function edit_user_account($user_id,$user_username){
+        $con = Connection();
+
+        //update admin data
+        $admin_data_update = "UPDATE user_tbl SET username = '$user_username' WHERE id = '$user_id'";
+        $admin_data_update_result = mysqli_query($con, $admin_data_update);
+
+        //header to edit_account.php
+        header("location:edit_account_user.php");
+    }
 
 
 
