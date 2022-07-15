@@ -2390,10 +2390,14 @@
             $subject = "Localhost Email Sending";
             $body = "Email Send by localhost.";
             $sender = "From:jehankandy@gmail.com";
+
+            mail($receiver, $subject, $body, $sender);
+        
+            //now update user_tbl with otp
+            $update_otp = "UPDATE user_tbl SET "
         }
 
         
     }
     
 ?>
-
