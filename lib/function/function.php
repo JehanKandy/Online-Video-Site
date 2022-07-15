@@ -27,7 +27,7 @@
     ---- 13 July 2022 - update --> add_admin()
     ---- 14 July 2022 - pwd_reset()
     ---- 15 July 2022 - new update -----> my_account_admin(),admin_channel_edit(),update_admin_channel(),admin_account(),update_admin_account(),
-                                          edit_admin_account(),user_channel_info(), edit_account_user()
+                                          edit_admin_account(),user_channel_info(), edit_account_user(), update_user_account()
 
 
                         
@@ -2200,8 +2200,124 @@
     //function for edit user account
     function edit_account_user(){
         $con = Connection();
+
+        //get loginSession email
+        $email = strval($_SESSION['loginSession']);
+
+        //get data according to email
+        $user_account = "SELECT * FROM user_tbl WHERE email = '$email'";
+        $user_account_result = mysqli_query($con, $user_account);
+
+        //fetch data
+        $user_account_row = mysqli_fetch_assoc($user_account_result);
+
+        //echo data
+        $update_user_data = "
+                <div class='body'>
+                    <table border='0'>
+                        <tr>
+                            <td>Username : </td>
+                            <td><input type='text' value='".$user_account_row['username']."' class='login-input' disabled><td>
+                        </tr>
+                        <tr>
+                            <td>User Email : </td>
+                            <td><input type='text' value='".$user_account_row['email']."' class='login-input' disabled><td>
+                        </tr>
+                        <tr>
+                            <td>User Roll : </td>";
+                                if($user_account_row['roll'] == 'user'){
+                                    $update_user_data .="<td><h1 class='badge badge-info'>User</h1></td>";
+                                }
+        $update_user_data .="
+                        </tr>
+                        <tr>
+                            <td>User Status : </td>";
+                                if($user_account_row['user_status'] == 1){
+                                    $update_user_data .="<td><h1 class='badge badge-success'>Active</h1></td>";
+                                }elseif($user_account_row['user_status'] == 0){
+                                    $update_user_data .="<td><h1 class='badge badge-danger'>Deactive</h1></td>";
+                                }
+
+        $update_user_data .="
+                        </tr>
+                        <tr>
+                            <td>Join Date : </td>
+                            <td><input type='date' value='".$user_account_row['join_date']."' class='login-input' disabled></td>        
+                        </tr>
+                        <tr>
+                            <td colspan='2'><a href='edit_account_info_user.php?id=".$user_account_row['id']."'><button class='btn btn-primary'>Edit Account Information</button></a></td>
+                        <tr>
+                    </table>
+                </div>     
+        
+        ";
+        echo $update_user_data;
     }
 
+    //funtion for update admin accont
+    function update_user_account(){
+        $con = Connection();
+
+        //get Id
+        $acc_id = $_GET['id'];
+
+        //get data from database according to id
+        $update_admin_data = "SELECT * FROM user_tbl WHERE id='$acc_id'";
+        $update_admin_data_result = mysqli_query($con, $update_admin_data);
+
+        //fetch data 
+        $update_admin_data_row = mysqli_fetch_assoc($update_admin_data_result);
+
+        //decripy password
+        $dc_pwd = $update_admin_data_row['pass1'];
+
+        $pwd = md5($dc_pwd);
+
+        //now print data in a form
+        $admin_info = "
+            <div class='body'>
+                <form action='' method='POST'>
+                    <table border='0'>
+                        <tr>
+                            <td><span class='label'>Username : </span></td>
+                            <td><input type='text' name='update_username' value='".$update_admin_data_row['username']."'>
+                                <input type='hidden' name='update_id' value='".$update_admin_data_row['id']."'></td>
+                        </tr>
+                        <tr>
+                            <td><span class='label'>Email : </span></td>
+                            <td><input type='email' name='update_email' value='".$update_admin_data_row['email']."' disabled></td>
+                        </tr>
+                        <tr>
+                            <td>User Roll : </td>";
+                                if($update_admin_data_row['roll'] == 'admin'){
+                                    $admin_info .="<td><h1 class='badge badge-warning'>Admin</h1>&nbsp;<h1 class='badge badge-warning'>PRO</h1></td>";
+                                }
+            $admin_info .="
+                        </tr>
+                        <tr>
+                            <td>User Status : </td>";
+                            if($update_admin_data_row['user_status'] == 1){
+                                $admin_info .="<td><h1 class='badge badge-success'>Active</h1></td>";
+                            }elseif($update_admin_data_row['user_status'] == 0){
+                                $admin_info .="<td><h1 class='badge badge-danger'>Deactive</h1></td>";
+                            }
+        
+            $admin_info .="
+                        <tr>
+                            <td>Join Date : </td>
+                            <td><input type='date' value='".$update_admin_data_row['join_date']."' disabled></td>
+                        </tr>
+                        <tr>
+                            <td colspan='2'><input type='submit' name='update' value='Update Account info' class='btn btn-success'></td>
+                        </tr>
+                    </table>
+                </form>
+                <a href='edit_account.php'><button class='btn btn-primary'>Back</button></a>
+            </div>
+        ";
+
+        echo $admin_info;
+    }
 
 
 
