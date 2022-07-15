@@ -13,7 +13,7 @@
 
 <?php 
     if(isset($_POST['update'])){
-        $result = update_pro_video($_POST['id'], $_POST['video_status']);
+        $result = update_admin_channel($_POST['update_channel_id'], $_POST['update_channel_name']);
         echo $result;
     }
 ?>
