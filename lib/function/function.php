@@ -1966,9 +1966,20 @@
         $all_data_row = mysqli_fetch_assoc($all_data_result);
 
         //echo in form
-        $update_amdin_channel = "
-        
+        $update_admin_channel = "
+            <div class='body'>
+                <form action='' method='POST'>
+                    <table border='0'>
+                        <tr>
+                            <td><span class='label'>Channel Name :</span></td>
+                            <tr><input type='text' name='update_channel_name' value='".$all_data_row['channel_name']."' class='login-input'></tr>
+                        </tr>
+                    </table>
+                </form>
+            </div>
         ";
+
+        echo $update_admin_channel;
 
     }
 ?>
