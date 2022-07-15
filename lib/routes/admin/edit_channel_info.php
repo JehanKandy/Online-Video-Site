@@ -13,7 +13,7 @@
 
 <?php 
     if(isset($_POST['update'])){
-        $result = update_channel($_POST['id'], $_POST['channel_status']);
+        $result = update_pro_video($_POST['id'], $_POST['video_status']);
         echo $result;
     }
 ?>
@@ -21,8 +21,8 @@
 <div class="update-page">
     <div class="update-content">
         <div class="title">
-            Update Channel Information
+            Update My Channel Information
         </div>
-        <?php channal_update_view(); ?>
-    </div>
+        <?php admin_channel_edit(); ?>
+    
 </div>
