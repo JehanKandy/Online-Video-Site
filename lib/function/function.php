@@ -2367,8 +2367,33 @@
 
 
     //function for change password
-    function pwd_reset(){
+    function pwd_reset($pwd_email){
         $con = Connection();
+
+        //get loginSession email
+        $email = strval($_SESSION['loginSession']);
+        
+        //get data according to add email
+        $change_pwd = "SELECT * FROM user_tbl WHERE email = '$email'";
+        $change_pwd_result = mysqli_query($con,$change_pwd);
+
+        //fetch data
+        $change_row = mysqli_fetch_assoc($change_pwd_result);
+
+        //check add password is existing or not
+        if($pwd_email != $change_row['email']){
+            return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Email Doesn't Exists..!</div>&nbsp</center>";
+        }elseif($pwd_email == $change_row['email']){
+            $pwd_reset_otp = rand(10000,99999);
+
+            $receiver = "jehankandysl@gmail.com";
+            $subject = "Localhost Email Sending";
+            $body = "Email Send by localhost.";
+            $sender = "From:jehankandy@gmail.com";
+        }
+
+        
     }
     
 ?>
+
