@@ -2092,7 +2092,7 @@
                         </tr>
                         <tr>
                             <td><span class='label'>Email : </span></td>
-                            <td><input type='text' name='update_username' value='".$update_admin_data_row['email']."'></td>
+                            <td><input type='email' name='update_email' value='".$update_admin_data_row['email']."'></td>
                         </tr>
                         <tr>
                             <td>User Roll : </td>";
