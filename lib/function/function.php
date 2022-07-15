@@ -1990,10 +1990,15 @@
     }
 
     //function for update admin channel
-    function update_admin_channel(){
+    function update_admin_channel($channel_id_update, $channel_name_update){
         $con = Connection();
 
+        //now update the table in database
+        $update_channel = "UPDATE channels SET channel_name = '$channel_name_update' WHERE id = '$channel_id_update'";
+        $update_channel_result = mysqli_query($con, $update_channel);
 
+        //header to my_channel.php
+        header("location:my_channel.php");
     }
 
 
