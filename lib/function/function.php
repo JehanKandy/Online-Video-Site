@@ -2004,6 +2004,34 @@
     //function for update admin account
     function admin_account(){
         $con = Connection();
+
+        //get loginSession email
+        $email = strval($_SESSION['loginSession']);
+        
+        //get data from database
+        $update_admin = "SELECT * FROM user_tbl WHERE email = '$email'";
+        $update_admin_result = mysqli_query($con, $update_admin);
+
+        //now fetch data from database
+        $update_admin_row = mysqli_fetch_assoc($update_admin_result);
+
+        //print data
+        $update_admin_data = "
+                <div class='body'>
+                    <table border='0'>
+                        <tr>
+                            <td>Username : </td>
+                            <td><input type='text' value='".$update_admin_row['username']."' class='login-input' disabled><td>
+                        </tr>
+                    </table>
+                </div>
+
+        
+        
+        ";
+
+        echo $update_admin_data;
+        
     }
 
 
