@@ -2045,7 +2045,8 @@
         $update_admin_data .="
                         </tr>
                         <tr>
-                            <td></td>
+                            <td>Join Date : </td>
+                            <td><input type='date' value='".$update_admin_row['join_date']."' class='login-input' disabled></td>        
                         </tr>
                     </table>
                 </div>
