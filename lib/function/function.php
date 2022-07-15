@@ -27,7 +27,7 @@
     ---- 13 July 2022 - update --> add_admin()
     ---- 14 July 2022 - pwd_reset()
     ---- 15 July 2022 - new update -----> my_account_admin(),admin_channel_edit(),update_admin_channel(),admin_account(),update_admin_account(),
-                                          edit_admin_account(),user_channel_info(), edit_account_user(), update_user_account()
+                                          edit_admin_account(),user_channel_info(), edit_account_user(), update_user_account(), add_catogery_user()
 
 
                         
@@ -1821,6 +1821,34 @@
 
             //header to page
             header("location:all_categories.php");
+        }
+    }
+
+    //function for add categories
+    function add_catogery_user($category_name, $catagery_desc){
+        $con = Connection();
+        
+        //get loginSession email
+        $email = strval($_SESSION['loginSession']);
+        
+        //check existing category according to add data
+        $check_category = "SELECT * FROM categories WHERE category_name = '$category_name'"; 
+        $check_category_result = mysqli_query($con, $check_category);
+
+        //count rows in according to above
+        $check_category_nor = mysqli_num_rows($check_category_result);
+
+        //if are any exisiting category in database retun with error message
+        if($check_category_nor > 0){
+            return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Category Already Exists..!</div>&nbsp</center>";
+        }
+        else{
+            //add category to database
+            $add_category = "INSERT INTO categories(username,category_name,category_desc,category_status,category_date)VALUES('$email','$category_name','$catagery_desc','1',NOW())";
+            $add_category_result = mysqli_query($con, $add_category);
+
+            //header to page
+            header("location:user_all_categories.php");
         }
     }
 
