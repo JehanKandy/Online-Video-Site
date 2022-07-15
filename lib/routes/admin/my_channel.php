@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="../../css/style.css">
 
 <div class="admin-content">
-    <section id="sidebar">
+<section id="sidebar">
         <ul class="nav-bar">
             <li><a href="../index_loged.php"><i class='far fa-file-video' style='font-size:20px'></i>&nbsp;&nbsp;View All Videos</a></li>
             <li><a href="../admin.php"><i class='fas fa-tachometer-alt' style='font-size:20px'></i>&nbsp;&nbsp;Dashboard</a></li>
@@ -30,50 +30,11 @@
     </section>
     <section class="admin-panel">
         <div class="container-fluid">
-          <h1 class="display-4">Channel Username : <?php login_user_name(); ?></h1>
+          <h1 class="display-4">My Channel</h1>
           <hr>
-          <div class="row">
-            <div class="col-auto">
-                <?php channel_info(); ?>
-            </div>
-          </div>
-          <br>
-          <hr>
-          <br>
-
-          <div class="row">
-            <div class="col-auto">
-              <div class="card bg-primary text-white">
-                <div class="card-body">
-                  <h4><i class='far fa-file-video' style='font-size:40px'></i>&nbsp;Videos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
-                  <hr style="background-color:white">
-                  <h5>
-                    <b><?php channel_free_videos(); ?></b>
-                  </h5>
-                </div>
-              </div>
-            </div> 
-            <div class="col-auto">
-              <div class="card bg-warning text-white">
-                <div class="card-body">
-                  <h4><i class='fas fa-film' style='font-size:40px'></i>&nbsp;Pro - Videos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
-                  <hr style="background-color:white">
-                  <h5>
-                    <b><?php channel_pro_videos(); ?></b>
-                  </h5>
-                </div>
-              </div>
-            </div>     
-        </div>
-          <br>
-          <hr>
-          <br>
-        <div class="row">
-          
+            <b><?php my_channel_admin(); ?></b>
         </div>
     </section>
 </div>
 
 <script src="../../../script.js"></script>
-
-    
