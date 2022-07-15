@@ -2063,6 +2063,32 @@
     //funtion for update admin accont
     function update_admin_account(){
         $con = Connection();
+
+        //get Id
+        $acc_id = $_GET['id'];
+
+        //get data from database according to id
+        $update_admin_data = "SELECT * FROM user_tbl WHERE id='$acc_id'";
+        $update_admin_data_result = mysqli_query($con, $update_admin_data);
+
+        //fetch data 
+        $udate_admin_data_row = mysqli_fetch_assoc($update_admin_data_result);
+
+        //now print data in a form
+        $admin_info = "
+            <div class='body'>
+                <form action='' method='POST'>
+                    <table border='0'>
+                        <tr>
+                            <td><span class='label'>Username : </span></td>
+                            <td><input type='text' name='update_username' value='".$udate_admin_data_row['username']."'></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        ";
+
+        echo $admin_info;
     }
 
 
