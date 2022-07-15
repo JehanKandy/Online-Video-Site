@@ -1871,6 +1871,10 @@
             //add admin to database
             $add_admin = "INSERT INTO user_tbl(username,email,pass1,roll,account_type,user_status,join_date,update_to_pro)VALUES('$admin_username','$admin_email','$new_pwd','admin','pro','1',NOW(),NOW())";
             $add_admin_result = mysqli_query($con, $add_admin);
+
+            //add channel to admin
+            $add_channel = "INSERT INTO channels(username,channel_name,user_email,channel_status,created_date)VALUES('$admin_username','$admin_username','$admin_email','1',NOW())";
+            $add_channel_result = mysqli_query($con, $add_channel);
             header("location:all_admins.php");
         }
     }
@@ -2092,7 +2096,7 @@
                         </tr>
                         <tr>
                             <td><span class='label'>Email : </span></td>
-                            <td><input type='email' name='update_email' value='".$update_admin_data_row['email']."'></td>
+                            <td><input type='email' name='update_email' value='".$update_admin_data_row['email']."' disabled></td>
                         </tr>
                         <tr>
                             <td>User Roll : </td>";
@@ -2127,8 +2131,15 @@
     }
 
     //function for update admin account
-    function edit_admin_account(){
+    function edit_admin_account($admin_id,$admin_username){
         $con = Connection();
+
+        //update admin data
+        $admin_data_update = "UPDATE user_tbl SET username = '$admin_username' WHERE id = '$admin_id'";
+        $admin_data_update_result = mysqli_query($con, $admin_data_update);
+
+        //header to edit_account.php
+        header("location:edit_account.php");
     }
 
 
