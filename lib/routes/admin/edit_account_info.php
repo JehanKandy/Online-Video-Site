@@ -13,7 +13,7 @@
 
 <?php 
     if(isset($_POST['update'])){
-        $result = edit_admin_account($_POST['update_channel_id'], $_POST['update_channel_name']);
+        $result = edit_admin_account($_POST['update_id'], $_POST['update_username'], $_POST['update_email']);
         echo $result;
     }
 ?>
