@@ -1926,6 +1926,23 @@
                         <td>User Email : </td>
                         <td><input type='text' value='".$channel_data_row['user_email']."' class='login-input' disabled></td>
                     </tr>
+                    <tr>
+                        <td>Channel Status : </td>";
+                        if($channel_data_row['channel_status'] == 1){
+                            $admin_channel .= "<td><h1 class='badge badge-success'>Active</h1></td>";
+                        }elseif($channel_data_row['channel_status'] == 0){
+                            $admin_channel .= "<td><h1 class='badge badge-danger'>Deactive</h1></td>";
+                        }
+
+        $admin_channel .="
+                    </tr>
+                    <tr>
+                        <td>Channel Create Date : </td>
+                        <td><input type='date' value='".$channel_data_row['created_date']."' class='login-input' disabled></td>
+                    </tr>
+                    <tr>
+                        <td colspan='2'><a href='edit_admin_channel.php?id=".$channel_data_row['user_email']."'><button class='btn btn-primary'>Edit Channel Infor</button></a></td>
+                    </tr>
                 <table>
             </div>
         
@@ -1934,4 +1951,3 @@
         echo $admin_channel;
     }
 ?>
-
