@@ -342,6 +342,7 @@ My one of University Projects<br>
   - - - - lib/routes/user/edit_my_channel_user.php
   - - - - lib/routes/user/my_channel_user.php
   - - - - lib/routes/user/user_all_categories.php
+  - - - - lib/routes/user/add_user_categories.php
   
   
 
