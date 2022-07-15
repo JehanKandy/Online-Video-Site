@@ -2072,7 +2072,12 @@
         $update_admin_data_result = mysqli_query($con, $update_admin_data);
 
         //fetch data 
-        $udate_admin_data_row = mysqli_fetch_assoc($update_admin_data_result);
+        $update_admin_data_row = mysqli_fetch_assoc($update_admin_data_result);
+
+        //decripy password
+        $dc_pwd = $update_admin_data_row['pass1'];
+
+        $pwd = md5($dc_pwd);
 
         //now print data in a form
         $admin_info = "
@@ -2081,13 +2086,32 @@
                     <table border='0'>
                         <tr>
                             <td><span class='label'>Username : </span></td>
-                            <td><input type='text' name='update_username' value='".$udate_admin_data_row['username']."'></td>
+                            <td><input type='text' name='update_username' value='".$update_admin_data_row['username']."'></td>
                         </tr>
                         <tr>
                             <td><span class='label'>Email : </span></td>
-                            <td><input type='text' name='update_username' value='".$udate_admin_data_row['email']."'></td>
+                            <td><input type='text' name='update_username' value='".$update_admin_data_row['email']."'></td>
                         </tr>
-
+                        <tr>
+                            <td>User Roll : </td>";
+                                if($update_admin_data_row['roll'] == 'admin'){
+                                    $admin_info .="<td><h1 class='badge badge-warning'>Admin</h1>&nbsp;<h1 class='badge badge-warning'>PRO</h1></td>";
+                                }
+            $admin_info .="
+                        </tr>
+                        <tr>
+                            <td>User Status : </td>";
+                            if($update_admin_data_row['user_status'] == 1){
+                                $admin_info .="<td><h1 class='badge badge-success'>Active</h1></td>";
+                            }elseif($update_admin_data_row['user_status'] == 0){
+                                $admin_info .="<td><h1 class='badge badge-danger'>Deactive</h1></td>";
+                            }
+        
+            $admin_info .="
+                        <tr>
+                            <td>Join Date : </td>
+                            <td><input type='date' value='".$update_admin_data_row['join_date']."' disabled></td>
+                        </tr>
                     </table>
                 </form>
             </div>
