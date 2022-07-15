@@ -26,7 +26,7 @@
     ---- 12 July 2022 - add_catogery(), add_admin()
     ---- 13 July 2022 - update --> add_admin()
     ---- 14 July 2022 - pwd_reset()
-    ---- 15 July 2022 - new update -----> my_account_admin()
+    ---- 15 July 2022 - new update -----> my_account_admin(),admin_channel_edit()
 
 
                         
@@ -1941,7 +1941,7 @@
                         <td><input type='date' value='".$channel_data_row['created_date']."' class='login-input' disabled></td>
                     </tr>
                     <tr>
-                        <td colspan='2'><a href='edit_admin_channel.php?id=".$channel_data_row['user_email']."'><button class='btn btn-primary'>Edit Channel Infor</button></a></td>
+                        <td colspan='2'><a href='edit_channel_info.php?id=".$channel_data_row['user_email']."'><button class='btn btn-primary'>Edit Channel Infor</button></a></td>
                     </tr>
                 <table>
             </div>
@@ -1949,5 +1949,10 @@
         ";
 
         echo $admin_channel;
+    }
+
+    //function for admin_channel_edit 
+    function admin_channel_edit(){
+        $con = Connection();
     }
 ?>
