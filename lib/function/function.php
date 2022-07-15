@@ -27,7 +27,7 @@
     ---- 13 July 2022 - update --> add_admin()
     ---- 14 July 2022 - pwd_reset()
     ---- 15 July 2022 - new update -----> my_account_admin(),admin_channel_edit(),update_admin_channel(),admin_account(),update_admin_account(),
-                                          edit_admin_account(),
+                                          edit_admin_account(),user_channel_info(), 
 
 
                         
@@ -2142,6 +2142,10 @@
         header("location:edit_account.php");
     }
 
+    //function for user account
+    function user_channel_info(){
+        $con = Connection();
+    }
 
 
 
@@ -2178,5 +2182,6 @@
                 return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Email Doesn't match..!</div>&nbsp</center>";
             }
         }
+    
     
 ?>
