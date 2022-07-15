@@ -2188,7 +2188,7 @@
                         <td><input type='date' value='".$user_channel_data_row['created_date']."' class='login-input' disabled></td>
                     </tr>
                     <tr>
-                        <td colspan='2'><a href='edit_channel_info.php?id=".$user_channel_data_row['user_email']."'><button class='btn btn-primary'>Edit Channel Infor</button></a></td>
+                        <td colspan='2'><a href='edit_my_channel_user.php?id=".$user_channel_data_row['user_email']."'><button class='btn btn-primary'>Edit Channel Infor</button></a></td>
                     </tr>
                 <table>
             </div>
