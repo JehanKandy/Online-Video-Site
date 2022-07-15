@@ -2387,17 +2387,21 @@
             $pwd_reset_otp = rand(10000,99999);
 
             $receiver = "jehankandysl@gmail.com";
-            $subject = "Localhost Email Sending";
-            $body = "Email Send by localhost.";
+            $subject = "Password Change OTP";
+            $body = "Use this OTP to change Password : $pwd_reset_otp";
             $sender = "From:jehankandy@gmail.com";
 
             mail($receiver, $subject, $body, $sender);
         
             //now update user_tbl with otp
             $update_otp = "UPDATE user_tbl SET pwd_reset_otp = '$pwd_reset_otp' WHERE email = '$email'";
-        }
+            $update_otp_result = mysqli_query($con, $update_otp);
 
-        
+            //header to change_pwd.php file
+            header("location:change_pwd.php");
+        }        
     }
+
+    
     
 ?>
