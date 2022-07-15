@@ -338,7 +338,8 @@ My one of University Projects<br>
   - - - lib/routes/user
   - - - - lib/routes/user/edit_account_infor_user.php
   - - - - lib/routes/user/edit_account_user.php
-
+  - - - - lib/routes/user/edit_channel_user_infor.php
+  - - - - lib/routes/user/edit_my_channel_user.php
   
   
   
