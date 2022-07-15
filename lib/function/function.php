@@ -2112,8 +2112,12 @@
                             <td>Join Date : </td>
                             <td><input type='date' value='".$update_admin_data_row['join_date']."' disabled></td>
                         </tr>
+                        <tr>
+                            <td colspan='2'><input type='submit' name='update' value='Update Account info' class='btn btn-success'></td>
+                        </tr>
                     </table>
                 </form>
+                <a href='edit_account.php'><button class='btn btn-primary'>Back</button></a>
             </div>
         ";
 
