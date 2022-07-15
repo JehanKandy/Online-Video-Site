@@ -1899,5 +1899,8 @@
     //function update for admin account
     function my_account_admin(){
         $con = Connection();
+        //get loginSession email
+        $email = strval($_SESSION['loginSession']);
+
     }
 ?>
