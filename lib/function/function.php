@@ -383,11 +383,16 @@
         while($video_similer_row = mysqli_fetch_assoc($video_similer_result)){
             echo "
                             
-                <div class='col-auto'>
-                    <div class='card-body'>
-                        <video src='../../upload/".$video_similer_row['video_url']."'controls></video>
-                    </div>
+            <div class='col-auto'>
+            <a href='../routes/video_full_screen.php?id=".$video_similer_row['id']."'>
+                <div class='card-body'>
+                    <video src='../../upload/".$video_similer_row['video_url']."'controls></video>
+                    <div class='title-video'>
+                        <span class='title'>".$video_similer_row['video_title']."</span>
+                    </div>                                    
                 </div>
+            </a>
+        </div>
         
             ";
         }        
@@ -918,11 +923,12 @@
                         while($all_categories_row = mysqli_fetch_assoc($all_categories_result)){
           
  
-        $category .= "<option value='".$all_categories_row['category_name']."'>".$all_categories_row['category_name']."</option>
-                    </select>
-        
-            ";
-        }
+                        $category .= "<option value='".$all_categories_row['category_name']."'>".$all_categories_row['category_name']."</option>
+                                    
+                        
+                            ";
+                        }
+                    $category .="</select>";
         
         echo $category;
     }
@@ -1784,7 +1790,10 @@
             $all_channels_view = "
 
                 <div class='card bg-primary text-white'>
-                    Channel Name : ".$all_view_channels_row['channel_name']."
+                    <div style='margin:20px'>
+                        <i class='fas fa-tv' style='font-size:35px; margin:10px;'></i><br>
+                        Channel Name : ".$all_view_channels_row['channel_name']."<br>
+                    </div>
                 </div>
 
             
