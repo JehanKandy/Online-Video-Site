@@ -2083,6 +2083,11 @@
                             <td><span class='label'>Username : </span></td>
                             <td><input type='text' name='update_username' value='".$udate_admin_data_row['username']."'></td>
                         </tr>
+                        <tr>
+                            <td><span class='label'>Email : </span></td>
+                            <td><input type='text' name='update_username' value='".$udate_admin_data_row['email']."'></td>
+                        </tr>
+
                     </table>
                 </form>
             </div>
