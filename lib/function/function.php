@@ -2023,6 +2023,23 @@
                             <td>Username : </td>
                             <td><input type='text' value='".$update_admin_row['username']."' class='login-input' disabled><td>
                         </tr>
+                        <tr>
+                            <td>User Email : </td>
+                            <td><input type='text' value='".$update_admin_row['email']."' class='login-input' disabled><td>
+                        </tr>
+                        <tr>
+                            <td>User Roll : </td>";
+                                if($update_admin_row['roll'] == 'admin'){
+                                    $update_admin_data .="<td><h1 class='badge badge-warning'>Admin</h1>&nbsp;<h1 class='badge badge-warning'>PRO</h1></td>";
+                                }
+        $update_admin_data .="
+                        </tr>
+                        <tr>
+                            <td>User Roll : </td>";
+
+                            
+        $update_admin_data .="
+                        </tr>
                     </table>
                 </div>
 
