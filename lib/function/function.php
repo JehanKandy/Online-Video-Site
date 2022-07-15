@@ -1896,9 +1896,10 @@
         }
     }
 
-    //function update for admin account
-    function my_account_admin(){
+    //function update for admin channel
+    function my_channel_admin(){
         $con = Connection();
+
         //get loginSession email
         $email = strval($_SESSION['loginSession']);
 
@@ -1910,6 +1911,27 @@
         $channel_data_row = mysqli_fetch_assoc($channel_data_result);
 
         //print channel infromation
+        $admin_channel = "
+            <div class='body'>
+                <table border='0'>
+                    <tr>
+                        <td>Channel Name : </td>
+                        <td><input type='text' value='".$channel_data_row['channel_name']."' class='login-input' disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Username : </td>
+                        <td><input type='text' value='".$channel_data_row['username']."' class='login-input' disabled></td>
+                    </tr>
+                    <tr>
+                        <td>User Email : </td>
+                        <td><input type='text' value='".$channel_data_row['user_email']."' class='login-input' disabled></td>
+                    </tr>
+                <table>
+            </div>
         
+        ";
+
+        echo $admin_channel;
     }
 ?>
+
