@@ -26,7 +26,7 @@
     ---- 12 July 2022 - add_catogery(), add_admin()
     ---- 13 July 2022 - update --> add_admin()
     ---- 14 July 2022 - pwd_reset()
-    ---- 15 July 2022 - new update -----> my_account_admin(),admin_channel_edit(),update_admin_channel(),admin_account()
+    ---- 15 July 2022 - new update -----> my_account_admin(),admin_channel_edit(),update_admin_channel(),admin_account(),update_admin_account()
 
 
                         
@@ -2052,14 +2052,17 @@
                             <td colspan='2'><a href='edit_account_info.php?id=".$update_admin_row['id']."'><button class='btn btn-primary'>Edit Account Information</button></a></td>
                         <tr>
                     </table>
-                </div>
-
-        
+                </div>     
         
         ";
 
         echo $update_admin_data;
         
+    }
+
+    //funtion for update admin accont
+    function update_admin_account(){
+        $con = Connection();
     }
 
 
