@@ -1874,28 +1874,6 @@
         }
     }
 
-    //function for password reset
-    function pwd_reset($pwd_email){
-        $con = Connection();
-
-        //get loginSession email
-        $email = strval($_SESSION['loginSession']);
-
-        //now check the email
-        $check_email = "SELECT * FROM user_tbl WHERE email='$email'";
-        $check_email_result = mysqli_query($con, $check_email);
-
-        //now validate email
-        $check_email_row = mysqli_fetch_assoc($check_email_result);
-
-        if($pwd_email == $check_email_row['email']){
-            header("location:pwd_change.php");
-        }   
-        elseif($pwd_email != $check_email_row['email']){
-            return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Email Doesn't match..!</div>&nbsp</center>";
-        }
-    }
-
     //function update for admin channel
     function my_channel_admin(){
         $con = Connection();
@@ -1972,7 +1950,8 @@
                     <table border='0'>
                         <tr>
                             <td><span class='label'>Channel Name :</span></td>
-                            <td><input type='text' name='update_channel_name' value='".$all_data_row['channel_name']."' class='login-input'></td>
+                            <td><input type='text' name='update_channel_name' value='".$all_data_row['channel_name']."' class='login-input'>
+                                <input type='hidden' name='update_channel_id' value='".$all_data_row['id']."'></td>
                         </tr>
                         <tr>
                             <td><span class='label'>Channel Username :</span></td>
@@ -2013,6 +1992,47 @@
     //function for update admin channel
     function update_admin_channel(){
         $con = Connection();
+
+
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //function for password reset
+        function pwd_reset($pwd_email){
+            $con = Connection();
+    
+            //get loginSession email
+            $email = strval($_SESSION['loginSession']);
+    
+            //now check the email
+            $check_email = "SELECT * FROM user_tbl WHERE email='$email'";
+            $check_email_result = mysqli_query($con, $check_email);
+    
+            //now validate email
+            $check_email_row = mysqli_fetch_assoc($check_email_result);
+    
+            if($pwd_email == $check_email_row['email']){
+                header("location:pwd_change.php");
+            }   
+            elseif($pwd_email != $check_email_row['email']){
+                return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Email Doesn't match..!</div>&nbsp</center>";
+            }
+        }
+    
 ?>
