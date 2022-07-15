@@ -2048,6 +2048,9 @@
                             <td>Join Date : </td>
                             <td><input type='date' value='".$update_admin_row['join_date']."' class='login-input' disabled></td>        
                         </tr>
+                        <tr>
+                            <td colspan='2'><a href='edit_account_info.php?id=".$update_admin_row['id']."'><button class='btn btn-primary'>Edit Account Information</button></a></td>
+                        <tr>
                     </table>
                 </div>
 
