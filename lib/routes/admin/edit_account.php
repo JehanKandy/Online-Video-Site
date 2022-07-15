@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="../../css/style.css">
 
 <div class="admin-content">
-    <section class="sidebar">
+<section id="sidebar">
         <ul class="nav-bar">
             <li><a href="../index_loged.php"><i class='far fa-file-video' style='font-size:20px'></i>&nbsp;&nbsp;View All Videos</a></li>
             <li><a href="../admin.php"><i class='fas fa-tachometer-alt' style='font-size:20px'></i>&nbsp;&nbsp;Dashboard</a></li>
@@ -30,19 +30,10 @@
     </section>
     <section class="admin-panel">
         <div class="container-fluid">
-          <h1 class="display-4">Account</h1>
+          <h1 class="display-4">My Account</h1>
           <hr>
-
-          <div class="row">
-            <div class="col-auto">
-                <?php edit_account(); ?>
-            </div>    
+            <b><?php admin_account(); ?></b>
         </div>
-        
-        <br>
-        <hr>
-        <br>
-          
     </section>
 </div>
 
