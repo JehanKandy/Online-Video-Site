@@ -1959,7 +1959,7 @@
         $id = $_GET['id'];
 
         //now check data from database accoring to id
-        $all_data = "SELECT * FROM channels WHERE email='$id'";
+        $all_data = "SELECT * FROM channels WHERE user_email='$id'";
         $all_data_result = mysqli_query($con, $all_data);
 
         //now fetch data
@@ -1972,10 +1972,38 @@
                     <table border='0'>
                         <tr>
                             <td><span class='label'>Channel Name :</span></td>
-                            <tr><input type='text' name='update_channel_name' value='".$all_data_row['channel_name']."' class='login-input'></tr>
+                            <td><input type='text' name='update_channel_name' value='".$all_data_row['channel_name']."' class='login-input'></td>
                         </tr>
+                        <tr>
+                            <td><span class='label'>Channel Username :</span></td>
+                            <td><input type='text' name='update_channel_name' value='".$all_data_row['username']."' class='login-input' disabled></td>                        
+                        </tr>
+                        <tr>
+                            <td><span class='label'>User Email :</span></td>
+                            <td><input type='text' name='update_channel_name' value='".$all_data_row['user_email']."' class='login-input' disabled></td>                        
+                        </tr>
+                        <tr>
+                            <td>Channel Status : </td>";
+
+                            if($all_data_row['channel_status'] == 1){
+                                $update_admin_channel .="<td><h1 class='badge badge-success'>Active</h1></td>";
+                            }
+                            elseif($all_data_row['channel_status'] == 0){
+                                $update_admin_channel .="<td><h1 class='badge badge-danger'>Deactive</h1></td>";
+                            }
+
+        $update_admin_channel .="
+                        </tr>
+                        <tr>
+                            <td>Channel Create Date : </td>
+                            <td><input type='date' value='".$all_data_row['created_date']."' class='login-input' disabled></td>
+                        </tr>
+                        <tr>
+                            <td colspan='2'><input type='submit' name='update' value='Update Channel Information' class='btn btn-success'></td>
+                        <tr>                        
                     </table>
                 </form>
+                <a href='my_channel.php'><button class='btn btn-primary'>Back</button></a>
             </div>
         ";
 
