@@ -1954,5 +1954,21 @@
     //function for admin_channel_edit 
     function admin_channel_edit(){
         $con = Connection();
+
+        //get value of id
+        $id = $_GET['id'];
+
+        //now check data from database accoring to id
+        $all_data = "SELECT * FROM channels WHERE email='$id'";
+        $all_data_result = mysqli_query($con, $all_data);
+
+        //now fetch data
+        $all_data_row = mysqli_fetch_assoc($all_data_result);
+
+        //echo in form
+        $update_amdin_channel = "
+        
+        ";
+
     }
 ?>
