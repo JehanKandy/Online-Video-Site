@@ -2394,7 +2394,7 @@
             mail($receiver, $subject, $body, $sender);
         
             //now update user_tbl with otp
-            $update_otp = "UPDATE user_tbl SET "
+            $update_otp = "UPDATE user_tbl SET pwd_reset_otp = '$pwd_reset_otp' WHERE email = '$email'";
         }
 
         
