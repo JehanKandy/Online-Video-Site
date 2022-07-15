@@ -1902,5 +1902,14 @@
         //get loginSession email
         $email = strval($_SESSION['loginSession']);
 
+        //now get all channel data according to login email
+        $channel_data = "SELECT * FROM channels WHERE user_email = '$email'";
+        $channel_data_result = mysqli_query($con, $channel_data);
+
+        //now fetch data
+        $channel_data_row = mysqli_fetch_assoc($channel_data_result);
+
+        //print channel infromation
+        
     }
 ?>
