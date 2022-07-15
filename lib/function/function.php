@@ -2145,6 +2145,57 @@
     //function for user account
     function user_channel_info(){
         $con = Connection();
+
+        //get loginSession email
+        $email = strval($_SESSION['loginSession']);
+
+
+        //now get all channel data according to login email
+        $user_channel_data = "SELECT * FROM channels WHERE user_email = '$email'";
+        $user_channel_data_result = mysqli_query($con, $user_channel_data);
+
+        //now fetch data
+        $user_channel_data_row = mysqli_fetch_assoc($user_channel_data_result);
+
+        //print channel infromation
+        $user_channel = "
+            <div class='body'>
+                <table border='0'>
+                    <tr>
+                        <td>Channel Name : </td>
+                        <td><input type='text' value='".$user_channel_data_row['channel_name']."' class='login-input' disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Username : </td>
+                        <td><input type='text' value='".$user_channel_data_row['username']."' class='login-input' disabled></td>
+                    </tr>
+                    <tr>
+                        <td>User Email : </td>
+                        <td><input type='email' value='".$user_channel_data_row['user_email']."' class='login-input' disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Channel Status : </td>";
+                        if($user_channel_data_row['channel_status'] == 1){
+                            $user_channel .= "<td><h1 class='badge badge-success'>Active</h1></td>";
+                        }elseif($user_channel_data_row['channel_status'] == 0){
+                            $user_channel .= "<td><h1 class='badge badge-danger'>Deactive</h1></td>";
+                        }
+
+        $user_channel .="
+                    </tr>
+                    <tr>
+                        <td>Channel Create Date : </td>
+                        <td><input type='date' value='".$user_channel_data_row['created_date']."' class='login-input' disabled></td>
+                    </tr>
+                    <tr>
+                        <td colspan='2'><a href='edit_channel_info.php?id=".$user_channel_data_row['user_email']."'><button class='btn btn-primary'>Edit Channel Infor</button></a></td>
+                    </tr>
+                <table>
+            </div>
+        
+        ";
+
+        echo $user_channel;
     }
 
 
