@@ -2405,6 +2405,18 @@
     //function for check otp
     function check_otp($otp_num){
         $con = Connection();
+
+        //get loginSession email
+        $email = strval($_SESSION['loginSession']);
+        
+        //get otp form database
+        $get_otp = "SELECT * FROM user_tbl WHERE email = '$email'";
+        $get_otp_result = mysqli_query($con, $get_otp);
+
+        //fetch data
+        $get_otp_row = mysqli_fetch_assoc($get_otp_result);
+
+        
     }
 
     
