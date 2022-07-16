@@ -29,6 +29,7 @@
     ---- 15 July 2022 - new update -----> my_account_admin(),admin_channel_edit(),update_admin_channel(),admin_account(),update_admin_account(),
                                           edit_admin_account(),user_channel_info(), edit_account_user(), update_user_account(), add_catogery_user(),
                                           pwd_reset(),
+    ---- 17 July 2022 - check_otp(), 
 
 
                         
@@ -2409,4 +2410,3 @@
     
     
 ?>
-
