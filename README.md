@@ -344,6 +344,20 @@ My one of University Projects<br>
   - - - - lib/routes/user/user_all_categories.php
   - - - - lib/routes/user/add_user_categories.php
   
+    
+   <hr>
+
+<br><br>
+<b>17 July 2022 :</b><br>
+  01. update<br>
+  - lib/function/function.php
+
+
+
+  02. Develop
+  - lib
+  - - lib/routes
+  - - -lib/routes/otp_for_pwd.php
   
 
 
