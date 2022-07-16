@@ -2416,7 +2416,11 @@
         //fetch data
         $get_otp_row = mysqli_fetch_assoc($get_otp_result);
 
-        
+        //now check otp is corrent oe not
+        if($otp_num != $get_otp_row['pwd_reset_otp']){
+            return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>OTP is not match...!</div>&nbsp</center>";
+        }
+
     }
 
     
