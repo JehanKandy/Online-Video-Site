@@ -2401,7 +2401,12 @@
             header("location:otp_for_pwd.php");
         }        
     }
+    //function for check otp
+    function check_otp($otp_num){
+        $con = Connection();
+    }
 
     
     
 ?>
+
