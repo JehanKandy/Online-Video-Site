@@ -2398,7 +2398,7 @@
             $update_otp_result = mysqli_query($con, $update_otp);
 
             //header to change_pwd.php file
-            header("location:change_pwd.php");
+            header("location:otp_for_pwd.php");
         }        
     }
 
