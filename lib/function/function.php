@@ -2451,6 +2451,13 @@
                 //now hash the passowrd using md5()
                 $new_pwd = md5($reset_pwd);
 
+                //update the password with new password
+                $update_pass = "UPDATE user_tbl SET pas1 = '$new_pwd' WHERE email = '$email'";
+                $update_pass_result = mysqli_query($con, $update_pass);
+
+                //now logout and login with new password
+                header("")
+
             }else{
                 return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Passwords don't match..!</div>&nbsp</center>";
             }
