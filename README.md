@@ -388,7 +388,15 @@ password : 456
   - - -lib/routes/otp_for_pwd.php
   - - -lib/routes/reset_pass.php
   
+  and end up with project
   
+  
+DEVELOP BY JEHANKANDY <br>
+FROM 03 July 2022 to 17 July 2022 
+<br>
+
+THANK YOU...!
+
 
 
   
