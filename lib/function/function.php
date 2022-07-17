@@ -2430,6 +2430,11 @@
         }
     }
 
+    //function for new password
+    function new_pass($reset_email){
+        $con = Connection();
+    }
+
     
     
 ?>
