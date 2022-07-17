@@ -21,7 +21,7 @@ and also help to develop the project
 # Download Full Project
 Link : https://drive.google.com/drive/folders/1BV8HuEi0qY3ZOFKw3ZoZZJNamKZ2XC_X
 
-# Istall system
+# Install system
 How to use
 
 1. isntall XAMPP on use pc
