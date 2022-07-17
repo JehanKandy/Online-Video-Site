@@ -21,16 +21,24 @@
   ?>
   <div class="pass-body">
     <form action="<?php echo($_SERVER['PHP_SELF']); ?>" method="post">
-      <span class="label">Enter Email : </span>
-      <input type="email" name="otp_email" id="otp_email" placeholder="Email" class="pass-input" required>
-      <br>
-      <span class="label">New Password : </span>
-      <input type="password" name="otp_password" id="otp_password" placeholder="New Password" class="pass-input" required>
-      <br>
-      <span class="label">Confirm New Password : </span>
-      <input type="password" name="otp_cpassword" id="otp_password" placeholder="Confirm New Password" class="pass-input" required>
-      <br>
-      <input type="submit" value="Reset Passowrd" name="reset" class="btn btn-primary">
+      <table border="0">
+        <tr>
+          <td><span class="label">Enter Email : </span></td>
+          <td><input type="email" name="otp_email" id="otp_email" placeholder="Email" class="pass-input" required></td>
+        </tr>
+        <tr>
+          <td><span class="label">New Password : </span></td>
+          <td><input type="password" name="otp_password" id="otp_password" placeholder="New Password" class="pass-input" required></td>
+        </tr>
+        <tr>
+          <td><span class="label">Confirm New Password : </span></td>
+          <td><input type="password" name="otp_cpassword" id="otp_password" placeholder="Confirm New Password" class="pass-input" required></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="submit" value="Reset Passowrd" name="reset" class="btn btn-primary"></td>
+        </tr>
+      </table>
     </form>
+
   </div>
 </div>
