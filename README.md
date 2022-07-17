@@ -34,13 +34,14 @@ How to use
 
 # System Login
 
-logins : Admin1 
-	username : jehan
-	password : 123
+logins :
+Admin1 
+username : jehan
+password : 123
 	
-       : user
-	username : kamal	
-	password : 456
+user
+username : kamal	
+password : 456
 
 # Development History
 
