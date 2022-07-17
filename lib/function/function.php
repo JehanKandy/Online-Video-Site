@@ -2387,7 +2387,7 @@
         }elseif($pwd_email == $change_row['email']){
             $pwd_reset_otp = rand(10000,99999);
 
-            $receiver = "jehankandysl@gmail.com";
+            $receiver = $pwd_email;
             $subject = "Password Change OTP";
             $body = "Use this OTP to change Password : $pwd_reset_otp";
             $sender = "From:jehankandy@gmail.com";
@@ -2426,7 +2426,7 @@
             $update_otp_result = mysqli_query($con, $update_otp);
 
             //now header to change_pass.php for reset password
-            header("location:change_pass.php");
+            header("location:reset_pass.php");
         }
     }
 
@@ -2452,7 +2452,7 @@
                 $new_pwd = md5($reset_pwd);
 
                 //update the password with new password
-                $update_pass = "UPDATE user_tbl SET pas1 = '$new_pwd' WHERE email = '$email'";
+                $update_pass = "UPDATE user_tbl SET pass1 = '$new_pwd' WHERE email = '$email'";
                 $update_pass_result = mysqli_query($con, $update_pass);
 
                 //now logout and login with new password
