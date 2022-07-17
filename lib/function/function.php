@@ -2420,7 +2420,14 @@
         if($otp_num != $get_otp_row['pwd_reset_otp']){
             return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>OTP is not match...!</div>&nbsp</center>";
         }
+        elseif($otp_num == $get_otp_row['pwd_reset_otp']){
+            //now update tabel row to 0 (update pwd_reset_otp to 0)
+            $update_otp = "UPDATE user_tbl SET pwd_reset_otp ='0' WHERE email = '$email'";
+            $update_otp_result = mysqli_query($con, $update_otp);
 
+            //now header to change_pass.php for reset password
+            header("location:change_pass.php");
+        }
     }
 
     
