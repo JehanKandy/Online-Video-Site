@@ -2442,7 +2442,14 @@
         $get_user_data_result = mysqli_query($con, $get_user_data);
 
         //fetch data
-        
+        $get_user_data_row = mysqli_fetch_assoc($get_user_data_result);
+
+        //check email is equal to login email 
+        if($reset_email == $email){
+
+        }else{
+            return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Email Doesn't match..!</div>&nbsp</center>";
+        }
     }
 
     
