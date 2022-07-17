@@ -2431,8 +2431,18 @@
     }
 
     //function for new password
-    function new_pass($reset_email){
+    function new_pass($reset_email, $reset_pwd, $reset_cpwd){
         $con = Connection();
+
+        //get loginSession email
+        $email = strval($_SESSION['loginSession']);
+        
+        //get data From database
+        $get_user_data = "SELECT * FROM user_tbl WHERE email = '$email'";
+        $get_user_data_result = mysqli_query($con, $get_user_data);
+
+        //fetch data
+        
     }
 
     
