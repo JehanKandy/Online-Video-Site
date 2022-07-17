@@ -37,11 +37,11 @@ How to use
 
 logins :
 Admin1 
-username : jehan
+username : jehan <br>
 password : 123
 	
 user
-username : kamal	
+username : kamal<br>	
 password : 456
 
 # Development History
