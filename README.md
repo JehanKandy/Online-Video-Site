@@ -32,7 +32,15 @@ How to use
 10. now click go button
 11. now again open tab and type in address bar localhost/video_site
 
+# System Login
 
+logins : Admin1 
+	username : jehan
+	password : 123
+	
+       : user
+	username : kamal	
+	password : 456
 
 # Development History
 
