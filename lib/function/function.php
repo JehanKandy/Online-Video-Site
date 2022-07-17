@@ -2446,7 +2446,14 @@
 
         //check email is equal to login email 
         if($reset_email == $email){
+            //now check password and confram password is mathch or not
+            if($reset_pwd == $reset_cpwd){
+                //now hash the passowrd using md5()
+                $new_pwd = md5($reset_pwd);
 
+            }else{
+                return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Passwords don't match..!</div>&nbsp</center>";
+            }
         }else{
             return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Email Doesn't match..!</div>&nbsp</center>";
         }
