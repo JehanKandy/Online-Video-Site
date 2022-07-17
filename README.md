@@ -15,6 +15,7 @@ My one of University Projects<br>
         4. standard iPad Mini screen
 
 
+# Download Full Project
 
 
 # Istall system
