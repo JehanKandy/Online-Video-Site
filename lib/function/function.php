@@ -2456,7 +2456,7 @@
                 $update_pass_result = mysqli_query($con, $update_pass);
 
                 //now logout and login with new password
-                header("")
+                header("location:../views/logout.php");
 
             }else{
                 return "<center>&nbsp<div class='alert alert-danger col-10' role='alert'>Passwords don't match..!</div>&nbsp</center>";
