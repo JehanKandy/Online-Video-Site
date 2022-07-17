@@ -17,6 +17,20 @@ My one of University Projects<br>
 
 
 
+# Istall system
+How to use
+
+1. isntall XAMPP on use pc
+2. goto : Xampp/htdoce/ onw create a folder named video_site
+3. copy all folders and files in to above cretaed folder 
+4. run aparche and mysql servsers
+5. open any web browser
+6. in address bar, type - localhost/phpmyadmin
+7. create database named video_system
+8. go to database
+9. import video_system.sql file
+10. now click go button
+11. now again open tab and type in address bar localhost/video_site
 
 
 
