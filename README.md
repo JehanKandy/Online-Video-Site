@@ -359,6 +359,8 @@ My one of University Projects<br>
   - lib
   - - lib/routes
   - - -lib/routes/otp_for_pwd.php
+  - - -lib/routes/reset_pass.php
+  
   
 
 
