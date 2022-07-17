@@ -14,6 +14,9 @@ My one of University Projects<br>
         3. standard iPad Air screen
         4. standard iPad Mini screen
 
+# all credits goes to
+Who teach me to develop this project and improve my Development Skill <br>
+and also help to develop the project
 
 # Download Full Project
 Link : https://drive.google.com/drive/folders/1BV8HuEi0qY3ZOFKw3ZoZZJNamKZ2XC_X
